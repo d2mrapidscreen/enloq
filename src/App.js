@@ -7,7 +7,8 @@ import Loader from "./components/Loader/Loader";
 import Loaderpoints from "./components/LoaderPoints/LoaderPoints";
 import Testimonial from './components/Testimonial/Testimonial';
 import Event from './components/Event/Event';
-
+import Applications from './components/Applications/Applications';
+import Feature from './components/Feature/Feature';
 
 function App() {
   const handleFindOutMore = () => {
@@ -33,7 +34,14 @@ function App() {
 
    
       <Event />
-      
+      <Applications />
+      <Feature 
+        title="SAFE AND"
+        subtitle="COMFORTABLE. WORK ALL DAY"
+        content="Enloq Loaders® are equipped standard with a safety cabin roof ROP's/FOP's (Roll Over Protection, Falling Object Protection) safety belts and in-seat sensors to reduce operator risk. The EL800s spacious and accessible cab is designed for optimal ease of use. The steering column is adjustable in depth and equipped with an LCD screen where all necessary information can be read easily. While using the multifunction joystick, the operator can position the seat with lumbar support making it ergonomically comfortable for all-day operation. Important controls are within easy reach and next to the joystick."
+        image="/api/placeholder/550/400"
+      />
+
       <Testimonial 
         quote="Within minutes of a test run we were convinced on the The Wombat. The machine is powerful and quiet and you have a lot of power available immediately. With two different drive modes, its quick to unload a trailer and bring to where it's needed. Fits through a gate and is better than using a shovel and wheelbarrow, we can save days of labor"
         author="Blake"

@@ -1,0 +1,113 @@
+.applications-section {
+    padding: 0;
+    background-color: #3c3c3c;
+    color: white;
+    margin: 0 auto;
+  }
+  
+  .application-item {
+    display: flex;
+    padding: 30px 100px;
+    position: relative;
+  }
+  
+  .application-item.reverse {
+    flex-direction: row-reverse;
+  }
+  
+  .application-image-container {
+    flex: 0 0 285px;
+    position: relative;
+    margin-right: 30px;
+  }
+  
+  .application-item.reverse .application-image-container {
+    margin-right: 0;
+    margin-left: 30px;
+  }
+  
+  .application-image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .application-badge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #4CAF50;
+    padding: 8px 16px;
+    border-radius: 0 0 20px 0;
+    z-index: 1;
+  }
+  
+  .application-title {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+  }
+  
+  .application-content {
+    flex: 1;
+    padding: 0 20px;
+  }
+  
+  .application-heading {
+    color: #4CAF50;
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+  }
+  
+  .application-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #fff;
+  }
+  
+  @media (max-width: 1024px) {
+    .application-item {
+      padding: 30px 60px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+  
+    .application-item, 
+    .application-item.reverse {
+      flex-direction: column;
+      padding: 30px 40px;
+    }
+    
+    .application-image-container,
+    .application-item.reverse .application-image-container {
+      margin: 0 0 20px 0;
+      width: 100%;
+      flex: none;
+    }
+    
+    .application-content {
+      padding: 0;
+    }
+  }
+  
+  @media (max-width: 480px) {
+  
+    .application-item {
+      padding: 20px 20px;
+    }
+    
+    .application-heading {
+      font-size: 20px;
+    }
+    
+    .application-text {
+      font-size: 14px;
+    }
+  }
