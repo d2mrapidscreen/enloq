@@ -1,18 +1,20 @@
 // src/components/Think/Think.js
 import React from 'react';
 import './Think.css';
-import logoImage from '../../assets/images/loader-icon.png'; 
+import logoImage from '../../assets/images/loader-icon.png'; // You would need to add this image
 
 function Think() {
   return (
     <section className="think-section">
       <div className="think-container">
-        <div className="think-logo">
-          <img src={logoImage} alt="Enloq Loader Icon" />
-        </div>
-        <div className="think-text">
-          <span className="think-black">Think</span>
-          <span className="think-green">Electric</span>
+        <div className="think-header">
+          <div className="think-logo">
+            <img src={logoImage} alt="Enloq Loader Icon" />
+          </div>
+          <div className="think-text">
+            <span className="think-black">Think</span>
+            <span className="think-green">Electric</span>
+          </div>
         </div>
         <div className="think-content">
           <p>
