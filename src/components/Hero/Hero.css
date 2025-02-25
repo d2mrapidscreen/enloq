@@ -1,0 +1,117 @@
+/* src/components/Hero/Hero.css */
+@font-face {
+    font-family: "Avenir Next";
+    font-style: normal;
+    font-weight: bold;
+    src: url("../../assets/fonts/Poppins-BlackItalic.ttf") ;
+  }
+  
+  @font-face {
+    font-family: "Avenir Next Heavy";
+    font-style: normal;
+    font-weight: 900;
+    src: url("../../assets/fonts/Poppins-ExtraBold.ttf") ;
+  }
+  
+  @font-face {
+    font-family: "Avenir Next";
+    font-style: normal;
+    font-weight: normal;
+    src: url("../../assets/fonts/Poppins-Light.ttf") 
+  }
+  
+  .hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    max-height: 800px;
+    overflow: hidden;
+  }
+  
+  .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  
+  .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0 20px;
+  }
+  
+  .hero-logo-container {
+    margin-bottom: 30px;
+    max-width: 180px;
+    width: 100%;
+  }
+  
+  .hero-logo {
+    width: 100%;
+    height: auto;
+  }
+  
+  .hero-tagline {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 15px 30px;
+    border-radius: 4px;
+  }
+  
+  .hero-tagline h1 {
+    font-family: "Avenir Next Heavy", sans-serif;
+    font-weight: 900;
+    font-size: 36px;
+    color: #000;
+    margin: 0;
+    letter-spacing: 1px;
+  }
+  
+  /* Media queries for responsiveness */
+  @media (max-width: 768px) {
+    .hero-section {
+      height: 70vh;
+    }
+    
+    .hero-logo-container {
+      max-width: 150px;
+      margin-bottom: 20px;
+    }
+    
+    .hero-tagline h1 {
+      font-size: 28px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero-section {
+      height: 60vh;
+    }
+    
+    .hero-logo-container {
+      max-width: 120px;
+    }
+    
+    .hero-tagline h1 {
+      font-size: 24px;
+    }
+    
+    .hero-tagline {
+      padding: 12px 20px;
+    }
+  }

@@ -1,24 +1,14 @@
 // App.js
 import React from "react";
 import "./App.css";
-import Navigation from "./components/Navigation/Navigation"; // Updated import path
+import Navigation from "./components/Navigation/Navigation";
+import Hero from "./components/Hero/Hero"; 
 
 function App() {
   return (
     <div className="App">
-
       <Navigation />
-
-      <section className="hero">
-        <img 
-          src="https://placehold.co/1400x600" 
-          alt="Placeholder" 
-          className="hero-image" 
-        />
-        <div className="hero-overlay">
-          <h1>100% ELECTRIC + 100% WORK</h1>
-        </div>
-      </section>
+      <Hero /> 
       
       <section className="about">
         <h2>About</h2>
