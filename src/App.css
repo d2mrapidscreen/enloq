@@ -79,7 +79,6 @@ body {
   width: 100%;
   max-width: 1400px;
   background: white;
-  padding-top: 80px;
   box-sizing: border-box;
 }
 
@@ -182,7 +181,7 @@ body {
 
 .nav-links a {
   text-decoration: none;
-  color: #333;
+  color: #2fb457;
   font-weight: bold;
   text-transform: uppercase;
   padding: 5px 10px;

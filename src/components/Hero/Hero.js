@@ -10,18 +10,16 @@ const Hero = () => {
       <div className="hero-background">
         <img 
           src={groupPhoto} 
-          alt="Enloq Group" 
+          alt="Enloq Electric Vehicles" 
           className="hero-image"
         />
       </div>
-      <div className="hero-content">
-        <div className="hero-logo-container">
-          <img 
-            src={enloqTagline} 
-            alt="Enloq Tagline" 
-            className="hero-logo"
-          />
-        </div>
+      <div className="hero-tagline-container">
+        <img 
+          src={enloqTagline} 
+          alt="100% ELECTRIC + 100% WORK" 
+          className="hero-tagline-image"
+        />
       </div>
     </section>
   );

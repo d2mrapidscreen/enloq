@@ -21,7 +21,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: white;
+  background-color: #000;
   border-bottom: 1px solid #eee;
   height: 36px;
   position: relative;
@@ -41,6 +41,16 @@
 }
 
 /* Navigation Links Styles */
+
+.logo-text {
+  color: #2fb457; /* Green color from your CSS */
+  font-family: "Poppins Light", sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
 .nav-links {
   display: flex;
   gap: 20px;
