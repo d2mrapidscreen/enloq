@@ -16,7 +16,7 @@ const FeatureTransparentFullWidth = ({
       </div>
       
       <div className="feature-transparent-content-wrapper">
-        <div className={`feature-transparent-content-inner ${textPosition === 'right' ? 'right' : ''}`}>
+        <div className={`feature-transparent-content-inner ${textPosition}`}>
           <div className="feature-transparent-text-container">
             <h2 className="feature-transparent-title">{title}</h2>
             <p className="feature-transparent-content">{content}</p>

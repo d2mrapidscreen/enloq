@@ -58,7 +58,7 @@ function App() {
         title="BUILT FOR TOUGH CONDITIONS"
         content="Designed for Australian conditions, Enloq Loaders® are built tough with superior power and extended battery life. The electric motors deliver precise control in all terrains, while the smart power management system optimizes energy usage for all-day operation."
         image={loaderBucketTransparentBkgImage}
-        textPosition="left"
+        textPosition="right"
 /*         imageCaption="Shown: EL800 Series at Hunter Valley Vineyards"
  */        icons={[smallBodyIcon, flexibleMobilityIcon]}
       />

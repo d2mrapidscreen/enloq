@@ -3,7 +3,8 @@
     position: relative;
     margin: 0;
     padding: 0;
-    height: 500px; /* Fixed height for consistent appearance */
+    height: 380px; /* Fixed height to match screenshot */
+    overflow: hidden;
   }
   
   .feature-transparent-background {
@@ -29,16 +30,16 @@
     right: 0;
     bottom: 0;
     display: flex;
-    align-items: center;
+    align-items: stretch;
     z-index: 5;
   }
   
   .feature-transparent-content-inner {
-    max-width: 1200px;
     width: 100%;
-    margin: 0 auto;
-    padding: 0 100px;
     display: flex;
+  }
+  
+  .feature-transparent-content-inner.left {
     justify-content: flex-start;
   }
   
@@ -47,15 +48,17 @@
   }
   
   .feature-transparent-text-container {
-    background-color: rgba(42, 42, 42, 0.85);
+    background-color: rgba(0, 0, 0, 0.8);
     padding: 40px;
-    max-width: 500px;
-    border-radius: 0;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   
   .feature-transparent-title {
     font-family: 'Poppins', sans-serif;
-    font-size: 32px;
+    font-size: 36px;
     line-height: 1.2;
     font-weight: 700;
     margin: 0 0 20px 0;
@@ -68,7 +71,7 @@
     font-size: 16px;
     line-height: 1.6;
     color: white;
-    margin: 0 0 20px 0;
+    margin: 0 0 30px 0;
   }
   
   .feature-transparent-image-caption {
@@ -103,15 +106,54 @@
   @media (max-width: 768px) {
     .feature-transparent-section {
       height: auto;
-      min-height: 500px;
     }
     
     .feature-transparent-content-inner {
-      padding: 40px;
+      flex-direction: column;
     }
     
     .feature-transparent-text-container {
-      max-width: 100%;
+      width: 100%;
+      padding: 30px;
+    }
+    
+    .feature-transparent-background {
+      position: relative;
+      height: 300px;
+    }
+    
+    .feature-transparent-content-wrapper {
+      position: relative;
+      height: auto;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .feature-transparent-background {
+      height: 200px;
+    }
+    
+    .feature-transparent-text-container {
+      padding: 20px;
+    }
+    
+    .feature-transparent-title {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    
+    .feature-transparent-content {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+    
+    .feature-icons {
+      gap: 10px;
+    }
+    
+    .feature-icon {
+      width: 60px;
+      height: 60px;
     }
   }
   
