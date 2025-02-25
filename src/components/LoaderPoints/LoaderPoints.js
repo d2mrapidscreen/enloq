@@ -95,6 +95,9 @@ const LoaderPoints = () => {
           </div>
         </div>
       </div>
+      <div className="loader-points-button-container">
+        <button className="find-out-more-btn">FIND OUT MORE</button>
+      </div>
     </section>
   );
 };
