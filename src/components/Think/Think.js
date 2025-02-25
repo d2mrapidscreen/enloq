@@ -1,7 +1,7 @@
 // src/components/Think/Think.js
 import React from 'react';
 import './Think.css';
-import logoImage from '../../assets/images/loader-icon.png'; // You would need to add this image
+import logoImage from '../../assets/images/icon_loader_leaf_green.png'; // You would need to add this image
 
 function Think() {
   return (

@@ -14,7 +14,7 @@ function Loader() {
           />
           
           {/* Numbered circles with arrows */}
-          <div className="number-marker marker-1">
+{/*           <div className="number-marker marker-1">
             <div className="number-circle">
               <span className="number">1</span>
             </div>
@@ -82,7 +82,7 @@ function Loader() {
               <span className="number">10</span>
             </div>
             <div className="marker-arrow arrow-10"></div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

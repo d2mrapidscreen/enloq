@@ -8,6 +8,7 @@ const LoaderPoints = () => {
         <div className="loader-points">
         <div className="loader-points-row">
           <div className="loader-point">
+
             <div className="point-number">1</div>
             <div className="point-content">
               <h3>WORKING COMFORTABLY</h3>
