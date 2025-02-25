@@ -4,6 +4,7 @@ import Navigation from "./components/Navigation/Navigation";
 import Hero from "./components/Hero/Hero"; 
 import Think from "./components/Think/Think";
 import Loader from "./components/Loader/Loader";
+import Loaderpoints from "./components/LoaderPoints/LoaderPoints";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Hero /> 
       <Think />
       <Loader />
+      <Loaderpoints />
       
       <section className="about">
         <h2>About</h2>
