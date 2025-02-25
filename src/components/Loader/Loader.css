@@ -1,189 +1,315 @@
 /* Loader.css */
 .loader-section {
-    padding: 2rem 0;
-    margin: 0 auto;
-    max-width: 1200px;
-  }
-  
+  padding: 2rem 0;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.loader-image-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 2rem;
+}
+
+.loader-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Number markers styling */
+.number-marker {
+  position: absolute;
+  z-index: 10;
+}
+
+.number-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  position: relative;
+}
+
+.number-circle:hover {
+  transform: scale(1.1);
+}
+
+.number {
+  color: #2fb457;
+  font-weight: 800;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Arrow styling */
+.marker-arrow {
+  position: absolute;
+  background-color: #2fb457;
+  height: 2px;
+  transform-origin: 0 50%;
+  pointer-events: none;
+}
+
+.marker-arrow::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: -3px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid #2fb457;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+}
+
+/* Positioning for each marker */
+.marker-1 {
+  top: 8%;
+  left: 56%;
+}
+
+.marker-2 {
+  top: 26%;
+  right: 15%;
+}
+
+.marker-3 {
+  top: 60%;
+  right: 8%;
+}
+
+.marker-4 {
+  top: 80%;
+  right: 18%;
+}
+
+.marker-5 {
+  bottom: 15%;
+  left: 62%;
+}
+
+.marker-6 {
+  bottom: 5%;
+  left: 50%;
+}
+
+.marker-7 {
+  bottom: 8%;
+  left: 35%;
+}
+
+.marker-8 {
+  top: 65%;
+  left: 17%;
+}
+
+.marker-9 {
+  top: 40%;
+  left: 25%;
+}
+
+.marker-10 {
+  top: 30%;
+  left: 38%;
+}
+
+/* Arrow styling for each direction */
+.arrow-1 {
+  width: 60px;
+  transform: rotate(90deg);
+  top: 15px;
+  left: 15px;
+}
+
+.arrow-2 {
+  width: 70px;
+  transform: rotate(-40deg);
+  top: 15px;
+  left: -30px;
+}
+
+.arrow-3 {
+  width: 50px;
+  transform: rotate(180deg);
+  top: 15px;
+  right: 15px;
+}
+
+.arrow-4 {
+  width: 45px;
+  transform: rotate(150deg);
+  top: 0;
+  right: 20px;
+}
+
+.arrow-5 {
+  width: 40px;
+  transform: rotate(120deg);
+  bottom: 15px;
+  right: 10px;
+}
+
+.arrow-6 {
+  width: 50px;
+  transform: rotate(100deg);
+  bottom: 15px;
+  left: 15px;
+}
+
+.arrow-7 {
+  width: 60px;
+  transform: rotate(60deg);
+  top: -20px;
+  left: 10px;
+}
+
+.arrow-8 {
+  width: 50px;
+  transform: rotate(40deg);
+  top: 10px;
+  left: 20px;
+}
+
+.arrow-9 {
+  width: 60px;
+  transform: rotate(20deg);
+  top: 5px;
+  left: 25px;
+}
+
+.arrow-10 {
+  width: 45px;
+  transform: rotate(0deg);
+  top: 15px;
+  left: 25px;
+}
+
+/* Loader details styling */
+.loader-details {
+  text-align: center;
+  max-width: 600px;
+  padding: 0 1rem;
+}
+
+.loader-details h2 {
+  font-family: 'Avenir Next', sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.loader-details p {
+  font-family: 'Avenir Next', sans-serif;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+.loader-features {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.loader-features li {
+  background-color: #f5f5f5;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-family: 'Avenir Next', sans-serif;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.learn-more-btn {
+  background-color: #2fb457;
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  font-family: 'Avenir Next', sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.learn-more-btn:hover {
+  background-color: #27a04a;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
   .loader-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2rem;
   }
   
   .loader-image-container {
-    position: relative;
-    width: 100%;
-    max-width: 800px;
-    margin-bottom: 2rem;
+    flex: 1;
+    margin-bottom: 0;
   }
   
-  .loader-image {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-  
-  /* Number markers styling */
-  .number-marker {
-    position: absolute;
-    z-index: 10;
-  }
-  
-  .number-circle {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-    transition: transform 0.2s ease;
-  }
-  
-  .number-circle:hover {
-    transform: scale(1.1);
-  }
-  
-  .number {
-    color: #2fb457;
-    font-weight: 800;
-    font-size: 16px;
-    font-family: 'Poppins', sans-serif;
-  }
-  
-  /* Positioning for each marker */
-  .marker-1 {
-    top: 8%;
-    left: 50%;
-  }
-  
-  .marker-2 {
-    top: 26%;
-    right: 15%;
-  }
-  
-  .marker-3 {
-    top: 60%;
-    right: 8%;
-  }
-  
-  .marker-4 {
-    top: 80%;
-    right: 18%;
-  }
-  
-  .marker-5 {
-    bottom: 15%;
-    left: 62%;
-  }
-  
-  .marker-6 {
-    bottom: 5%;
-    left: 50%;
-  }
-  
-  .marker-7 {
-    bottom: 8%;
-    left: 35%;
-  }
-  
-  .marker-8 {
-    top: 65%;
-    left: 17%;
-  }
-  
-  .marker-9 {
-    top: 40%;
-    left: 25%;
-  }
-  
-  .marker-10 {
-    top: 30%;
-    left: 38%;
-  }
-  
-  /* Loader details styling */
   .loader-details {
-    text-align: center;
-    max-width: 600px;
-    padding: 0 1rem;
-  }
-  
-  .loader-details h2 {
-    font-family: 'Avenir Next', sans-serif;
-    font-weight: bold;
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: #333;
-  }
-  
-  .loader-details p {
-    font-family: 'Avenir Next', sans-serif;
-    font-size: 1.1rem;
-    margin-bottom: 1.5rem;
-    color: #555;
+    flex: 1;
+    text-align: left;
+    padding-top: 2rem;
   }
   
   .loader-features {
-    list-style-type: none;
-    padding: 0;
-    margin-bottom: 2rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
+    justify-content: flex-start;
+  }
+}
+
+/* Mobile responsiveness for markers */
+@media (max-width: 767px) {
+  .marker-arrow {
+    /* Scale down arrows for smaller screens */
+    transform-origin: 0 50% !important;
+    transform: scale(0.7) !important;
+  }
+
+  /* Adjust specific arrows for better mobile layout */
+  .arrow-1, .arrow-2, .arrow-3, .arrow-4, .arrow-5,
+  .arrow-6, .arrow-7, .arrow-8, .arrow-9, .arrow-10 {
+    width: 30px !important;
   }
   
-  .loader-features li {
-    background-color: #f5f5f5;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-family: 'Avenir Next', sans-serif;
-    font-size: 0.9rem;
-    color: #333;
+  /* Ensure markers stay at their correct positions */
+  .number-marker {
+    transform: scale(0.8);
+  }
+}
+
+/* For ultra-small screens, ensure markers don't overlap */
+@media (max-width: 480px) {
+  .number-marker {
+    transform: scale(0.7);
   }
   
-  .learn-more-btn {
-    background-color: #2fb457;
-    color: white;
-    border: none;
-    padding: 0.8rem 2rem;
-    font-family: 'Avenir Next', sans-serif;
-    font-weight: bold;
-    font-size: 1rem;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  /* Reduce space between markers on very small screens */
+  .marker-1, .marker-2, .marker-3, .marker-4, .marker-5,
+  .marker-6, .marker-7, .marker-8, .marker-9, .marker-10 {
+    /* Specific adjustments may be needed */
   }
-  
-  .learn-more-btn:hover {
-    background-color: #27a04a;
-  }
-  
-  /* Responsive adjustments */
-  @media (min-width: 768px) {
-    .loader-container {
-      flex-direction: row;
-      align-items: flex-start;
-      gap: 2rem;
-    }
-    
-    .loader-image-container {
-      flex: 1;
-      margin-bottom: 0;
-    }
-    
-    .loader-details {
-      flex: 1;
-      text-align: left;
-      padding-top: 2rem;
-    }
-    
-    .loader-features {
-      justify-content: flex-start;
-    }
-  }
+}
