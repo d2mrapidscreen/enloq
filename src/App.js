@@ -1,9 +1,9 @@
-// App.js
 import React from "react";
 import "./App.css";
 import Navigation from "./components/Navigation/Navigation";
 import Hero from "./components/Hero/Hero"; 
 import Think from "./components/Think/Think";
+import Loader from "./components/Loader/Loader";
 
 function App() {
   return (
@@ -11,7 +11,8 @@ function App() {
       <Navigation />
       <Hero /> 
       <Think />
-
+      <Loader />
+      
       <section className="about">
         <h2>About</h2>
         <img 

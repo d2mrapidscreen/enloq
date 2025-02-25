@@ -1,7 +1,7 @@
 // src/components/Hero/Hero.js
 import React from 'react';
 import './Hero.css';
-import groupPhoto from '../../assets/images/SRDC_Enloq_Group_photo_09.24.png';
+import groupPhoto from '../../assets/images/SRDC_Enloq_Group_photo.png';
 import enloqTagline from '../../assets/images/enloq-tagline.png';
 
 const Hero = () => {
