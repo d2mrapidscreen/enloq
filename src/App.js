@@ -10,6 +10,8 @@ import Event from './components/Event/Event';
 import Applications from './components/Applications/Applications';
 import Feature from './components/Feature/Feature';
 import FeatureTransparentFullWidth from './components/FeatureTransparentFullWidth/FeatureTransparentFullWidth';
+import ImageRow from "./components/ImageRow/ImageRow";
+
 
 // Image imports
 import loaderBucketImage from './assets/images/Loader_raised_bucket_from_rear.jpg';
@@ -17,6 +19,8 @@ import loaderBucketTransparentBkgImage from './assets/images/Loader_raised_bucke
 
 import smallBodyIcon from './assets/images/icon_small_body.png';
 import flexibleMobilityIcon from './assets/images/icon_flexible_mobility.png'
+import securitySystemIcon from './assets/images/icon_security_system.png'
+
 
 function App() {
   const handleFindOutMore = () => {
@@ -24,6 +28,7 @@ function App() {
     console.log('Find out more clicked');
   };
 
+ 
   return (
     <div className="App">
       <Navigation />
@@ -63,6 +68,15 @@ function App() {
  */        icons={[smallBodyIcon, flexibleMobilityIcon]}
       />
 
+      <ImageRow 
+        images={[
+          { src: smallBodyIcon, alt: 'Image description' },
+          { src: flexibleMobilityIcon, alt: 'Image description' },
+          { src: securitySystemIcon, alt: 'Image description' },
+        ]} 
+        imagesPerRow={3}
+      />
+      
       <Testimonial 
         quote="Within minutes of a test run we were convinced on the The Wombat. The machine is powerful and quiet and you have a lot of power available immediately. With two different drive modes, its quick to unload a trailer and bring to where it's needed. Fits through a gate and is better than using a shovel and wheelbarrow, we can save days of labor"
         author="Blake"
