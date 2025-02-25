@@ -3,8 +3,9 @@ import './LoaderPoints.css';
 
 const LoaderPoints = () => {
   return (
-    <section className="loader-points">
-      <div className="loader-points-container">
+    <section className="loader-points-section">
+      <div className="loader-points-wrapper">
+        <div className="loader-points">
         <div className="loader-points-row">
           <div className="loader-point">
             <div className="point-number">1</div>
@@ -94,9 +95,10 @@ const LoaderPoints = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div className="loader-points-button-container">
-        <button className="find-out-more-btn">FIND OUT MORE</button>
+        </div>
+        <div className="loader-points-button-container">
+          <button className="find-out-more-btn">FIND OUT MORE</button>
+        </div>
       </div>
     </section>
   );
