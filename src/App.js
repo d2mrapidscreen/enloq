@@ -1,27 +1,12 @@
+// App.js
 import React from "react";
 import "./App.css";
-import Navigation from './Navigation/Navigation';
+import Navigation from "./components/Navigation/Navigation"; // Updated import path
 
 function App() {
   return (
     <div className="App">
 
-      {/* Logo Bar */}
-      <header className="top-bar">
-        <div className="top-bar-container">
-          <img 
-            src="https://placehold.co/150x50" 
-            alt="Logo" 
-            className="logo"
-          />
-          <div className="contact-info">
-            <a href="tel:+123456789">+1 234 567 89</a> | 
-            <a href="mailto:info@example.com"> info@example.com</a>
-          </div>
-        </div>
-      </header>
-
-      {/* Add the Navigation component */}
       <Navigation />
 
       <section className="hero">
@@ -52,22 +37,27 @@ function App() {
       
       <section className="products">
         <h2>Products</h2>
+        {/* Products content would go here */}
       </section>
       
       <section className="testimonials">
         <h2>Testimonials</h2>
+        {/* Testimonials content would go here */}
       </section>
       
       <section className="specifications">
         <h2>Specifications</h2>
+        {/* Specifications content would go here */}
       </section>
       
       <section className="sustainability">
         <h2>Sustainability</h2>
+        {/* Sustainability content would go here */}
       </section>
       
       <section className="contact">
         <h2>Contact</h2>
+        {/* Contact content would go here */}
       </section>
     </div>
   );
