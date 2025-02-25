@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/enloq/static/css/main.72e4cbe5.css",
-    "main.js": "/enloq/static/js/main.068707bb.js",
+    "main.css": "/enloq/static/css/main.65960f47.css",
+    "main.js": "/enloq/static/js/main.c57db7a7.js",
     "static/media/SRDC_Enloq_Group_photo.png": "/enloq/static/media/SRDC_Enloq_Group_photo.82550be7fd35ee1cf989.png",
     "static/media/Poppins-BlackItalic.ttf": "/enloq/static/media/Poppins-BlackItalic.563eda3d3407af0fb581.ttf",
     "static/media/Poppins-Light.ttf": "/enloq/static/media/Poppins-Light.7641a0f76ca9ef6c252c.ttf",
@@ -12,11 +12,11 @@
     "static/media/Poppins-ExtraBold.ttf": "/enloq/static/media/Poppins-ExtraBold.01849ee091e1762a5dd5.ttf",
     "static/media/enloq-tagline.png": "/enloq/static/media/enloq-tagline.c971bb244c66cee6ae7a.png",
     "index.html": "/enloq/index.html",
-    "main.72e4cbe5.css.map": "/enloq/static/css/main.72e4cbe5.css.map",
-    "main.068707bb.js.map": "/enloq/static/js/main.068707bb.js.map"
+    "main.65960f47.css.map": "/enloq/static/css/main.65960f47.css.map",
+    "main.c57db7a7.js.map": "/enloq/static/js/main.c57db7a7.js.map"
   },
   "entrypoints": [
-    "static/css/main.72e4cbe5.css",
-    "static/js/main.068707bb.js"
+    "static/css/main.65960f47.css",
+    "static/js/main.c57db7a7.js"
   ]
 }
