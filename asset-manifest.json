@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/enlow/static/css/main.23c6db00.css",
+    "main.js": "/enlow/static/js/main.d9e3f455.js",
+    "index.html": "/enlow/index.html",
+    "main.23c6db00.css.map": "/enlow/static/css/main.23c6db00.css.map",
+    "main.d9e3f455.js.map": "/enlow/static/js/main.d9e3f455.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.23c6db00.css",
+    "static/js/main.d9e3f455.js"
+  ]
+}
