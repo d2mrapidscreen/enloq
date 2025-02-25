@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import Navigation from './Navigation/Navigation';
 
 function App() {
   return (
@@ -19,6 +20,9 @@ function App() {
           </div>
         </div>
       </header>
+
+      {/* Add the Navigation component */}
+      <Navigation />
 
       <section className="hero">
         <img 
