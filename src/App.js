@@ -35,11 +35,15 @@ function App() {
    
       <Event />
       <Applications />
+
       <Feature 
         title="SAFE AND"
         subtitle="COMFORTABLE. WORK ALL DAY"
         content="Enloq Loaders® are equipped standard with a safety cabin roof ROP's/FOP's (Roll Over Protection, Falling Object Protection) safety belts and in-seat sensors to reduce operator risk. The EL800s spacious and accessible cab is designed for optimal ease of use. The steering column is adjustable in depth and equipped with an LCD screen where all necessary information can be read easily. While using the multifunction joystick, the operator can position the seat with lumbar support making it ergonomically comfortable for all-day operation. Important controls are within easy reach and next to the joystick."
-        image="/api/placeholder/550/400"
+        backgroundColor="#4CAF50"
+        textPosition="left"
+        image="/api/placeholder/500/350"
+        showImage={true}
       />
 
       <Testimonial 
@@ -49,6 +53,8 @@ function App() {
         buttonText="FIND OUT MORE"
         onButtonClick={handleFindOutMore}
       />
+
+
 
       <section className="contact">
         <h2>FOOTER TO BE ADDED</h2>
