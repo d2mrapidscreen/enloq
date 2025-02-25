@@ -1,8 +1,14 @@
 {
   "files": {
-    "main.css": "/enloq/static/css/main.dfcc2c64.css",
-    "main.js": "/enloq/static/js/main.c57db7a7.js",
+    "main.css": "/enloq/static/css/main.07d6830e.css",
+    "main.js": "/enloq/static/js/main.a0c00cd5.js",
+    "static/media/Loader_raised_bucket_to_ute.jpg": "/enloq/static/media/Loader_raised_bucket_to_ute.e61914bdc80cc23e16e7.jpg",
+    "static/media/Loader_raised_bucket_from_rear.jpg": "/enloq/static/media/Loader_raised_bucket_from_rear.2d449ae248ab912b0496.jpg",
     "static/media/SRDC_Enloq_Group_photo.png": "/enloq/static/media/SRDC_Enloq_Group_photo.82550be7fd35ee1cf989.png",
+    "static/media/Forest.png": "/enloq/static/media/Forest.92c9b037ba8984010e05.png",
+    "static/media/Winery.png": "/enloq/static/media/Winery.2fd4ac32f388879b3389.png",
+    "static/media/Nursery.png": "/enloq/static/media/Nursery.b211c64952f5f54d29ac.png",
+    "static/media/Construction.png": "/enloq/static/media/Construction.a55a6371b0d99de92183.png",
     "static/media/Poppins-BlackItalic.ttf": "/enloq/static/media/Poppins-BlackItalic.563eda3d3407af0fb581.ttf",
     "static/media/Poppins-Light.ttf": "/enloq/static/media/Poppins-Light.7641a0f76ca9ef6c252c.ttf",
     "static/media/Poppins-Regular.ttf": "/enloq/static/media/Poppins-Regular.35d26b781dc5fda684cc.ttf",
@@ -10,13 +16,16 @@
     "static/media/SRDC_Enloq_Miniloader_EL800s.png": "/enloq/static/media/SRDC_Enloq_Miniloader_EL800s.1064e6e80f409837e6a7.png",
     "static/media/Poppins-Bold.ttf": "/enloq/static/media/Poppins-Bold.cdb29a5d7ccf57ff05a3.ttf",
     "static/media/Poppins-ExtraBold.ttf": "/enloq/static/media/Poppins-ExtraBold.01849ee091e1762a5dd5.ttf",
+    "static/media/Timber.png": "/enloq/static/media/Timber.cea70245f300758147be.png",
     "static/media/enloq-tagline.png": "/enloq/static/media/enloq-tagline.c971bb244c66cee6ae7a.png",
+    "static/media/icon_small_body.png": "/enloq/static/media/icon_small_body.a0fe5a415274d9e60f61.png",
+    "static/media/icon_flexible_mobility.png": "/enloq/static/media/icon_flexible_mobility.28a548f25c0ba6056229.png",
     "index.html": "/enloq/index.html",
-    "main.dfcc2c64.css.map": "/enloq/static/css/main.dfcc2c64.css.map",
-    "main.c57db7a7.js.map": "/enloq/static/js/main.c57db7a7.js.map"
+    "main.07d6830e.css.map": "/enloq/static/css/main.07d6830e.css.map",
+    "main.a0c00cd5.js.map": "/enloq/static/js/main.a0c00cd5.js.map"
   },
   "entrypoints": [
-    "static/css/main.dfcc2c64.css",
-    "static/js/main.c57db7a7.js"
+    "static/css/main.07d6830e.css",
+    "static/js/main.a0c00cd5.js"
   ]
 }
