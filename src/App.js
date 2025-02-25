@@ -5,8 +5,16 @@ import Hero from "./components/Hero/Hero";
 import Think from "./components/Think/Think";
 import Loader from "./components/Loader/Loader";
 import Loaderpoints from "./components/LoaderPoints/LoaderPoints";
+import Testimonial from './components/Testimonial/Testimonial';
+import Event from './components/Event/Event';
+
 
 function App() {
+  const handleFindOutMore = () => {
+    // Handle button click action
+    console.log('Find out more clicked');
+  };
+
   return (
     <div className="App">
       <Navigation />
@@ -14,45 +22,28 @@ function App() {
       <Think />
       <Loader />
       <Loaderpoints />
+    
+      <Testimonial 
+        quote="We see a big financial gain with near zero hourly running costs and with no emissions, we are not breathing diesel particulates from owning electric machines anymore. Its better for our staff"
+        author="Tony"
+        company="Hunter Winery"
+        buttonText="FIND OUT MORE"
+        onButtonClick={handleFindOutMore}
+      />
+
+   
+      <Event />
       
-      <section className="about">
-        <h2>About</h2>
-        <img 
-          src="https://placehold.co/700x400" 
-          alt="Placeholder" 
-          className="about-image" 
-        />
-        <p className="about-text">
-          The Enloq Loaders® E.V. series are high capacity articulated wheel loaders, material dumpers
-          and all-terrain fork lifts in different size configurations that are 100% electric. Our entire range
-          is designed for zero emission, low noise operation without compromising speed, power
-          or operational length. Powered by BYD® Lithium Blade Battery technology our ra
-        </p>
-      </section>
-      
-      <section className="products">
-        <h2>Products</h2>
-        {/* Products content would go here */}
-      </section>
-      
-      <section className="testimonials">
-        <h2>Testimonials</h2>
-        {/* Testimonials content would go here */}
-      </section>
-      
-      <section className="specifications">
-        <h2>Specifications</h2>
-        {/* Specifications content would go here */}
-      </section>
-      
-      <section className="sustainability">
-        <h2>Sustainability</h2>
-        {/* Sustainability content would go here */}
-      </section>
-      
+      <Testimonial 
+        quote="Within minutes of a test run we were convinced on the The Wombat. The machine is powerful and quiet and you have a lot of power available immediately. With two different drive modes, its quick to unload a trailer and bring to where it's needed. Fits through a gate and is better than using a shovel and wheelbarrow, we can save days of labor"
+        author="Blake"
+        company="Wolf Plumbing"
+        buttonText="FIND OUT MORE"
+        onButtonClick={handleFindOutMore}
+      />
+
       <section className="contact">
-        <h2>Contact</h2>
-        {/* Contact content would go here */}
+        <h2>FOOTER TO BE ADDED</h2>
       </section>
     </div>
   );
