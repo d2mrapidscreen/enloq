@@ -73,10 +73,13 @@ function App() {
           { src: smallBodyIcon, alt: 'Image description' },
           { src: flexibleMobilityIcon, alt: 'Image description' },
           { src: securitySystemIcon, alt: 'Image description' },
+          { src: smallBodyIcon, alt: 'Image description' },
+          { src: flexibleMobilityIcon, alt: 'Image description' },
+          { src: securitySystemIcon, alt: 'Image description' }
         ]} 
-        imagesPerRow={3}
+        imagesPerRow={6}
       />
-      
+
       <Testimonial 
         quote="Within minutes of a test run we were convinced on the The Wombat. The machine is powerful and quiet and you have a lot of power available immediately. With two different drive modes, its quick to unload a trailer and bring to where it's needed. Fits through a gate and is better than using a shovel and wheelbarrow, we can save days of labor"
         author="Blake"

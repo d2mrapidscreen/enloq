@@ -10,19 +10,24 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
-    width: 100%;
+    gap: 0;
+    width: calc(100% - 200px); /* Inset 100px from each side */
+    margin: 0 auto;
   }
   
   .image-item {
-    width: calc((100% / var(--images-per-row)) - 20px);
-    min-width: 120px;
+    flex: 0 0 auto;
+    /* Adding explicit margins for the spacing */
+    margin: 0 40px; 
+    /* Width calculation based on available space */
+    width: calc((100% / 3) - 80px); /* Accounting for both left and right margin */
+    position: relative;
   }
   
   .image-wrapper {
     width: 100%;
     height: 0;
-    padding-bottom: 75%;
+    padding-bottom: 100%; /* Make it square */
     position: relative;
     overflow: hidden;
   }
@@ -33,24 +38,61 @@
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain; /* Change to 'contain' to show full image */
+  }
+  
+  /* Adjust items per row based on prop */
+  .image-grid[data-items-per-row="2"] .image-item {
+    width: calc((100% / 2) - 80px);
+  }
+  
+  .image-grid[data-items-per-row="3"] .image-item {
+    width: calc((100% / 3) - 80px);
+  }
+  
+  .image-grid[data-items-per-row="4"] .image-item {
+    width: calc((100% / 4) - 80px);
+  }
+  
+  .image-grid[data-items-per-row="5"] .image-item {
+    width: calc((100% / 5) - 80px);
   }
   
   /* Responsive adjustments */
   @media (max-width: 1024px) {
+    .image-grid {
+      width: calc(100% - 100px);
+    }
+    
     .image-item {
-      width: calc((100% / 3) - 20px);
+      margin: 0 20px;
+    }
+    
+    .image-grid[data-items-per-row="3"] .image-item,
+    .image-grid[data-items-per-row="4"] .image-item,
+    .image-grid[data-items-per-row="5"] .image-item {
+      width: calc((100% / 3) - 40px);
     }
   }
   
   @media (max-width: 768px) {
+    .image-grid {
+      width: calc(100% - 60px);
+    }
+    
     .image-item {
-      width: calc((100% / 2) - 20px);
+      margin: 0 15px;
+      width: calc((100% / 2) - 30px) !important;
     }
   }
   
   @media (max-width: 480px) {
+    .image-grid {
+      width: calc(100% - 40px);
+    }
+    
     .image-item {
-      width: 100%;
+      margin: 10px 0;
+      width: 100% !important;
     }
   }
