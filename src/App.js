@@ -15,6 +15,9 @@ import FeatureTransparentFullWidth from './components/FeatureTransparentFullWidt
 import loaderBucketImage from './assets/images/Loader_raised_bucket_from_rear.jpg';
 import loaderBucketTransparentBkgImage from './assets/images/Loader_raised_bucket_to_ute.jpg';
 
+import smallBodyIcon from './assets/images/icon_small_body.png';
+import flexibleMobilityIcon from './assets/images/icon_flexible_mobility.png'
+
 function App() {
   const handleFindOutMore = () => {
     // Handle button click action
@@ -56,7 +59,8 @@ function App() {
         content="Designed for Australian conditions, Enloq Loaders® are built tough with superior power and extended battery life. The electric motors deliver precise control in all terrains, while the smart power management system optimizes energy usage for all-day operation."
         image={loaderBucketTransparentBkgImage}
         textPosition="left"
-        imageCaption="Shown: EL800 Series at Hunter Valley Vineyards"
+/*         imageCaption="Shown: EL800 Series at Hunter Valley Vineyards"
+ */        icons={[smallBodyIcon, flexibleMobilityIcon]}
       />
 
       <Testimonial 
