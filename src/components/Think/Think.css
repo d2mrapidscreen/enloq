@@ -1,0 +1,99 @@
+.think-section {
+    width: 100%;
+    background-color: #d1d3d4;
+    padding: 40px 0;
+    position: relative;
+  }
+  
+  .think-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+    position: relative;
+  }
+  
+  .think-logo {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 15px;
+  }
+  
+  .think-logo img {
+    height: 40px;
+    width: auto;
+  }
+  
+  .think-text {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .think-black {
+    color: #000;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .think-green {
+    color: #2fb457;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+  }
+  
+  .think-content {
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+  }
+  
+  .think-content p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0;
+    color: #000;
+  }
+  
+  .green-text {
+    color: #2fb457;
+    font-weight: bold;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .think-text {
+      font-size: 1.8rem;
+    }
+    
+    .think-logo img {
+      height: 30px;
+    }
+    
+    .think-content p {
+      font-size: 0.8rem;
+    }
+  }
+  
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: bold;
+    src: url('../../assets/fonts/Poppins-Bold.ttf')
+  }
+  
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../../assets/fonts/Poppins-Regular.ttf') 
+  }
+  
+  @font-face {
+    font-family: 'Poppins Medium';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../../assets/fonts/Poppins-Medium.ttf') 
+  }

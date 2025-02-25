@@ -3,13 +3,15 @@ import React from "react";
 import "./App.css";
 import Navigation from "./components/Navigation/Navigation";
 import Hero from "./components/Hero/Hero"; 
+import Think from "./components/Think/Think";
 
 function App() {
   return (
     <div className="App">
       <Navigation />
       <Hero /> 
-      
+      <Think />
+
       <section className="about">
         <h2>About</h2>
         <img 
