@@ -1,0 +1,159 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  background-color: #f0f0f0;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Top Logo Bar */
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1400px;
+  background: white;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.top-bar-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+  transition: height 0.3s ease;
+}
+
+.contact-info {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.contact-info a {
+  color: #333;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .top-bar {
+    width: 95%; /* Match App width on mobile */
+  }
+
+  .top-bar-container {
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+  .logo {
+    height: 35px;
+    margin-bottom: 10px;
+  }
+  
+  .contact-info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .contact-info a {
+    margin: 5px 0;
+  }
+}
+
+.App {
+  width: 100%;
+  max-width: 1400px;
+  background: white;
+  padding-top: 80px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .App {
+    width: 95%;
+    padding-top: 120px;
+  }
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 400px;
+  max-height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 75%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: clamp(18px, 2.5vw, 24px);
+  font-weight: bold;
+}
+
+/* Section styles */
+.about, 
+.products, 
+.testimonials, 
+.specifications, 
+.sustainability, 
+.contact {
+  padding: 5% 20px;
+  text-align: center;
+}
+
+.about { background-color: #d8d8d8; }
+.products { background-color: #e8e8e8; }
+.testimonials { background-color: #f0f0f0; }
+.specifications { background-color: #d0d0d0; }
+.sustainability { background-color: #c8c8c8; }
+.contact { background-color: #e0e0e0; }
+
+.about-image {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+}
+
+.about-text {
+  width: 90%;
+  max-width: 800px;
+  margin: 20px auto;
+  font-size: clamp(16px, 1.8vw, 18px);
+  line-height: 1.6;
+  text-align: center;
+}
