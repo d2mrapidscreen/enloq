@@ -1,0 +1,140 @@
+.feature-transparent-section {
+    width: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .feature-transparent-container {
+    display: flex;
+    width: 100%;
+    position: relative;
+  }
+  
+  .feature-transparent-image-container {
+    flex: 1;
+    width: 50%;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .feature-transparent-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .feature-transparent-content-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    z-index: 5;
+  }
+  
+  .feature-transparent-content-inner {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 100px;
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .feature-transparent-content-inner.right {
+    justify-content: flex-end;
+  }
+  
+  .feature-transparent-text-container {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    max-width: 500px;
+    border-radius: 4px;
+  }
+  
+  .feature-transparent-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+    line-height: 1.2;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+    color: white;
+    text-transform: uppercase;
+  }
+  
+  .feature-transparent-content {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: white;
+    margin: 0 0 20px 0;
+  }
+  
+  .feature-transparent-image-caption {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-style: italic;
+    color: white;
+    margin: 10px 0 0 0;
+  }
+  
+  @media (max-width: 1024px) {
+    .feature-transparent-content-inner {
+      padding: 0 60px;
+    }
+    
+    .feature-transparent-title {
+      font-size: 32px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .feature-transparent-container {
+      flex-direction: column;
+    }
+    
+    .feature-transparent-image-container {
+      width: 100%;
+      height: 300px;
+    }
+    
+    .feature-transparent-content-wrapper {
+      position: relative;
+      padding: 40px 0;
+    }
+    
+    .feature-transparent-content-inner {
+      padding: 0 40px;
+      justify-content: center;
+    }
+    
+    .feature-transparent-content-inner.right {
+      justify-content: center;
+    }
+    
+    .feature-transparent-text-container {
+      max-width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .feature-transparent-content-inner {
+      padding: 0 20px;
+    }
+    
+    .feature-transparent-text-container {
+      padding: 30px 20px;
+    }
+    
+    .feature-transparent-title {
+      font-size: 24px;
+    }
+    
+    .feature-transparent-content {
+      font-size: 14px;
+    }
+  }

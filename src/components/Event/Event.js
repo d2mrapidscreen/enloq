@@ -20,12 +20,6 @@ const Event = () => {
       title: 'Event title',
       details: 'Dates and address etc',
       image: '/api/placeholder/300/200'
-    },
-    {
-      id: 4,
-      title: 'Event title',
-      details: 'Dates and address etc',
-      image: '/api/placeholder/300/200'
     }
   ];
 

@@ -9,6 +9,11 @@ import Testimonial from './components/Testimonial/Testimonial';
 import Event from './components/Event/Event';
 import Applications from './components/Applications/Applications';
 import Feature from './components/Feature/Feature';
+import FeatureTransparentFullWidth from './components/FeatureTransparentFullWidth/FeatureTransparentFullWidth';
+
+// Image imports
+import loaderBucketImage from './assets/images/Loader_raised_bucket_from_rear.jpg';
+import loaderBucketTransparentBkgImage from './assets/images/Loader_raised_bucket_to_ute.jpg';
 
 function App() {
   const handleFindOutMore = () => {
@@ -42,8 +47,16 @@ function App() {
         content="Enloq Loaders® are equipped standard with a safety cabin roof ROP's/FOP's (Roll Over Protection, Falling Object Protection) safety belts and in-seat sensors to reduce operator risk. The EL800s spacious and accessible cab is designed for optimal ease of use. The steering column is adjustable in depth and equipped with an LCD screen where all necessary information can be read easily. While using the multifunction joystick, the operator can position the seat with lumbar support making it ergonomically comfortable for all-day operation. Important controls are within easy reach and next to the joystick."
         backgroundColor="#4CAF50"
         textPosition="left"
-        image="/api/placeholder/500/350"
+        image={loaderBucketImage}
         showImage={true}
+      />
+
+      <FeatureTransparentFullWidth
+        title="BUILT FOR TOUGH CONDITIONS"
+        content="Designed for Australian conditions, Enloq Loaders® are built tough with superior power and extended battery life. The electric motors deliver precise control in all terrains, while the smart power management system optimizes energy usage for all-day operation."
+        image={loaderBucketTransparentBkgImage}
+        textPosition="left"
+        imageCaption="Shown: EL800 Series at Hunter Valley Vineyards"
       />
 
       <Testimonial 
@@ -53,8 +66,6 @@ function App() {
         buttonText="FIND OUT MORE"
         onButtonClick={handleFindOutMore}
       />
-
-
 
       <section className="contact">
         <h2>FOOTER TO BE ADDED</h2>
