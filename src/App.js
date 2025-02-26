@@ -11,7 +11,7 @@ import Applications from './components/Applications/Applications';
 import Feature from './components/Feature/Feature';
 import FeatureTransparentFullWidth from './components/FeatureTransparentFullWidth/FeatureTransparentFullWidth';
 import ImageRow from "./components/ImageRow/ImageRow";
-
+import Gallery from "./components/Gallery/Gallery";
 
 // Image imports
 import loaderBucketImage from './assets/images/Loader_raised_bucket_from_rear.jpg';
@@ -72,13 +72,13 @@ function App() {
         images={[
           { src: smallBodyIcon, alt: 'Image description' },
           { src: flexibleMobilityIcon, alt: 'Image description' },
-          { src: securitySystemIcon, alt: 'Image description' },
-          { src: smallBodyIcon, alt: 'Image description' },
-          { src: flexibleMobilityIcon, alt: 'Image description' },
           { src: securitySystemIcon, alt: 'Image description' }
         ]} 
-        imagesPerRow={6}
+        imagesPerRow={3}
       />
+
+      {/* Gallery images are configured within the component code */}
+      <Gallery />
 
       <Testimonial 
         quote="Within minutes of a test run we were convinced on the The Wombat. The machine is powerful and quiet and you have a lot of power available immediately. With two different drive modes, its quick to unload a trailer and bring to where it's needed. Fits through a gate and is better than using a shovel and wheelbarrow, we can save days of labor"

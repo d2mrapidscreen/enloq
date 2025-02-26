@@ -2,17 +2,17 @@ import React from 'react';
 import './ImageRow.css';
 
 const ImageRow = ({ images = [], imagesPerRow = 3 }) => {
-  // If we have more than imagesPerRow images, organize into multiple rows
-  const organizeRows = () => {
-    // Group images into rows of size imagesPerRow
+  // Create rows of images based on imagesPerRow
+  const createRows = () => {
     const rows = [];
     for (let i = 0; i < images.length; i += imagesPerRow) {
+      // Slice the array to get only imagesPerRow items (or fewer for the last row)
       rows.push(images.slice(i, i + imagesPerRow));
     }
     return rows;
   };
 
-  const rows = organizeRows();
+  const rows = createRows();
 
   return (
     <div className="image-row-container">
@@ -20,17 +20,12 @@ const ImageRow = ({ images = [], imagesPerRow = 3 }) => {
         <div 
           key={rowIndex} 
           className="image-grid" 
-          data-items-per-row={imagesPerRow}
+          data-items-per-row={rowImages.length}
         >
           {rowImages.map((image, imageIndex) => (
             <div 
               key={`${rowIndex}-${imageIndex}`} 
-              className="image-item"
-              style={{
-                /* Add style to ensure even spacing between images */
-                marginLeft: imageIndex === 0 ? 0 : '40px',
-                marginRight: imageIndex === rowImages.length - 1 ? 0 : '40px'
-              }}
+              className="image-item" 
             >
               <div className="image-wrapper">
                 <img 

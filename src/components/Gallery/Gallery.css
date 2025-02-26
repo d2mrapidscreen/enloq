@@ -1,0 +1,174 @@
+.gallery-section {
+  width: 100%;
+  padding: 60px 0;
+  background-color: #e6e6e6; /* Updated to match the screenshot's lighter gray */
+}
+
+.gallery-container {
+  width: calc(100% - 200px);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery-header {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.gallery-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.gallery-title-dark {
+  color: #333;
+}
+
+.gallery-title-green {
+  color: #4CAF50;
+}
+
+.gallery-content {
+  max-width: 900px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.gallery-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+  margin: 0;
+}
+
+.gallery-grid-container {
+  width: 100%;
+}
+
+.gallery-grid {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.gallery-grid:last-child {
+  margin-bottom: 0;
+}
+
+.gallery-item {
+  flex: 1;
+  margin: 0 10px;
+  max-width: calc(25% - 20px);
+  position: relative;
+}
+
+.gallery-image-wrapper {
+  border: 4px solid white;
+  border-radius: 16px; /* Increased border radius for more rounded corners */
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  padding-bottom: 75%; /* 4:3 aspect ratio */
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Custom tooltip styling */
+.gallery-tooltip {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  text-align: center;
+  z-index: 100;
+  white-space: nowrap;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  pointer-events: none; /* Make sure tooltip doesn't interfere with mouse events */
+}
+
+.gallery-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.8) transparent transparent transparent;
+}
+
+/* Hover effect for images */
+.gallery-item:hover .gallery-image-wrapper {
+  transform: translateY(-5px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .gallery-container {
+    width: calc(100% - 100px);
+  }
+  
+  .gallery-title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-container {
+    width: calc(100% - 60px);
+  }
+  
+  .gallery-grid {
+    flex-wrap: wrap;
+  }
+  
+  .gallery-item {
+    max-width: calc(50% - 20px);
+    margin-bottom: 20px;
+  }
+  
+  .gallery-title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-container {
+    width: calc(100% - 40px);
+  }
+  
+  .gallery-item {
+    max-width: 100%;
+    margin: 0 0 20px 0;
+  }
+  
+  .gallery-title {
+    font-size: 24px;
+  }
+  
+  .gallery-text {
+    font-size: 14px;
+  }
+}

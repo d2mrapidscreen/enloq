@@ -1,98 +1,100 @@
 .image-row-container {
-    width: 100%;
-    max-width: 1200px;
-    padding: 20px 0;
-    margin: 0 auto;
-    background-color: #333333;
-  }
-  
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px 0;
+  margin: 0 auto;
+  background-color: #333333;
+}
+
+.image-grid {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - 200px); /* Inset 100px from each side */
+  margin: 0 auto;
+  /* Add margin to create space between rows */
+  margin-bottom: 60px;
+}
+
+/* Remove margin from the last row */
+.image-grid:last-child {
+  margin-bottom: 0;
+}
+
+.image-item {
+  flex: 0 0 auto;
+  /* Distribute space evenly within the row */
+  width: calc(100% / var(--items-per-row, 3));
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.image-wrapper {
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%; /* Make it square */
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Border removed as requested */
+}
+
+.grid-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Adjust items per row based on data attribute */
+.image-grid[data-items-per-row="2"] {
+  --items-per-row: 2;
+}
+
+.image-grid[data-items-per-row="3"] {
+  --items-per-row: 3;
+}
+
+.image-grid[data-items-per-row="4"] {
+  --items-per-row: 4;
+}
+
+.image-grid[data-items-per-row="5"] {
+  --items-per-row: 5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
   .image-grid {
-    display: flex;
+    width: calc(100% - 100px);
+  }
+}
+
+@media (max-width: 768px) {
+  .image-grid {
+    width: calc(100% - 60px);
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 0;
-    width: calc(100% - 200px); /* Inset 100px from each side */
-    margin: 0 auto;
   }
   
   .image-item {
-    flex: 0 0 auto;
-    /* Adding explicit margins for the spacing */
-    margin: 0 40px; 
-    /* Width calculation based on available space */
-    width: calc((100% / 3) - 80px); /* Accounting for both left and right margin */
-    position: relative;
+    width: calc(50% - 20px);
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-grid {
+    width: calc(100% - 40px);
   }
   
-  .image-wrapper {
+  .image-item {
     width: 100%;
-    height: 0;
-    padding-bottom: 100%; /* Make it square */
-    position: relative;
-    overflow: hidden;
   }
-  
-  .grid-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: contain; /* Change to 'contain' to show full image */
-  }
-  
-  /* Adjust items per row based on prop */
-  .image-grid[data-items-per-row="2"] .image-item {
-    width: calc((100% / 2) - 80px);
-  }
-  
-  .image-grid[data-items-per-row="3"] .image-item {
-    width: calc((100% / 3) - 80px);
-  }
-  
-  .image-grid[data-items-per-row="4"] .image-item {
-    width: calc((100% / 4) - 80px);
-  }
-  
-  .image-grid[data-items-per-row="5"] .image-item {
-    width: calc((100% / 5) - 80px);
-  }
-  
-  /* Responsive adjustments */
-  @media (max-width: 1024px) {
-    .image-grid {
-      width: calc(100% - 100px);
-    }
-    
-    .image-item {
-      margin: 0 20px;
-    }
-    
-    .image-grid[data-items-per-row="3"] .image-item,
-    .image-grid[data-items-per-row="4"] .image-item,
-    .image-grid[data-items-per-row="5"] .image-item {
-      width: calc((100% / 3) - 40px);
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .image-grid {
-      width: calc(100% - 60px);
-    }
-    
-    .image-item {
-      margin: 0 15px;
-      width: calc((100% / 2) - 30px) !important;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .image-grid {
-      width: calc(100% - 40px);
-    }
-    
-    .image-item {
-      margin: 10px 0;
-      width: 100% !important;
-    }
-  }
+}
