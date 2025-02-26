@@ -38,10 +38,18 @@
 }
 
 .intro-title {
-  color: #4CAF50; /* Green color as seen in your screenshot */
   font-size: 2rem;
   margin-bottom: 15px;
   text-transform: uppercase;
+}
+
+/* Added support for highlighted titles */
+.title-primary {
+  color: #333333; /* Dark color for primary part */
+}
+
+.title-highlight {
+  color: #4CAF50; /* Green color for highlighted part */
 }
 
 .intro-content {

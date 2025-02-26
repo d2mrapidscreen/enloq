@@ -160,7 +160,9 @@ function App() {
       <ImageRow 
         introSections={[
           {
-            title: "FUEL CONSUMPTION",
+            titlePart1: "FUEL",
+            primaryColor: "#fff",
+            titlePart2: "CONSUMPTION",
             content: "A comparison of the operating costs of the all-electric EL800s and EL400s Wombat wheel loaders and competing conventional diesel skid steer loaders."
           }]}
         customComponent={{

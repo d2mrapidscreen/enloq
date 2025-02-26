@@ -5,10 +5,12 @@ const ImageRow = ({
   images = [], 
   imagesPerRow = 3,
   headerImage = null, // Image to display at the top before intro sections
-  introSections = [], // Array of intro sections, each with title and content
+  introSections = [], // Array of intro sections, each with title and content (now supports highlights)
   singleImage = null, // New: Single image to display
   youtubeVideo = null, // New: YouTube video to embed
-  customComponent = null // New: Custom React component to render
+  customComponent = null, // New: Custom React component to render
+  titlePrimaryColor = null, // Override for primary title color
+  titleHighlightColor = null // Override for highlight title color
 }) => {
   // State for modal/popup
   const [modalImage, setModalImage] = useState(null);
@@ -137,8 +139,26 @@ const ImageRow = ({
         <div className="intro-sections">
           {introSections.map((section, index) => (
             <div key={index} className="intro-section">
-              {section.title && (
-                <h2 className="intro-title">{section.title}</h2>
+              {(section.title || section.titlePart1 || section.titlePart2) && (
+                <h2 className="intro-title">
+                  {section.title && section.title}
+                  {(section.titlePart1 || section.titlePart2) && (
+                    <>
+                      <span 
+                        className="title-primary"
+                        style={titlePrimaryColor || section.primaryColor ? { color: titlePrimaryColor || section.primaryColor } : {}}
+                      >
+                        {section.titlePart1} 
+                      </span>
+                      <span 
+                        className="title-highlight"
+                        style={titleHighlightColor || section.highlightColor ? { color: titleHighlightColor || section.highlightColor } : {}}
+                      >
+                        {section.titlePart2}
+                      </span>
+                    </>
+                  )}
+                </h2>
               )}
               {section.content && (
                 <p className="intro-content">{section.content}</p>
