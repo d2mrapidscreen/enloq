@@ -1,9 +1,22 @@
 {
   "files": {
-    "main.css": "/enloq/static/css/main.07d6830e.css",
-    "main.js": "/enloq/static/js/main.a0c00cd5.js",
+    "main.css": "/enloq/static/css/main.59566398.css",
+    "main.js": "/enloq/static/js/main.60d59f13.js",
     "static/media/Loader_raised_bucket_to_ute.jpg": "/enloq/static/media/Loader_raised_bucket_to_ute.e61914bdc80cc23e16e7.jpg",
     "static/media/Loader_raised_bucket_from_rear.jpg": "/enloq/static/media/Loader_raised_bucket_from_rear.2d449ae248ab912b0496.jpg",
+    "static/media/attachment_10.png": "/enloq/static/media/attachment_10.58b8eb93aedb19eeef72.png",
+    "static/media/attachment_6.png": "/enloq/static/media/attachment_6.682eb868b5c7fea69a2f.png",
+    "static/media/attachment_7.png": "/enloq/static/media/attachment_7.67fc84e1d43c5147ae77.png",
+    "static/media/attachment_9.png": "/enloq/static/media/attachment_9.e87eebefe01ec47fb4ae.png",
+    "static/media/attachment_12.png": "/enloq/static/media/attachment_12.cfb8d2d36686b0e356cd.png",
+    "static/media/attachment_3.png": "/enloq/static/media/attachment_3.fcaf2916736fb38e40b7.png",
+    "static/media/attachment_1.png": "/enloq/static/media/attachment_1.f0dbcd458cfc54b8eb7b.png",
+    "static/media/attachment_4.png": "/enloq/static/media/attachment_4.5d3dd01c2cf71f77d0dc.png",
+    "static/media/attachment_5.png": "/enloq/static/media/attachment_5.99095839f279346cdddc.png",
+    "static/media/attachment_11.png": "/enloq/static/media/attachment_11.7f3604f81523c8bef076.png",
+    "static/media/attachment_8.png": "/enloq/static/media/attachment_8.b371a1e7bcbf0ee998ba.png",
+    "static/media/SRDC_Enloq_Miniloader_EL800s.png": "/enloq/static/media/SRDC_Enloq_Miniloader_EL800s.f15428639b50cb90039d.png",
+    "static/media/attachment_2.png": "/enloq/static/media/attachment_2.790916cfe0495c82f02c.png",
     "static/media/SRDC_Enloq_Group_photo.png": "/enloq/static/media/SRDC_Enloq_Group_photo.82550be7fd35ee1cf989.png",
     "static/media/Forest.png": "/enloq/static/media/Forest.92c9b037ba8984010e05.png",
     "static/media/Winery.png": "/enloq/static/media/Winery.2fd4ac32f388879b3389.png",
@@ -13,19 +26,21 @@
     "static/media/Poppins-Light.ttf": "/enloq/static/media/Poppins-Light.7641a0f76ca9ef6c252c.ttf",
     "static/media/Poppins-Regular.ttf": "/enloq/static/media/Poppins-Regular.35d26b781dc5fda684cc.ttf",
     "static/media/Poppins-Medium.ttf": "/enloq/static/media/Poppins-Medium.673ed42382ab264e0bf5.ttf",
-    "static/media/SRDC_Enloq_Miniloader_EL800s.png": "/enloq/static/media/SRDC_Enloq_Miniloader_EL800s.1064e6e80f409837e6a7.png",
     "static/media/Poppins-Bold.ttf": "/enloq/static/media/Poppins-Bold.cdb29a5d7ccf57ff05a3.ttf",
     "static/media/Poppins-ExtraBold.ttf": "/enloq/static/media/Poppins-ExtraBold.01849ee091e1762a5dd5.ttf",
     "static/media/Timber.png": "/enloq/static/media/Timber.cea70245f300758147be.png",
-    "static/media/enloq-tagline.png": "/enloq/static/media/enloq-tagline.c971bb244c66cee6ae7a.png",
-    "static/media/icon_small_body.png": "/enloq/static/media/icon_small_body.a0fe5a415274d9e60f61.png",
-    "static/media/icon_flexible_mobility.png": "/enloq/static/media/icon_flexible_mobility.28a548f25c0ba6056229.png",
+    "static/media/enloq-tagline.png": "/enloq/static/media/enloq-tagline.0c60aff20a6bf82638be.png",
+    "static/media/icon_security_system.png": "/enloq/static/media/icon_security_system.d1b17582d9c7260d3499.png",
+    "static/media/icon_zero_emissions.png": "/enloq/static/media/icon_zero_emissions.c0354777f903c8db64b6.png",
+    "static/media/icon_small_body.png": "/enloq/static/media/icon_small_body.ca8284a513e5933cd5e6.png",
+    "static/media/icon_flexible_mobility.png": "/enloq/static/media/icon_flexible_mobility.56ca4b43f5d1ec87c21f.png",
+    "static/media/icon_loader_leaf_green.png": "/enloq/static/media/icon_loader_leaf_green.895ad394b413d74c73f0.png",
     "index.html": "/enloq/index.html",
-    "main.07d6830e.css.map": "/enloq/static/css/main.07d6830e.css.map",
-    "main.a0c00cd5.js.map": "/enloq/static/js/main.a0c00cd5.js.map"
+    "main.59566398.css.map": "/enloq/static/css/main.59566398.css.map",
+    "main.60d59f13.js.map": "/enloq/static/js/main.60d59f13.js.map"
   },
   "entrypoints": [
-    "static/css/main.07d6830e.css",
-    "static/js/main.a0c00cd5.js"
+    "static/css/main.59566398.css",
+    "static/js/main.60d59f13.js"
   ]
 }
