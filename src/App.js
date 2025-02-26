@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import Navigation from "./components/Navigation/Navigation";
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 import Hero from "./components/Hero/Hero"; 
 import Think from "./components/Think/Think";
 import Loader from "./components/Loader/Loader";
@@ -260,6 +261,8 @@ function App() {
         <Footer />
       </section>
 
+      <ScrollToTop />
+      
     </div>
   );
 }
