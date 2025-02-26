@@ -45,7 +45,11 @@ function App() {
     <div className="App">
       <Navigation />
       <Hero /> 
-      <Think />
+
+{/*       <Think />
+ */}      
+      <ThinkElectricSection />
+
       <Loader />
       <Loaderpoints />
     
@@ -56,7 +60,6 @@ function App() {
         buttonText="FIND OUT MORE"
         onButtonClick={handleFindOutMore}
       />
-
    
       <Event />
       <Applications />
@@ -134,7 +137,6 @@ function App() {
         imagesPerRow={3}
       />
 
-      <ThinkElectricSection />
       <EnloqLoadersSection />
 
       <Testimonial 

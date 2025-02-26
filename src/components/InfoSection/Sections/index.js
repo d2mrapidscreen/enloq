@@ -1,9 +1,11 @@
-// Example 1: "Think Electric" section
+// src/components/Sections/index.js
 import React from 'react';
 import InfoSection from '../InfoSection';
 import leafLogo from '../../../assets/images/icon_loader_leaf_green.png';
+import enloqLogo from '../../../assets/images/enloq_loaders_corp_logo.png';
 
 function ThinkElectricSection() {
+  // HTML content with pre-formatted highlight spans
   const thinkContent = `
     The <span class="highlight-text">Enloq Loaders® E.V.</span> series are high capacity articulated wheel loaders, material dumpers 
     and all-terrain fork lifts in different size configurations that are 100% electric. Our entire range 
@@ -28,8 +30,8 @@ function ThinkElectricSection() {
 
 // Example 2: "Enloq Loaders" section
 function EnloqLoadersSection() {
-  const enloqLogo = '/path/to/enloq-logo.png'; // Replace with actual path
   
+  // HTML content with multiple paragraphs
   const enloqContent = `
     <p>Enloq Loaders® focuses on the development and implementation of electric equipment for 
     industrial applications in support of a greener efficient work practices.</p>
@@ -47,17 +49,40 @@ function EnloqLoadersSection() {
 
   return (
     <InfoSection
-      backgroundColor="#f5f5f5"
+      backgroundColor="#d1d3d4"
       logo={enloqLogo}
-      titlePrefix="enloq"
+      titlePrefix=""
       titleColorPrefix="#000"
-      titleSuffix="."
+      titleSuffix=""
       titleColorSuffix="#2fb457"
-      content={<div dangerouslySetInnerHTML={{ __html: enloqContent }} />}
-      highlightTerms={["Enloq Loaders®"]}
+      content={enloqContent}
+      highlightColor="#2fb457"
       logoAlt="Enloq Logo"
     />
   );
 }
 
-export { ThinkElectricSection, EnloqLoadersSection };
+// Example 3: Auto-highlighting without manual HTML
+function EnloqFeatureSection() {
+  // Plain text content, let the component handle the highlighting
+  const featureContent = `
+    Enloq Loaders® provides innovative electric solutions for industrial applications.
+    Our equipment is designed with sustainability and performance in mind.
+    Contact us today to learn more about how Enloq Loaders® can transform your operations.
+  `;
+
+  return (
+    <InfoSection
+      backgroundColor="#f9f9f9"
+      titlePrefix="Feature"
+      titleColorPrefix="#000"
+      titleSuffix="Highlights"
+      titleColorSuffix="#2fb457"
+      content={featureContent}
+      highlightTerms={["Enloq Loaders®"]}
+      highlightColor="#2fb457"
+    />
+  );
+}
+
+export { ThinkElectricSection, EnloqLoadersSection, EnloqFeatureSection };
