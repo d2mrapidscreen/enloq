@@ -3,6 +3,7 @@ import React from 'react';
 import './Navigation.css';
 
 import logoImage from '../../assets/images/enloq_loaders_nav_logo.png'; 
+import phoneImage from '../../assets/images/Nav_phone_icon.png'; 
 
 function Navigation() {
   return (
@@ -21,6 +22,7 @@ function Navigation() {
 
       {/* Phone number on the right */}
       <div className="phone-container">
+        <img src={phoneImage} alt="phone" className="logo-image" />
         <span className="phone-number">1300 993 563</span>
       </div>
     </nav>

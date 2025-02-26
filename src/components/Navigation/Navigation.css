@@ -29,6 +29,7 @@
 .phone-container {
   display: flex;
   align-items: center;
+  gap: 10px; /* Add space between phone icon and number */
 }
 
 .phone-number {
