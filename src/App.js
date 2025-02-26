@@ -36,6 +36,8 @@ import dashboardImage from './assets/images/EV_dashbrd.png'
 import enloqTagline from './assets/images/enloq-tagline.png';
 
 import downloadPdfImage from './assets/images/download_pdf.png'
+import downloadPdfImageBig from './assets/images/universe.webp'
+import downloadPdfFile1 from './assets/pdf/website_layout.pdf'
 
 
 function App() {
@@ -60,13 +62,29 @@ function App() {
       <ImageRow 
         introSections={[
           {
-            title: "Download",
-            content: "The place to get your downloads!"
+            title: "Technical Details",
+            content: "White papers, specifications and other details."
           }
         ]}
         images={[
-          { src: downloadPdfImage, alt: 'Download 1' },
-          { src: downloadPdfImage, alt: 'Download 2' },
+          { src: downloadPdfImage, 
+            alt: 'Download 1',
+            alt: "Image 2",
+            action: {
+              type: "download",
+              url: downloadPdfFile1, // File to download (optional, defaults to image src)
+              filename: "document-name.pdf", // Suggested filename (optional)
+              tooltip: "Click to download PDF"
+            }},
+          { src: downloadPdfImage, 
+            alt: 'Specifications',
+            action: {
+              type: "popup",  // Shows enlarged image in popup
+              largeImageSrc: downloadPdfImageBig, // Optional: use different image for popup
+              tooltip: "Click to enlarge"
+            },
+            caption: "This is an optional caption for the popup view",
+           },
           { src: downloadPdfImage, alt: 'Dashboard 3' }
         ]} 
         imagesPerRow={3}

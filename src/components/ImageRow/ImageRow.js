@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './ImageRow.css';
 
 const ImageRow = ({ 
@@ -7,6 +7,9 @@ const ImageRow = ({
   headerImage = null, // Image to display at the top before intro sections
   introSections = [] // Array of intro sections, each with title and content
 }) => {
+  // State for modal/popup
+  const [modalImage, setModalImage] = useState(null);
+
   // Create rows of images based on imagesPerRow
   const createRows = () => {
     const rows = [];
@@ -15,6 +18,36 @@ const ImageRow = ({
       rows.push(images.slice(i, i + imagesPerRow));
     }
     return rows;
+  };
+
+  // Handle image click based on action type
+  const handleImageClick = (image) => {
+    if (!image.action) return; // No action defined
+    
+    switch (image.action.type) {
+      case 'popup':
+        // Open the image in a modal
+        setModalImage(image);
+        break;
+      case 'download':
+        // Create a link element and trigger download
+        const link = document.createElement('a');
+        link.href = image.action.url || image.src;
+        link.download = image.action.filename || 'download';
+        link.target = '_blank';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        break;
+      default:
+        // Do nothing for undefined actions or 'none' type
+        break;
+    }
+  };
+
+  // Close the modal
+  const closeModal = () => {
+    setModalImage(null);
   };
 
   const rows = createRows();
@@ -60,7 +93,11 @@ const ImageRow = ({
               key={`${rowIndex}-${imageIndex}`} 
               className="image-item" 
             >
-              <div className="image-wrapper">
+              <div 
+                className={`image-wrapper ${image.action ? 'clickable' : ''}`}
+                onClick={() => handleImageClick(image)}
+                title={image.action ? image.action.tooltip || '' : ''}
+              >
                 <img 
                   src={image.src} 
                   alt={image.alt || `Image ${imageIndex + 1}`} 
@@ -71,6 +108,23 @@ const ImageRow = ({
           ))}
         </div>
       ))}
+
+      {/* Modal/Popup for enlarged images */}
+      {modalImage && (
+        <div className="image-modal-overlay" onClick={closeModal}>
+          <div className="image-modal-content" onClick={(e) => e.stopPropagation()}>
+            <img 
+              src={modalImage.action.largeImageSrc || modalImage.src} 
+              alt={modalImage.alt || 'Enlarged image'} 
+              className="modal-image" 
+            />
+            {modalImage.caption && (
+              <p className="modal-caption">{modalImage.caption}</p>
+            )}
+            <button className="modal-close-button" onClick={closeModal}>×</button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
