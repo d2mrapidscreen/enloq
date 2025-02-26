@@ -7,7 +7,8 @@ import Loader from "./components/Loader/Loader";
 import Loaderpoints from "./components/LoaderPoints/LoaderPoints";
 import Testimonial from './components/Testimonial/Testimonial';
 import Event from './components/Event/Event';
-import Applications from './components/Applications/Applications';
+import Applications from './components/Sections/Applications';
+import SupportServices from './components/Sections/SupportServices';
 import Feature from './components/Feature/Feature';
 import FeatureTransparentFullWidth from './components/FeatureTransparentFullWidth/FeatureTransparentFullWidth';
 import ImageRow from "./components/ImageRow/ImageRow";
@@ -97,6 +98,7 @@ function App() {
  */        icons={[euroQuickHitchLogo, securitySystemIcon, quickChangeIcon]}
       />
 
+      <SupportServices />
 
       <Testimonial 
         quote="Within minutes of a test run we were convinced on the The Wombat. The machine is powerful and quiet and you have a lot of power available immediately. With two different drive modes, its quick to unload a trailer and bring to where it's needed. Fits through a gate and is better than using a shovel and wheelbarrow, we can save days of labor"
