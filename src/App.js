@@ -23,6 +23,11 @@ import securitySystemIcon from './assets/images/icon_security_system.png'
 import quickChangeIcon from './assets/images/icon_quick_change.png'
 import euroQuickHitchLogo from './assets/images/EQH_logo.png'
 
+import kneeControllerImage from './assets/images/Knee_controller.png'
+import tractorLightImage from './assets/images/Light_closeup.png'
+import dashboardImage from './assets/images/EV_dashbrd.png'
+
+
 function App() {
   const handleFindOutMore = () => {
     // Handle button click action
@@ -71,9 +76,9 @@ function App() {
 
       <ImageRow 
         images={[
-          { src: smallBodyIcon, alt: 'Image description' },
-          { src: flexibleMobilityIcon, alt: 'Image description' },
-          { src: securitySystemIcon, alt: 'Image description' }
+          { src: kneeControllerImage, alt: 'Easy Control Image' },
+          { src: tractorLightImage, alt: 'Lighting Image' },
+          { src: dashboardImage, alt: 'Dashboard Image' }
         ]} 
         imagesPerRow={3}
       />
