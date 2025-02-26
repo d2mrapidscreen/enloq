@@ -30,6 +30,7 @@ import euroQuickHitchLogo from './assets/images/EQH_logo.png'
 import kneeControllerImage from './assets/images/Knee_controller.png'
 import tractorLightImage from './assets/images/Light_closeup.png'
 import dashboardImage from './assets/images/EV_dashbrd.png'
+import enloqTagline from './assets/images/enloq-tagline.png';
 
 
 function App() {
@@ -107,6 +108,29 @@ function App() {
         title="THE ENLOQ RANGE"
         titleHighlight="RANGE"
         content="Explore our complete range of high-performance machines designed for various applications."
+      />
+
+      <ImageRow
+        headerImage={{ 
+          src: enloqTagline, 
+          alt: '100% Electric + 100% Work' 
+        }}
+        introSections={[
+          {
+            title: "THE FUTURE IS ELECTRIC",
+            content: "The demand for compact electric EV equipment is an unstoppable trend. With Enloq Loaders®, our goal to be a global, reliable partner with expertise in the design and development of electric equipment. We are aimed at developing an electric version in different sizes for each category of wheel loaders, all terrain forklifts and material dumpers."
+          },
+          {
+            title: "DIRECT SUPPORT",
+            content: "At Enloq Loaders® we like to be close to our customers and provide the machines, service and parts that you demand. All supported by a team of experts from the head office of Enloq loaders® in West Gosford, NSW, Australia."
+          }
+        ]}
+        images={[
+          { src: kneeControllerImage, alt: 'Easy Control Image' },
+          { src: tractorLightImage, alt: 'Lighting Image' },
+          { src: dashboardImage, alt: 'Dashboard Image' }
+        ]}
+        imagesPerRow={3}
       />
 
       <Testimonial 

@@ -4,8 +4,54 @@
   padding: 20px 0;
   margin: 0 auto;
   background-color: #333333;
+  color: #ffffff;
 }
 
+/* Header image styling */
+.header-image-container {
+  width: calc(100% - 200px);
+  margin: 20px auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.header-image {
+  max-width: 100%;
+  height: auto;
+  max-height: 150px; /* Adjust based on your needs */
+}
+
+/* Introduction sections styling */
+.intro-sections {
+  width: calc(100% - 200px);
+  margin: 0 auto 40px auto;
+  text-align: center;
+}
+
+.intro-section {
+  margin-bottom: 30px;
+}
+
+.intro-section:last-child {
+  margin-bottom: 0;
+}
+
+.intro-title {
+  color: #4CAF50; /* Green color as seen in your screenshot */
+  font-size: 2rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.intro-content {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+/* Original image grid styling */
 .image-grid {
   display: flex;
   flex-wrap: nowrap;
@@ -39,7 +85,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* Border removed as requested */
 }
 
 .grid-image {
@@ -72,14 +117,17 @@
 
 /* Responsive adjustments */
 @media (max-width: 1024px) {
-  .image-grid {
+  .image-grid, .intro-sections, .header-image-container {
     width: calc(100% - 100px);
   }
 }
 
 @media (max-width: 768px) {
-  .image-grid {
+  .image-grid, .intro-sections, .header-image-container {
     width: calc(100% - 60px);
+  }
+  
+  .image-grid {
     flex-wrap: wrap;
   }
   
@@ -87,14 +135,26 @@
     width: calc(50% - 20px);
     margin-bottom: 20px;
   }
+  
+  .intro-title {
+    font-size: 1.75rem;
+  }
 }
 
 @media (max-width: 480px) {
-  .image-grid {
+  .image-grid, .intro-sections, .header-image-container {
     width: calc(100% - 40px);
+  }
+  
+  .header-image {
+    max-height: 100px; /* Smaller on mobile */
   }
   
   .image-item {
     width: 100%;
+  }
+  
+  .intro-title {
+    font-size: 1.5rem;
   }
 }
