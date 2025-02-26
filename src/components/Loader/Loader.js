@@ -11,6 +11,7 @@ function Loader() {
             src={require("../../assets/images/SRDC_Enloq_Miniloader_EL800s.png")} 
             alt="Enloq Miniloader EL800s" 
             className="loader-image" 
+            style={{ width: '100%', height: '100%', maxWidth: '100%', margin: '0 auto' }}
           />
           
           {/* Numbered circles with arrows */}

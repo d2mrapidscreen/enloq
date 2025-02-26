@@ -2,7 +2,7 @@
 .loader-section {
   padding: 2rem 0;
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 100%; /* Changed from 1200px to allow full image width */
   display: flex;
   justify-content: center;
 }
@@ -12,21 +12,25 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  max-width: 800px;
+  max-width: 1200px; /* Increased from 800px to match desired image width */
   width: 100%;
 }
 
 .loader-image-container {
   position: relative;
   width: 100%;
-  max-width: 800px;
+  max-width: 800px; 
   margin-bottom: 2rem;
+  display: flex;
+  justify-content: center; /* Center the image within container */
 }
 
 .loader-image {
   width: 100%;
   height: auto;
   display: block;
+  max-height: 800px; /* Added to respect desired height */
+  object-fit: contain; /* Ensures the image maintains aspect ratio */
 }
 
 /* Number markers styling */
@@ -264,8 +268,8 @@
 /* Responsive adjustments */
 @media (min-width: 768px) {
   .loader-container {
-    flex-direction: row;
-    align-items: flex-start;
+    flex-direction: column; /* Changed from row to keep image centered */
+    align-items: center;
     gap: 2rem;
   }
   
@@ -276,12 +280,12 @@
   
   .loader-details {
     flex: 1;
-    text-align: left;
+    text-align: center; /* Changed from left to keep centered */
     padding-top: 2rem;
   }
   
   .loader-features {
-    justify-content: flex-start;
+    justify-content: center; /* Changed from flex-start to keep centered */
   }
 }
 
