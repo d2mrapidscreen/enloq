@@ -20,7 +20,8 @@ import loaderBucketTransparentBkgImage from './assets/images/Loader_raised_bucke
 import smallBodyIcon from './assets/images/icon_small_body.png';
 import flexibleMobilityIcon from './assets/images/icon_flexible_mobility.png'
 import securitySystemIcon from './assets/images/icon_security_system.png'
-
+import quickChangeIcon from './assets/images/icon_quick_change.png'
+import euroQuickHitchLogo from './assets/images/EQH_logo.png'
 
 function App() {
   const handleFindOutMore = () => {
@@ -79,6 +80,16 @@ function App() {
 
       {/* Gallery images are configured within the component code */}
       <Gallery />
+
+      <FeatureTransparentFullWidth
+        title="Quick Coupler Standard"
+        content="The Enloq® models are equipped with a hydraulic Euro quick coupler as standard. This makes it possible to change attachments safely and within seconds from within the cab."
+        image={loaderBucketTransparentBkgImage}
+        textPosition="left"
+/*         imageCaption="Shown: EL800 Series at Hunter Valley Vineyards"
+ */        icons={[euroQuickHitchLogo, securitySystemIcon, quickChangeIcon]}
+      />
+
 
       <Testimonial 
         quote="Within minutes of a test run we were convinced on the The Wombat. The machine is powerful and quiet and you have a lot of power available immediately. With two different drive modes, its quick to unload a trailer and bring to where it's needed. Fits through a gate and is better than using a shovel and wheelbarrow, we can save days of labor"
