@@ -32,7 +32,10 @@ import euroQuickHitchLogo from './assets/images/EQH_logo.png'
 import kneeControllerImage from './assets/images/Knee_controller.png'
 import tractorLightImage from './assets/images/Light_closeup.png'
 import dashboardImage from './assets/images/EV_dashbrd.png'
+
 import enloqTagline from './assets/images/enloq-tagline.png';
+
+import downloadPdfImage from './assets/images/download_pdf.png'
 
 
 function App() {
@@ -53,7 +56,22 @@ function App() {
 
       <Loader />
       <Loaderpoints />
-    
+
+      <ImageRow 
+        introSections={[
+          {
+            title: "Download",
+            content: "The place to get your downloads!"
+          }
+        ]}
+        images={[
+          { src: downloadPdfImage, alt: 'Download 1' },
+          { src: downloadPdfImage, alt: 'Download 2' },
+          { src: downloadPdfImage, alt: 'Dashboard 3' }
+        ]} 
+        imagesPerRow={3}
+      />
+
       <Testimonial 
         quote="We see a big financial gain with near zero hourly running costs and with no emissions, we are not breathing diesel particulates from owning electric machines anymore. Its better for our staff"
         author="Tony"

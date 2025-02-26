@@ -28,7 +28,6 @@ function ThinkElectricSection() {
   );
 }
 
-// Example 2: "Enloq Loaders" section
 function EnloqLoadersSection() {
   
   // HTML content with multiple paragraphs
@@ -62,7 +61,6 @@ function EnloqLoadersSection() {
   );
 }
 
-// Example 3: Auto-highlighting without manual HTML
 function EnloqFeatureSection() {
   // Plain text content, let the component handle the highlighting
   const featureContent = `
