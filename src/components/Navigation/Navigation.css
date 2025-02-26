@@ -37,9 +37,22 @@
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
 }
 
-/* Navigation Links Styles */
+.phone-number:hover {
+  transform: scale(1.05);
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+/* Add a subtle indication that it's clickable */
+.phone-container {
+  position: relative;
+  cursor: pointer;
+}
 
 /* Logo Image Styles */
 .logo-image {
@@ -61,11 +74,46 @@
   font-weight: 300;
   text-decoration: none;
   text-transform: uppercase;
-  transition: opacity 0.3s ease;
+  transition: all 0.3s ease;
+  position: relative;
+  padding-bottom: 3px;
 }
 
 .nav-link:hover {
   opacity: 0.8;
+}
+
+/* Active link indicator */
+.nav-link.active {
+  font-weight: 500;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #2fb457;
+  transform: scaleX(1);
+}
+
+/* Hover animation for non-active links */
+.nav-link:not(.active)::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #2fb457;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.nav-link:not(.active):hover::after {
+  transform: scaleX(1);
 }
 
 /* Social Icons Container */
@@ -95,23 +143,41 @@
   opacity: 1;
 }
 
-/* Responsive design */
+/* Responsive design - IMPROVED */
 @media (max-width: 768px) {
   .navigation-bar {
     flex-direction: column;
     height: auto;
-    padding: 15px;
-    gap: 15px;
+    padding: 8px; /* Reduced padding */
+    gap: 8px; /* Reduced gap */
+  }
+  
+  .logo-container {
+    margin-bottom: 4px; /* Small space after logo */
   }
 
   .nav-links {
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
+    flex-direction: row; /* Keep links in a row for compact layout */
+    justify-content: center;
+    gap: 12px; /* Reduced gap between links */
+    width: 100%;
+    margin: 4px 0; /* Reduced margin */
+  }
+  
+  .nav-link {
+    font-size: 11px; /* Slightly smaller font */
   }
 
-  .social-icons {
-    justify-content: center;
-    margin-top: 10px;
+  .phone-container {
+    margin-top: 4px; /* Small space before phone */
+  }
+  
+  /* For very small screens, stack the nav links */
+  @media (max-width: 480px) {
+    .nav-links {
+      flex-direction: column;
+      align-items: center;
+      gap: 6px; /* Even smaller gap for vertical layout */
+    }
   }
 }

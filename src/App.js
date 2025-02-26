@@ -61,36 +61,39 @@ function App() {
       <Loader />
       <Loaderpoints />
 
-      <ImageRow 
-        introSections={[
-          {
-            title: "Technical Details",
-            content: "White papers, specifications and other details."
-          }
-        ]}
-        images={[
-          { src: downloadPdfImage, 
-            alt: 'Download 1',
-            alt: "Image 2",
-            action: {
-              type: "download",
-              url: downloadPdfFile1, // File to download (optional, defaults to image src)
-              filename: "document-name.pdf", // Suggested filename (optional)
-              tooltip: "Click to download PDF"
-            }},
-          { src: downloadPdfImage, 
-            alt: 'Specifications',
-            action: {
-              type: "popup",  // Shows enlarged image in popup
-              largeImageSrc: downloadPdfImageBig, // Optional: use different image for popup
-              tooltip: "Click to enlarge"
+      <section id="downloads">
+        <ImageRow 
+          introSections={[
+            {
+              title: "Technical Details",
+              content: "White papers, specifications and other details."
+            }
+          ]}
+          images={[
+            { src: downloadPdfImage, 
+              alt: 'Download 1',
+              alt: "Image 2",
+              action: {
+                type: "download",
+                url: downloadPdfFile1, // File to download (optional, defaults to image src)
+                filename: "document-name.pdf", // Suggested filename (optional)
+                tooltip: "Click to download PDF"
+              }},
+            { src: downloadPdfImage, 
+              alt: 'Specifications',
+              action: {
+                type: "popup",  // Shows enlarged image in popup
+                largeImageSrc: downloadPdfImageBig, // Optional: use different image for popup
+                tooltip: "Click to enlarge"
+              },
+              caption: "This is an optional caption for the popup view",
             },
-            caption: "This is an optional caption for the popup view",
-           },
-          { src: downloadPdfImage, alt: 'Dashboard 3' }
-        ]} 
-        imagesPerRow={3}
-      />
+            { src: downloadPdfImage, alt: 'Dashboard 3' }
+          ]} 
+          imagesPerRow={3}
+        />
+      </section>
+
 
       <Testimonial 
         quote="We see a big financial gain with near zero hourly running costs and with no emissions, we are not breathing diesel particulates from owning electric machines anymore. Its better for our staff"
@@ -100,7 +103,10 @@ function App() {
         onButtonClick={handleFindOutMore}
       />
    
-      <Event />
+      <section id="events">
+        <Event />
+      </section>
+      
       <Applications />
 
       <Testimonial 
@@ -250,7 +256,9 @@ function App() {
 
       <EnloqLoadersSection />
 
-      <Footer />
+      <section id="contact">
+        <Footer />
+      </section>
 
     </div>
   );
