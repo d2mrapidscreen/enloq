@@ -15,13 +15,15 @@ import ImageRow from "./components/ImageRow/ImageRow";
 import Gallery from "./components/Gallery/Gallery";
 import ModelsGallery from "./components/Gallery/ModelsGallery";
 import { ThinkElectricSection, EnloqLoadersSection } from './components/InfoSection/Sections';
+import TableFeatures from './components/TableFeatures/TableFeatures';
+import TableTechnical from './components/TableTechnical/TableTechnical';
+import TableEmissions from './components/TableEmissions/TableEmissions';
 import Footer from './components/Footer/Footer';
 
 // Image imports
 import loaderBucketImage from './assets/images/Loader_raised_bucket_from_rear.jpg';
 import loaderBucketTransparentBkgImage from './assets/images/Loader_raised_bucket_to_ute.jpg';
 import loaderQuickHitchImage from './assets/images/Loader_quick_hitch.png';
-
 
 import smallBodyIcon from './assets/images/icon_small_body.png';
 import flexibleMobilityIcon from './assets/images/icon_flexible_mobility.png'
@@ -150,6 +152,10 @@ function App() {
 /*         imageCaption="Shown: EL800 Series at Hunter Valley Vineyards"
  */        icons={[euroQuickHitchLogo, securitySystemIcon, quickChangeIcon]}
       />
+
+      <TableFeatures />
+      <TableTechnical />
+      <TableEmissions />
 
       <SupportServices />
 
