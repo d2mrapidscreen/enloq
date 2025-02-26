@@ -16,6 +16,8 @@ import Gallery from "./components/Gallery/Gallery";
 // Image imports
 import loaderBucketImage from './assets/images/Loader_raised_bucket_from_rear.jpg';
 import loaderBucketTransparentBkgImage from './assets/images/Loader_raised_bucket_to_ute.jpg';
+import loaderQuickHitchImage from './assets/images/Loader_quick_hitch.png';
+
 
 import smallBodyIcon from './assets/images/icon_small_body.png';
 import flexibleMobilityIcon from './assets/images/icon_flexible_mobility.png'
@@ -89,7 +91,7 @@ function App() {
       <FeatureTransparentFullWidth
         title="Quick Coupler Standard"
         content="The Enloq® models are equipped with a hydraulic Euro quick coupler as standard. This makes it possible to change attachments safely and within seconds from within the cab."
-        image={loaderBucketTransparentBkgImage}
+        image={loaderQuickHitchImage}
         textPosition="left"
 /*         imageCaption="Shown: EL800 Series at Hunter Valley Vineyards"
  */        icons={[euroQuickHitchLogo, securitySystemIcon, quickChangeIcon]}

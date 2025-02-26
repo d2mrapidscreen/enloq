@@ -34,19 +34,17 @@
 .phone-number {
   color: #2fb457; /* Green color from your CSS */
   font-family: "Poppins", sans-serif;
-  font-size: 9px;
+  font-size: 16px;
   font-weight: bold;
 }
 
 /* Navigation Links Styles */
 
-.logo-text {
-  color: #2fb457; /* Green color from your CSS */
-  font-family: "Poppins Light", sans-serif;
-  font-size: 24px;
-  font-weight: 900;
-  text-decoration: none;
-  text-transform: uppercase;
+/* Logo Image Styles */
+.logo-image {
+  height: 24px; /* Adjust based on your desired size */
+  width: auto;
+  display: block;
 }
 
 .nav-links {
@@ -58,7 +56,7 @@
 .nav-link {
   color: #2fb457; /* Green color from your CSS */
   font-family: "Poppins Light", sans-serif;
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 300;
   text-decoration: none;
   text-transform: uppercase;

@@ -2,13 +2,14 @@
 import React from 'react';
 import './Navigation.css';
 
+import logoImage from '../../assets/images/enloq_loaders_nav_logo.png'; 
+
 function Navigation() {
   return (
     <nav className="navigation-bar">
-      {/* Logo on the left */}
+      {/* Logo image on the left */}
       <div className="logo-container">
-        <span className="logo-text">enloq.</span>
-        <span className="logo-text green">loaders</span>
+        <img src={logoImage} alt="enloq.loaders" className="logo-image" />
       </div>
 
       {/* Navigation links in the center */}
