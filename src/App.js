@@ -102,7 +102,9 @@ function App() {
       />
 
       {/* Gallery images are configured within the component code */}
-      <Gallery />
+      <Gallery
+        backgroundColor="#d1d3d4"
+       />
 
       <FeatureTransparentFullWidth
         title="Quick Coupler Standard"
@@ -117,7 +119,7 @@ function App() {
 
       <ModelsGallery 
         imagesPerRow={4}
-        backgroundColor="#f0f0f0"
+        backgroundColor="#d1d3d4"
         title="THE ENLOQ RANGE"
         titleHighlight="RANGE"
         content="Explore our complete range of high-performance machines designed for various applications."
