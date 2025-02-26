@@ -173,6 +173,17 @@ function App() {
           maxWidth: "800px" 
           */
         }}
+        button={{
+          enabled: true,
+          text: "DOWNLOAD THE BROCHURE",
+          href: downloadPdfFile1,
+          download: "filename.pdf",            // Name for the downloaded file
+          style: {
+            backgroundColor: "#4CAF50", // Green button
+            /* borderRadius: "4px", */
+            fontWeight: "700"
+          }
+        }}
       />
 
       <SupportServices />

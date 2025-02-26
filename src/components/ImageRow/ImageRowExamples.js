@@ -1,5 +1,66 @@
-// Example: Using ImageRow with custom title colors
-export const CustomColorTitleExample = () => {
+// Example: Using ImageRow with a button
+export const ButtonExample = () => {
+    return (
+      <ImageRow 
+        headerImage={{
+          src: "/api/placeholder/200/100",
+          alt: "Company Logo"
+        }}
+        introSections={[
+          {
+            titlePart1: "OUR",
+            titlePart2: "SERVICES",
+            content: "We offer a wide range of premium services to meet your needs."
+          }
+        ]}
+        singleImage={{
+          src: "/api/placeholder/800/400",
+          alt: "Service showcase",
+          caption: "Our expert team providing quality service",
+          maxWidth: "800px"
+        }}
+        button={{
+          enabled: true,
+          text: "VIEW ALL SERVICES",
+          href: "/services",
+          target: "_self",
+          onClick: () => console.log("Button clicked")
+        }}
+      />
+    );
+  };
+  
+  // Example: Using button with custom styling
+  export const CustomButtonExample = () => {
+    return (
+      <ImageRow 
+        introSections={[
+          {
+            titlePart1: "PREMIUM",
+            titlePart2: "FEATURES",
+            content: "Explore our premium features designed to enhance your experience."
+          }
+        ]}
+        singleImage={{
+          src: "/api/placeholder/800/400",
+          alt: "Premium features",
+          caption: "Advanced features for premium users",
+          maxWidth: "800px"
+        }}
+        button={{
+          enabled: true,
+          text: "UPGRADE NOW",
+          href: "/upgrade",
+          style: {
+            backgroundColor: "#4CAF50", // Green button
+            borderRadius: "4px",
+            fontWeight: "700"
+          }
+        }}
+      />
+    );
+  };// Example: Using ImageRow with custom title colors
+  export const CustomColorTitleExample = () => {
     return (
       <ImageRow 
         headerImage={{
@@ -282,6 +343,7 @@ export const CustomColorTitleExample = () => {
             title: "Product Specifications",
             maxWidth: "600px"
           }}
+          
         />
       </div>
     );

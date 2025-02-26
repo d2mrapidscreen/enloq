@@ -10,7 +10,8 @@ const ImageRow = ({
   youtubeVideo = null, // New: YouTube video to embed
   customComponent = null, // New: Custom React component to render
   titlePrimaryColor = null, // Override for primary title color
-  titleHighlightColor = null // Override for highlight title color
+  titleHighlightColor = null, // Override for highlight title color
+  button = null // New: Optional button configuration
 }) => {
   // State for modal/popup
   const [modalImage, setModalImage] = useState(null);
@@ -231,6 +232,31 @@ const ImageRow = ({
             )}
             <button className="modal-close-button" onClick={closeModal}>×</button>
           </div>
+        </div>
+      )}
+
+      {/* Render button if provided */}
+      {button && button.enabled && (
+        <div className="image-row-button-container">
+          {button.href ? (
+            <a 
+              href={button.href}
+              target={button.target || "_self"}
+              className="image-row-button"
+              onClick={button.onClick}
+              style={button.style || {}}
+            >
+              {button.text || "FIND OUT MORE"}
+            </a>
+          ) : (
+            <button 
+              className="image-row-button"
+              onClick={button.onClick}
+              style={button.style || {}}
+            >
+              {button.text || "FIND OUT MORE"}
+            </button>
+          )}
         </div>
       )}
     </div>
