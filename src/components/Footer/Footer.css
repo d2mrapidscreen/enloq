@@ -1,0 +1,89 @@
+/* Footer.css */
+@font-face {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: bold;
+    src: url("../../assets/fonts/Poppins-Bold.ttf");
+  }
+  
+  @font-face {
+    font-family: "Poppins Light";
+    font-style: normal;
+    font-weight: 300;
+    src: url("../../assets/fonts/Poppins-Light.ttf");
+  }
+  
+  .footer {
+    background-color: #111111;
+    padding: 10px 0;
+    padding-top: 15px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 800px; /* Reduced from 1200px to match the image */
+    margin: 0 auto; /* Center the content */
+    box-sizing: border-box;
+  }
+  
+  .footer-logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .loader-image {
+    height: 110px; /* Increased to match the image */
+    width: auto;
+  }
+  
+  .logo-text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .footer-logo-image {
+    height: 24px;
+    width: auto;
+    margin-bottom: 5px;
+  }
+  
+  .footer-address {
+    font-family: "Poppins Light", sans-serif;
+    font-size: 12px;
+    line-height: 1.4;
+  }
+  
+  .footer-address p {
+    margin: 0;
+    color: white;
+  }
+  
+  .footer-phone {
+    color: #2fb457 !important;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    margin-top: 4px !important;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .footer-logo-container {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .logo-text-container {
+      align-items: center;
+    }
+  }

@@ -15,6 +15,7 @@ import ImageRow from "./components/ImageRow/ImageRow";
 import Gallery from "./components/Gallery/Gallery";
 import ModelsGallery from "./components/Gallery/ModelsGallery";
 import { ThinkElectricSection, EnloqLoadersSection } from './components/InfoSection/Sections';
+import Footer from './components/Footer/Footer';
 
 // Image imports
 import loaderBucketImage from './assets/images/Loader_raised_bucket_from_rear.jpg';
@@ -63,6 +64,14 @@ function App() {
    
       <Event />
       <Applications />
+
+      <Testimonial 
+        quote="Within minutes of a test run we were convinced on the The Wombat. The machine is powerful and quiet and you have a lot of power available immediately. With two different drive modes, its quick to unload a trailer and bring to where it's needed. Fits through a gate and is better than using a shovel and wheelbarrow, we can save days of labor"
+        author="Blake"
+        company="Wolf Plumbing"
+        buttonText="FIND OUT MORE"
+        onButtonClick={handleFindOutMore}
+      />
 
       <Feature 
         title="SAFE AND"
@@ -139,17 +148,8 @@ function App() {
 
       <EnloqLoadersSection />
 
-      <Testimonial 
-        quote="Within minutes of a test run we were convinced on the The Wombat. The machine is powerful and quiet and you have a lot of power available immediately. With two different drive modes, its quick to unload a trailer and bring to where it's needed. Fits through a gate and is better than using a shovel and wheelbarrow, we can save days of labor"
-        author="Blake"
-        company="Wolf Plumbing"
-        buttonText="FIND OUT MORE"
-        onButtonClick={handleFindOutMore}
-      />
+      <Footer />
 
-      <section className="contact">
-        <h2>FOOTER TO BE ADDED</h2>
-      </section>
     </div>
   );
 }
