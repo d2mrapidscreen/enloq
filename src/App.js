@@ -153,6 +153,35 @@ function App() {
  */        icons={[euroQuickHitchLogo, securitySystemIcon, quickChangeIcon]}
       />
 
+      <ImageRow 
+        introSections={[
+          {
+            titlePart1: "VIDEO",
+            primaryColor: "#fff",
+            titlePart2: "EXAMPLE",
+            content: "An example of presenting a youtube video"
+          }]}
+        youtubeVideo={{
+          videoId: "NTvudSGfHRI", // This would be your actual YouTube video ID
+          title: "Paddington in Peru",
+          caption: "Step-by-step guide to using our product",
+          aspectRatio: "16:9",
+          maxWidth: "800px"
+        }}
+        button={{
+          enabled: true,
+          text: "DOWNLOAD THE BROCHURE",
+          href: downloadPdfFile1,
+          download: "filename.pdf",            // Name for the downloaded file
+          style: {
+            backgroundColor: "#4CAF50", // Green button
+            /* borderRadius: "4px", */
+            fontWeight: "700"
+          }
+        }}
+      />
+
+
       <TableFeatures />
       <TableTechnical />
       <TableEmissions />
