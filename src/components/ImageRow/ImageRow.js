@@ -5,7 +5,10 @@ const ImageRow = ({
   images = [], 
   imagesPerRow = 3,
   headerImage = null, // Image to display at the top before intro sections
-  introSections = [] // Array of intro sections, each with title and content
+  introSections = [], // Array of intro sections, each with title and content
+  singleImage = null, // New: Single image to display
+  youtubeVideo = null, // New: YouTube video to embed
+  customComponent = null // New: Custom React component to render
 }) => {
   // State for modal/popup
   const [modalImage, setModalImage] = useState(null);
@@ -50,6 +53,70 @@ const ImageRow = ({
     setModalImage(null);
   };
 
+  // Helper to render a YouTube embed with proper aspect ratio
+  const renderYoutubeEmbed = (videoData) => {
+    if (!videoData || !videoData.videoId) return null;
+    
+    const { videoId, title = 'YouTube video', aspectRatio = '16:9' } = videoData;
+    
+    // Calculate padding based on aspect ratio (default 16:9)
+    let paddingBottom = '56.25%'; // Default for 16:9
+    if (aspectRatio === '4:3') paddingBottom = '75%';
+    if (aspectRatio === '1:1') paddingBottom = '100%';
+    
+    return (
+      <div className="youtube-container" style={{ width: '100%', maxWidth: videoData.maxWidth || '800px', margin: '0 auto' }}>
+        <div style={{ position: 'relative', paddingBottom, height: 0, overflow: 'hidden' }}>
+          <iframe 
+            style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 0 }}
+            src={`https://www.youtube.com/embed/${videoId}`}
+            title={title}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
+        {videoData.caption && (
+          <p className="video-caption" style={{ textAlign: 'center', marginTop: '10px' }}>{videoData.caption}</p>
+        )}
+      </div>
+    );
+  };
+
+  // Helper to render single image with optional caption
+  const renderSingleImage = (imageData) => {
+    if (!imageData || !imageData.src) return null;
+    
+    return (
+      <div className="single-image-container" style={{ width: '100%', maxWidth: imageData.maxWidth || '800px', margin: '0 auto' }}>
+        <img 
+          src={imageData.src} 
+          alt={imageData.alt || 'Featured image'} 
+          className="single-image"
+          style={{ width: '100%', height: 'auto', display: 'block' }}
+        />
+        {imageData.caption && (
+          <p className="single-image-caption" style={{ textAlign: 'center', marginTop: '10px' }}>{imageData.caption}</p>
+        )}
+      </div>
+    );
+  };
+
+  // Helper to render custom component
+  const renderCustomComponent = (componentData) => {
+    if (!componentData || !componentData.component) return null;
+    
+    const { component: Component, props = {}, wrapperClassName = '', title } = componentData;
+    
+    return (
+      <div className={`custom-component-container ${wrapperClassName}`} style={{ width: '100%', maxWidth: componentData.maxWidth || '800px', margin: '0 auto' }}>
+        {title && (
+          <h3 className="component-title" style={{ marginBottom: '15px', color: '#4CAF50' }}>{title}</h3>
+        )}
+        <Component {...props} />
+      </div>
+    );
+  };
+
   const rows = createRows();
 
   return (
@@ -81,8 +148,29 @@ const ImageRow = ({
         </div>
       )}
 
-      {/* Render image grid */}
-      {rows.map((rowImages, rowIndex) => (
+      {/* NEW: Render single image if provided */}
+      {singleImage && (
+        <div className="content-section">
+          {renderSingleImage(singleImage)}
+        </div>
+      )}
+
+      {/* NEW: Render YouTube video if provided */}
+      {youtubeVideo && (
+        <div className="content-section">
+          {renderYoutubeEmbed(youtubeVideo)}
+        </div>
+      )}
+
+      {/* NEW: Render custom component if provided */}
+      {customComponent && (
+        <div className="content-section">
+          {renderCustomComponent(customComponent)}
+        </div>
+      )}
+
+      {/* Render image grid (original functionality) */}
+      {images.length > 0 && rows.map((rowImages, rowIndex) => (
         <div 
           key={rowIndex} 
           className="image-grid" 
