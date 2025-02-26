@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/enloq/static/css/main.d9d6e5e5.css",
-    "main.js": "/enloq/static/js/main.2b790f5e.js",
+    "main.js": "/enloq/static/js/main.3edf3973.js",
     "static/media/Loader_raised_bucket_to_ute.jpg": "/enloq/static/media/Loader_raised_bucket_to_ute.e61914bdc80cc23e16e7.jpg",
     "static/media/Loader_raised_bucket_from_rear.jpg": "/enloq/static/media/Loader_raised_bucket_from_rear.2d449ae248ab912b0496.jpg",
     "static/media/Loader_quick_hitch.png": "/enloq/static/media/Loader_quick_hitch.e6157cce41ac4db9ff02.png",
@@ -19,8 +19,12 @@
     "static/media/SRDC_Enloq_Miniloader_EL800s.png": "/enloq/static/media/SRDC_Enloq_Miniloader_EL800s.f15428639b50cb90039d.png",
     "static/media/attachment_2.png": "/enloq/static/media/attachment_2.790916cfe0495c82f02c.png",
     "static/media/SRDC_Enloq_Group_photo.png": "/enloq/static/media/SRDC_Enloq_Group_photo.82550be7fd35ee1cf989.png",
+    "static/media/genuine_parts.png": "/enloq/static/media/genuine_parts.6489611e4f1f62da3f24.png",
+    "static/media/training_group.png": "/enloq/static/media/training_group.5b1a83d399a362906cd9.png",
+    "static/media/maintenance.png": "/enloq/static/media/maintenance.6c124572dbc1c1ea53a0.png",
     "static/media/Light_closeup.png": "/enloq/static/media/Light_closeup.1f315b0c6614366e9ab2.png",
     "static/media/EV_dashbrd.png": "/enloq/static/media/EV_dashbrd.f7bbefd341be0beea848.png",
+    "static/media/services_support.png": "/enloq/static/media/services_support.9442bfc8e01a9f8f1d3e.png",
     "static/media/Knee_controller.png": "/enloq/static/media/Knee_controller.28d599140536a8067bf3.png",
     "static/media/Forest.png": "/enloq/static/media/Forest.92c9b037ba8984010e05.png",
     "static/media/Winery.png": "/enloq/static/media/Winery.2fd4ac32f388879b3389.png",
@@ -44,10 +48,10 @@
     "static/media/EQH_logo.png": "/enloq/static/media/EQH_logo.4b02f276c697894a9a1b.png",
     "index.html": "/enloq/index.html",
     "main.d9d6e5e5.css.map": "/enloq/static/css/main.d9d6e5e5.css.map",
-    "main.2b790f5e.js.map": "/enloq/static/js/main.2b790f5e.js.map"
+    "main.3edf3973.js.map": "/enloq/static/js/main.3edf3973.js.map"
   },
   "entrypoints": [
     "static/css/main.d9d6e5e5.css",
-    "static/js/main.2b790f5e.js"
+    "static/js/main.3edf3973.js"
   ]
 }
