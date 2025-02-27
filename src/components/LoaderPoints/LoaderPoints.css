@@ -1,12 +1,17 @@
 .loader-points-section {
   background-color: #ffffff;
   padding: 40px 0;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 .loader-points-wrapper {
   max-width: 1200px;
-  margin: 0 100px 100px;
+  margin: 0 auto 100px; /* Changed from fixed margins to auto for centering */
   padding: 0 20px;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .loader-points {
@@ -14,12 +19,18 @@
   padding: 30px;
   color: #fff;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .loader-points-row {
   display: flex;
   margin-bottom: 30px;
   flex-wrap: wrap;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .loader-points-row:last-child {
@@ -54,6 +65,7 @@
 
 .point-content {
   flex: 1;
+  min-width: 0; /* Allows text to properly wrap in flexbox containers */
 }
 
 .point-content h3 {
@@ -62,6 +74,9 @@
   font-size: 16px;
   margin: 0 0 8px 0;
   text-transform: uppercase;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .point-content p {
@@ -69,6 +84,9 @@
   font-size: 14px;
   line-height: 1.4;
   margin: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .point-content strong {
@@ -79,6 +97,7 @@
   display: flex;
   justify-content: center;
   margin-top: 25px;
+  width: 100%;
 }
 
 .find-out-more-btn {
@@ -101,13 +120,94 @@
   background-color: #333333;
 }
 
-/* Media query for mobile devices */
+/* Media query for tablets */
 @media (max-width: 768px) {
+  .loader-points-wrapper {
+    margin: 0 auto 50px; /* Reduced bottom margin */
+    padding: 0 15px; /* Reduced side padding */
+  }
+  
   .loader-point {
-    width: 100%;
+    width: 100%; /* Full width on smaller screens */
+    padding-right: 0; /* Remove right padding since we're stacking */
   }
   
   .loader-points-row {
     flex-direction: column;
+  }
+  
+  .loader-points {
+    padding: 20px; /* Reduced padding */
+  }
+}
+
+/* Media query for small mobile devices */
+@media (max-width: 500px) {
+  .loader-points-section {
+    padding: 30px 0; /* Reduced padding */
+  }
+  
+  .loader-points-wrapper {
+    margin: 0 auto 40px; /* Further reduced margin */
+    padding: 0 10px; /* Smaller padding */
+  }
+  
+  .loader-points {
+    padding: 15px; /* Even smaller padding */
+  }
+  
+  .point-number {
+    width: 30px; /* Smaller number circle */
+    height: 30px;
+    font-size: 16px;
+    margin-right: 10px;
+  }
+  
+  .point-content h3 {
+    font-size: 14px; /* Smaller heading */
+  }
+  
+  .point-content p {
+    font-size: 12px; /* Smaller text */
+  }
+  
+  /* Force text wrapping on tiny screens */
+  .point-content h3,
+  .point-content p {
+    word-break: break-word !important;
+    white-space: normal !important;
+  }
+  
+  .find-out-more-btn {
+    padding: 12px 30px; /* Smaller button */
+    font-size: 14px;
+  }
+}
+
+/* Very small mobile screens */
+@media (max-width: 380px) {
+  .loader-points {
+    padding: 12px 10px; /* Minimal padding */
+  }
+  
+  .loader-point {
+    margin-bottom: 12px; /* Smaller gap between points */
+  }
+  
+  .point-number {
+    width: 28px; /* Even smaller circle */
+    height: 28px;
+    font-size: 14px;
+    margin-right: 8px;
+  }
+  
+  .point-content h3 {
+    font-size: 13px;
+    margin-bottom: 4px;
+  }
+  
+  .point-content p {
+    font-size: 11px;
+    line-height: 1.3;
   }
 }
