@@ -134,3 +134,19 @@
     font-size: 14px;
   }
 }
+
+@media (max-width: 768px) {
+  .application-content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .application-heading {
+    text-align: center;
+  }
+
+  .application-text {
+    text-align: center;
+    max-width: 600px; /* Optional: prevents text from stretching too wide */
+  }
+}
