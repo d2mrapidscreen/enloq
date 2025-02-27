@@ -1,146 +1,181 @@
 .feature-section {
-    padding: 0;
-    width: 100%;
-    background-color: white;
-  }
-  
+  padding: 0;
+  width: 100%;
+  background-color: white;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.feature-section-inner {
+  margin: 0 auto;
+  padding: 60px 100px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.feature-container {
+  position: relative;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.feature-badge {
+  position: absolute;
+  top: 20px;
+  padding: 8px 16px;
+  background-color: #4CAF50;
+  border-radius: 4px;
+  z-index: 10;
+}
+
+.feature-badge-text {
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.feature-content-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+}
+
+.feature-content-wrapper.reverse {
+  flex-direction: row-reverse;
+}
+
+.feature-text-container {
+  flex: 1;
+  max-width: 600px;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+
+.feature-content-wrapper.reverse .feature-text-container {
+  padding-right: 0;
+  padding-left: 20px;
+}
+
+.feature-header {
+  margin-bottom: 20px;
+}
+
+.feature-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 36px;
+  line-height: 1.2;
+  font-weight: 700;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.feature-title-light {
+  color: white;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.feature-title-dark {
+  color: #222;
+  display: block;
+}
+
+.feature-content {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: white;
+  margin: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: normal;
+  hyphens: none;
+}
+
+.feature-image-container {
+  flex: 1;
+  max-width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.feature-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+  max-width: 100%;
+}
+
+@media (max-width: 1024px) {
   .feature-section-inner {
-    margin: 0 auto;
-    padding: 60px 100px;
-    position: relative;
-  }
-  
-  .feature-container {
-    position: relative;
-  }
-  
-  .feature-badge {
-    position: absolute;
-    top: 20px;
-    padding: 8px 16px;
-    background-color: #4CAF50;
-    border-radius: 4px;
-    z-index: 10;
-  }
-  
-  .feature-badge-text {
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    font-size: 14px;
-    text-transform: uppercase;
-  }
-  
-  .feature-content-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-  }
-  
-  .feature-content-wrapper.reverse {
-    flex-direction: row-reverse;
-  }
-  
-  .feature-text-container {
-    flex: 1;
-    max-width: 600px;
-    padding-right: 20px;
-  }
-  
-  .feature-content-wrapper.reverse .feature-text-container {
-    padding-right: 0;
-    padding-left: 20px;
-  }
-  
-  .feature-header {
-    margin-bottom: 20px;
+    padding: 50px 60px;
   }
   
   .feature-title {
-    font-family: 'Poppins', sans-serif;
-    font-size: 36px;
-    line-height: 1.2;
-    font-weight: 700;
-    margin: 0;
-    text-transform: uppercase;
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .feature-section-inner {
+    padding: 40px 30px; /* Match the 30px padding from other components */
   }
   
-  .feature-title-light {
-    color: white;
-    display: block;
-    margin-bottom: 5px;
+  .feature-content-wrapper,
+  .feature-content-wrapper.reverse {
+    flex-direction: column;
+    gap: 30px;
   }
   
-  .feature-title-dark {
-    color: #222;
-    display: block;
+  .feature-text-container,
+  .feature-content-wrapper.reverse .feature-text-container {
+    max-width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    text-align: center; /* Center text like other components */
   }
   
-  .feature-content {
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
-    color: white;
-    margin: 0;
+  .feature-title {
+    font-size: 28px;
   }
   
   .feature-image-container {
-    flex: 1;
-    max-width: 500px;
+    max-width: 100%;
+    margin-top: 0; /* Remove top margin */
+    width: 100%;
+  }
+  
+  .feature-badge {
+    position: relative;
+    top: 0;
+    left: 0 !important;
+    right: 0 !important;
+    margin-bottom: 20px;
+    display: inline-block;
+  }
+}
+
+@media (max-width: 480px) {
+  .feature-section-inner {
+    padding: 40px 30px; /* Consistent with other components */
+  }
+  
+  .feature-title {
+    font-size: 24px;
+  }
+  
+  .feature-content {
+    font-size: 14px;
+    text-align: center; /* Center text on mobile like other components */
   }
   
   .feature-image {
-    width: 100%;
-    height: auto;
-    display: block;
+    max-width: 100%;
     border-radius: 4px;
   }
-  
-  @media (max-width: 1024px) {
-    .feature-section-inner {
-      width: calc(100% );
-    }
-    
-    .feature-title {
-      font-size: 32px;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .feature-content-wrapper,
-    .feature-content-wrapper.reverse {
-      flex-direction: column;
-    }
-    
-    .feature-text-container {
-      max-width: 100%;
-      padding-right: 0;
-    }
-    
-    .feature-content-wrapper.reverse .feature-text-container {
-      padding-left: 0;
-    }
-    
-    .feature-title {
-      font-size: 28px;
-    }
-    
-    .feature-image-container {
-      max-width: 100%;
-      margin-top: 30px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .feature-section-inner {
-      padding: 40px 20px;
-    }
-    
-    .feature-title {
-      font-size: 24px;
-    }
-    
-    .feature-content {
-      font-size: 14px;
-    }
-  }
+}
