@@ -301,3 +301,24 @@ p, span, div {
     max-width: 100% !important;
   }
 }
+
+/* Add this section to support full-width sections like ImageRow */
+section {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+/* This specific selector ensures ImageRow components are never constrained by parent sections */
+section .image-row-container {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  position: relative;
+  box-sizing: border-box;
+  left: 0 !important;
+  right: 0 !important;
+  transform: none !important;
+}

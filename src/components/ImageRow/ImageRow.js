@@ -124,100 +124,127 @@ const ImageRow = ({
 
   return (
     <div className="image-row-container">
-      {/* Render header image if provided */}
-      {headerImage && (
-        <div className="header-image-container">
-          <img 
-            src={headerImage.src} 
-            alt={headerImage.alt || 'Header image'} 
-            className="header-image" 
-          />
-        </div>
-      )}
-      
-      {/* Render intro sections if provided */}
-      {introSections && introSections.length > 0 && (
-        <div className="intro-sections">
-          {introSections.map((section, index) => (
-            <div key={index} className="intro-section">
-              {(section.title || section.titlePart1 || section.titlePart2) && (
-                <h2 className="intro-title">
-                  {section.title && section.title}
-                  {(section.titlePart1 || section.titlePart2) && (
-                    <>
-                      <span 
-                        className="title-primary"
-                        style={titlePrimaryColor || section.primaryColor ? { color: titlePrimaryColor || section.primaryColor } : {}}
-                      >
-                        {section.titlePart1} 
-                      </span>
-                      <span 
-                        className="title-highlight"
-                        style={titleHighlightColor || section.highlightColor ? { color: titleHighlightColor || section.highlightColor } : {}}
-                      >
-                        {section.titlePart2}
-                      </span>
-                    </>
-                  )}
-                </h2>
-              )}
-              {section.content && (
-                <p className="intro-content">{section.content}</p>
-              )}
-            </div>
-          ))}
-        </div>
-      )}
-
-      {/* NEW: Render single image if provided */}
-      {singleImage && (
-        <div className="content-section">
-          {renderSingleImage(singleImage)}
-        </div>
-      )}
-
-      {/* NEW: Render YouTube video if provided */}
-      {youtubeVideo && (
-        <div className="content-section">
-          {renderYoutubeEmbed(youtubeVideo)}
-        </div>
-      )}
-
-      {/* NEW: Render custom component if provided */}
-      {customComponent && (
-        <div className="content-section">
-          {renderCustomComponent(customComponent)}
-        </div>
-      )}
-
-      {/* Render image grid (original functionality) */}
-      {images.length > 0 && rows.map((rowImages, rowIndex) => (
-        <div 
-          key={rowIndex} 
-          className="image-grid" 
-          data-items-per-row={rowImages.length}
-        >
-          {rowImages.map((image, imageIndex) => (
-            <div 
-              key={`${rowIndex}-${imageIndex}`} 
-              className="image-item" 
-            >
-              <div 
-                className={`image-wrapper ${image.action ? 'clickable' : ''}`}
-                onClick={() => handleImageClick(image)}
-                title={image.action ? image.action.tooltip || '' : ''}
-              >
-                <img 
-                  src={image.src} 
-                  alt={image.alt || `Image ${imageIndex + 1}`} 
-                  className="grid-image" 
-                />
+      <div className="image-row-inner">
+        {/* Render header image if provided */}
+        {headerImage && (
+          <div className="header-image-container">
+            <img 
+              src={headerImage.src} 
+              alt={headerImage.alt || 'Header image'} 
+              className="header-image" 
+            />
+          </div>
+        )}
+        
+        {/* Render intro sections if provided */}
+        {introSections && introSections.length > 0 && (
+          <div className="intro-sections">
+            {introSections.map((section, index) => (
+              <div key={index} className="intro-section">
+                {(section.title || section.titlePart1 || section.titlePart2) && (
+                  <h2 className="intro-title">
+                    {section.title && section.title}
+                    {(section.titlePart1 || section.titlePart2) && (
+                      <>
+                        <span 
+                          className="title-primary"
+                          style={titlePrimaryColor || section.primaryColor ? { color: titlePrimaryColor || section.primaryColor } : {}}
+                        >
+                          {section.titlePart1} 
+                        </span>
+                        <span 
+                          className="title-highlight"
+                          style={titleHighlightColor || section.highlightColor ? { color: titleHighlightColor || section.highlightColor } : {}}
+                        >
+                          {section.titlePart2}
+                        </span>
+                      </>
+                    )}
+                  </h2>
+                )}
+                {section.content && (
+                  <p className="intro-content">{section.content}</p>
+                )}
               </div>
-            </div>
-          ))}
-        </div>
-      ))}
+            ))}
+          </div>
+        )}
 
+        {/* Render single image if provided */}
+        {singleImage && (
+          <div className="content-section">
+            {renderSingleImage(singleImage)}
+          </div>
+        )}
+
+        {/* Render YouTube video if provided */}
+        {youtubeVideo && (
+          <div className="content-section">
+            {renderYoutubeEmbed(youtubeVideo)}
+          </div>
+        )}
+
+        {/* Render custom component if provided */}
+        {customComponent && (
+          <div className="content-section">
+            {renderCustomComponent(customComponent)}
+          </div>
+        )}
+
+        {/* Render image grid (original functionality) */}
+        {images.length > 0 && rows.map((rowImages, rowIndex) => (
+          <div 
+            key={rowIndex} 
+            className="image-grid" 
+            data-items-per-row={rowImages.length}
+          >
+            {rowImages.map((image, imageIndex) => (
+              <div 
+                key={`${rowIndex}-${imageIndex}`} 
+                className="image-item" 
+              >
+                <div 
+                  className={`image-wrapper ${image.action ? 'clickable' : ''}`}
+                  onClick={() => handleImageClick(image)}
+                  title={image.action ? image.action.tooltip || '' : ''}
+                >
+                  <img 
+                    src={image.src} 
+                    alt={image.alt || `Image ${imageIndex + 1}`} 
+                    className="grid-image" 
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+        ))}
+
+        {/* Render button if provided */}
+        {button && button.enabled && (
+          <div className="image-row-button-container">
+            {button.href ? (
+              <a 
+                href={button.href}
+                target={button.target || "_self"}
+                className="image-row-button"
+                onClick={button.onClick}
+                style={button.style || {}}
+              >
+                {button.text || "FIND OUT MORE"}
+              </a>
+            ) : (
+              <button 
+                className="image-row-button"
+                onClick={button.onClick}
+                style={button.style || {}}
+              >
+                {button.text || "FIND OUT MORE"}
+              </button>
+            )}
+          </div>
+        )}
+      </div>
+      
       {/* Modal/Popup for enlarged images */}
       {modalImage && (
         <div className="image-modal-overlay" onClick={closeModal}>
@@ -232,31 +259,6 @@ const ImageRow = ({
             )}
             <button className="modal-close-button" onClick={closeModal}>×</button>
           </div>
-        </div>
-      )}
-
-      {/* Render button if provided */}
-      {button && button.enabled && (
-        <div className="image-row-button-container">
-          {button.href ? (
-            <a 
-              href={button.href}
-              target={button.target || "_self"}
-              className="image-row-button"
-              onClick={button.onClick}
-              style={button.style || {}}
-            >
-              {button.text || "FIND OUT MORE"}
-            </a>
-          ) : (
-            <button 
-              className="image-row-button"
-              onClick={button.onClick}
-              style={button.style || {}}
-            >
-              {button.text || "FIND OUT MORE"}
-            </button>
-          )}
         </div>
       )}
     </div>
