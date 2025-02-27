@@ -2,11 +2,11 @@ import React from 'react';
 import './Event.css';
 
 import event6Image from '../../assets/images/event_wimmera_field_days.png'
-import event1Image from '../../assets/images/event_farm_world.png'
+import event1Image from '../../assets/images/event_farm_world.webp'
 import event2Image from '../../assets/images/event_seymour_expo.png'
 import event3Image from '../../assets/images/event_east_gippsland_field_days.png'
 import event4Image from '../../assets/images/event_tocal_field_days.png'
-import event5Image from '../../assets/images/event_norco_primex.png'
+import event5Image from '../../assets/images/event_norco_primex.jpg'
 
 
 const Event = () => {
