@@ -123,7 +123,7 @@
 /* Media query for tablets */
 @media (max-width: 768px) {
   .loader-points-wrapper {
-    margin: 0 auto 50px; /* Reduced bottom margin */
+    margin: 0 auto 0px; /* Reduced bottom margin */
     padding: 0 15px; /* Reduced side padding */
   }
   
@@ -148,7 +148,7 @@
   }
   
   .loader-points-wrapper {
-    margin: 0 auto 40px; /* Further reduced margin */
+    margin: 0 auto 0px; /* Further reduced margin */
     padding: 0 10px; /* Smaller padding */
   }
   

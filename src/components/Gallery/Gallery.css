@@ -2,12 +2,15 @@
   width: 100%;
   padding: 60px 0;
   background-color: #e6e6e6; /* Updated to match the screenshot's lighter gray */
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .gallery-container {
   width: calc(100% - 200px);
   max-width: 1200px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .gallery-header {
@@ -22,6 +25,10 @@
   line-height: 1.2;
   margin: 0;
   text-transform: uppercase;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: normal;
+  hyphens: none;
 }
 
 .gallery-title-dark {
@@ -44,6 +51,10 @@
   line-height: 1.6;
   color: #555;
   margin: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: normal;
+  hyphens: none;
 }
 
 .gallery-grid-container {
@@ -86,7 +97,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  /* object-fit: cover; */
+  object-fit: contain; /* Changed from cover to contain for product images */
 }
 
 /* Custom tooltip styling */
@@ -127,41 +138,58 @@
 /* Responsive adjustments */
 @media (max-width: 1024px) {
   .gallery-container {
-    width: calc(100% - 100px);
+    width: calc(100% - 60px); /* Increased horizontal space */
   }
   
   .gallery-title {
     font-size: 32px;
   }
+  
+  .gallery-item {
+    margin: 0 8px; /* Slightly reduced margins */
+  }
 }
 
 @media (max-width: 768px) {
+  .gallery-section {
+    padding: 40px 0; /* Reduced vertical padding */
+  }
+  
   .gallery-container {
-    width: calc(100% - 60px);
+    width: calc(100% - 40px); /* More space on edges */
   }
   
   .gallery-grid {
     flex-wrap: wrap;
+    margin-bottom: 0; /* Remove margin between rows */
   }
   
   .gallery-item {
-    max-width: calc(50% - 20px);
-    margin-bottom: 20px;
+    max-width: calc(50% - 16px); /* Two items per row with good spacing */
+    margin: 0 8px 16px 8px; /* Better spacing all around */
   }
   
   .gallery-title {
     font-size: 28px;
   }
+  
+  .gallery-text {
+    padding: 0 10px; /* Add some side padding to text */
+  }
 }
 
 @media (max-width: 480px) {
+  .gallery-section {
+    padding: 30px 0;
+  }
+  
   .gallery-container {
-    width: calc(100% - 40px);
+    width: calc(100% - 30px); /* Consistent with other components */
   }
   
   .gallery-item {
-    max-width: 100%;
-    margin: 0 0 20px 0;
+    max-width: calc(50% - 10px); /* Two items per row with better spacing */
+    margin: 0 5px 15px 5px; /* Reduced margins but still provides separation */
   }
   
   .gallery-title {
@@ -170,5 +198,19 @@
   
   .gallery-text {
     font-size: 14px;
+  }
+  
+  /* Smaller image wrappers on very small screens */
+  .gallery-image-wrapper {
+    border-width: 3px;
+    border-radius: 12px;
+  }
+}
+
+/* For very small screens - optional if needed */
+@media (max-width: 360px) {
+  .gallery-item {
+    max-width: calc(50% - 8px); /* Keep two items per row but with minimal margin */
+    margin: 0 4px 12px 4px;
   }
 }
