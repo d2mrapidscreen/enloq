@@ -81,7 +81,7 @@ function Navigation() {
   }, []);
   
   return (
-    <nav className="navigation-bar">
+    <nav className="navigation-bar" role="navigation" aria-label="Main Navigation">
       {/* Logo image */}
       <div className="logo-container">
         <img src={logoImage} alt="enloq.loaders" className="logo-image" />

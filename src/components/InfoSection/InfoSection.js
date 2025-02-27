@@ -1,5 +1,5 @@
 // src/components/InfoSection/InfoSection.js
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './InfoSection.css';
 
 function InfoSection({ 
@@ -15,6 +15,24 @@ function InfoSection({
   highlightTerms = [],
   logoAlt = "Logo"
 }) {
+  // Add state to track window width for responsive adjustments
+  const [isMobile, setIsMobile] = useState(false);
+  
+  // Effect to check window size and set mobile state
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 480);
+    };
+    
+    // Set initial value
+    handleResize();
+    
+    // Add event listener
+    window.addEventListener('resize', handleResize);
+    
+    // Clean up
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
   
   // Function to apply highlighting to specific terms in content
   const formatContent = (text) => {

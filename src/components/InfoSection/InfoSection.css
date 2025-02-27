@@ -1,107 +1,244 @@
 .info-section {
-    width: 100%;
-    padding: 40px 0;
-    position: relative;
-  }
-  
-  .info-container {
-    max-width: 1140px;
-    margin: 0 auto;
-    padding: 0 15px;
-    position: relative;
-  }
-  
+  width: 100%;
+  padding: 40px 0;
+  position: relative;
+  box-sizing: border-box;
+  overflow-x: hidden !important; /* Force prevent horizontal overflow */
+}
+
+.info-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  overflow-x: hidden !important; /* Force prevent horizontal overflow */
+}
+
+.info-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap; /* Allow wrapping for small screens */
+  max-width: 100%; /* Ensure header doesn't exceed container */
+}
+
+.info-logo {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 15px;
+}
+
+.info-logo img {
+  height: 40px;
+  width: auto;
+  max-width: 100%; /* Ensure image doesn't overflow */
+}
+
+.info-text {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 2.2rem;
+  font-weight: bold;
+  word-break: break-word; /* Prevent text from overflowing */
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.info-title-prefix {
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.info-title-suffix {
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+}
+
+.info-content {
+  max-width: 800px;
+  margin: 20px auto;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-wrap: break-word !important; /* Force text wrapping */
+}
+
+.info-content p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0 0 12px 0;
+  color: #000;
+  text-align: center;
+  word-wrap: break-word !important; /* Force text wrapping */
+  overflow-wrap: break-word !important;
+  word-break: break-word !important;
+  hyphens: auto;
+  max-width: 100%; /* Ensure paragraphs don't exceed container */
+}
+
+/* Special handling for long product names and terms */
+.highlight-text {
+  color: var(--highlight-color, #2fb457);
+  font-weight: bold;
+  display: inline-block; /* Allow wrapping of highlighted terms */
+  word-break: break-all !important; /* Force breaking within words if needed */
+  overflow-wrap: break-word !important;
+  hyphens: auto;
+}
+
+/* Tablet Breakpoint */
+@media screen and (max-width: 768px) {
   .info-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 30px;
-  }
-  
-  .info-logo {
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 15px;
-  }
-  
-  .info-logo img {
-    height: 40px;
-    width: auto;
+    margin-bottom: 20px;
   }
   
   .info-text {
-    display: inline-block;
-    vertical-align: middle;
-    font-size: 2.2rem;
-    font-weight: bold;
+    font-size: 1.8rem;
   }
   
-  .info-title-prefix {
-    font-family: 'Poppins', sans-serif;
-    font-weight: bold;
-    margin-right: 10px;
-  }
-  
-  .info-title-suffix {
-    font-family: 'Poppins', sans-serif;
-    font-weight: bold;
-  }
-  
-  .info-content {
-    max-width: 800px;
-    margin: 20px auto;
-    text-align: center;
+  .info-logo img {
+    height: 30px;
   }
   
   .info-content p {
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.9rem;
-    line-height: 1.5;
-    margin: 0;
-    color: #000;
+    font-size: 0.8rem;
+    text-align: left; /* Left-align text for better readability on smaller screens */
+    padding: 0 5px; /* Add small padding */
+  }
+  
+  .info-container {
+    padding: 0 20px; /* Increase side padding slightly */
+  }
+}
+
+/* Mobile Breakpoint */
+@media screen and (max-width: 500px) {
+  .info-section {
+    padding: 30px 0; /* Reduce vertical padding */
+    max-width: 100vw !important; /* Limit to viewport width */
+  }
+  
+  .info-header {
+    flex-direction: column; /* Stack logo and text vertically */
+    margin-bottom: 15px;
+    text-align: center; /* Center align the stacked elements */
+  }
+  
+  .info-logo {
+    margin-right: 0;
+    margin-bottom: 10px; /* Add space between logo and text */
+  }
+  
+  .info-text {
+    font-size: 1.5rem; /* Smaller font size for mobile */
     text-align: center;
+    width: 100%; /* Full width to contain text properly */
   }
   
-  .highlight-text {
-    color: var(--highlight-color, #2fb457);
-    font-weight: bold;
+  .info-content {
+    margin: 15px auto;
+    padding: 0; /* Remove padding to maximize space */
+    max-width: 95%; /* Ensure content stays within container */
   }
   
-  @media screen and (max-width: 768px) {
-    .info-header {
-      margin-bottom: 20px;
-    }
-    
-    .info-text {
-      font-size: 1.8rem;
-    }
-    
-    .info-logo img {
-      height: 30px;
-    }
-    
-    .info-content p {
-      font-size: 0.8rem;
-    }
+  .info-content p {
+    font-size: 0.75rem;
+    line-height: 1.4;
+    margin-bottom: 10px;
+    text-align: left;
+    padding: 0 2px; /* Minimal padding */
+    max-width: 100%; /* Ensure paragraphs don't overflow */
   }
   
-  @font-face {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: bold;
-    src: url('../../assets/fonts/Poppins-Bold.ttf')
+  .info-container {
+    padding: 0 8px; /* Reduce padding for more space */
+    max-width: 100%; /* Ensure container doesn't overflow */
   }
   
-  @font-face {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: normal;
-    src: url('../../assets/fonts/Poppins-Regular.ttf') 
+  /* Stronger text wrapping for mobile */
+  .highlight-text, 
+  .info-content p, 
+  .info-text {
+    word-break: break-all !important; /* Force breaking even within words */
+  }
+}
+
+/* Extra Small Mobile Breakpoint */
+@media screen and (max-width: 380px) {
+  html, body {
+    overflow-x: hidden !important; /* Force no horizontal scroll on body */
+    max-width: 100vw !important;
+  }
+
+  .info-section {
+    padding: 20px 0;
+    max-width: 100vw !important;
   }
   
-  @font-face {
-    font-family: 'Poppins Medium';
-    font-style: normal;
-    font-weight: 500;
-    src: url('../../assets/fonts/Poppins-Medium.ttf')
+  .info-text {
+    font-size: 1.2rem; /* Even smaller font size for tiny screens */
   }
+  
+  .info-title-prefix {
+    margin-right: 5px; /* Reduce spacing between prefix and suffix */
+    display: inline-block; /* Ensure proper wrapping */
+  }
+  
+  .info-title-suffix {
+    display: inline-block; /* Ensure proper wrapping */
+  }
+  
+  .info-logo img {
+    height: 22px; /* Even smaller logo */
+  }
+  
+  .info-container {
+    padding: 0 5px; /* Minimal padding on very small screens */
+    max-width: 100%;
+  }
+  
+  .info-content {
+    padding: 0;
+    max-width: 98%;
+  }
+  
+  .info-content p {
+    font-size: 0.7rem; /* Smaller text */
+    line-height: 1.3;
+    max-width: 100%;
+    padding: 0;
+  }
+  
+  /* Force text breaking for tiny screens */
+  p, span, div {
+    word-break: break-all !important;
+    overflow-wrap: break-word !important;
+    white-space: normal !important;
+  }
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: bold;
+  src: url('../../assets/fonts/Poppins-Bold.ttf')
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../../assets/fonts/Poppins-Regular.ttf') 
+}
+
+@font-face {
+  font-family: 'Poppins Medium';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../../assets/fonts/Poppins-Medium.ttf')
+}
