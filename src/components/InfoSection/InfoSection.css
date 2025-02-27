@@ -3,17 +3,16 @@
   padding: 40px 0;
   position: relative;
   box-sizing: border-box;
-  overflow-x: hidden !important; /* Force prevent horizontal overflow */
+  overflow-x: hidden !important;
 }
 
 .info-container {
   max-width: 1140px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 30px; /* Increased padding for better spacing */
   position: relative;
   box-sizing: border-box;
   width: 100%;
-  overflow-x: hidden !important; /* Force prevent horizontal overflow */
 }
 
 .info-header {
@@ -21,8 +20,7 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 30px;
-  flex-wrap: wrap; /* Allow wrapping for small screens */
-  max-width: 100%; /* Ensure header doesn't exceed container */
+  flex-wrap: wrap;
 }
 
 .info-logo {
@@ -34,7 +32,7 @@
 .info-logo img {
   height: 40px;
   width: auto;
-  max-width: 100%; /* Ensure image doesn't overflow */
+  max-width: 100%;
 }
 
 .info-text {
@@ -42,9 +40,10 @@
   vertical-align: middle;
   font-size: 2.2rem;
   font-weight: bold;
-  word-break: break-word; /* Prevent text from overflowing */
+  word-break: normal; /* Changed from break-word */
   overflow-wrap: break-word;
-  hyphens: auto;
+  hyphens: none; /* Disable automatic hyphenation */
+  text-align: center;
 }
 
 .info-title-prefix {
@@ -64,7 +63,6 @@
   text-align: center;
   width: 100%;
   box-sizing: border-box;
-  overflow-wrap: break-word !important; /* Force text wrapping */
 }
 
 .info-content p {
@@ -74,21 +72,20 @@
   margin: 0 0 12px 0;
   color: #000;
   text-align: center;
-  word-wrap: break-word !important; /* Force text wrapping */
-  overflow-wrap: break-word !important;
-  word-break: break-word !important;
-  hyphens: auto;
-  max-width: 100%; /* Ensure paragraphs don't exceed container */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: normal; /* Changed from break-word */
+  hyphens: none; /* Disable automatic hyphenation */
 }
 
 /* Special handling for long product names and terms */
 .highlight-text {
   color: var(--highlight-color, #2fb457);
   font-weight: bold;
-  display: inline-block; /* Allow wrapping of highlighted terms */
-  word-break: break-all !important; /* Force breaking within words if needed */
-  overflow-wrap: break-word !important;
-  hyphens: auto;
+  display: inline;
+  word-break: normal;
+  overflow-wrap: break-word;
+  hyphens: none;
 }
 
 /* Tablet Breakpoint */
@@ -107,118 +104,88 @@
   
   .info-content p {
     font-size: 0.8rem;
-    text-align: left; /* Left-align text for better readability on smaller screens */
-    padding: 0 5px; /* Add small padding */
+    text-align: center; /* Keep centered like testimonials */
   }
   
   .info-container {
-    padding: 0 20px; /* Increase side padding slightly */
+    padding: 0 30px; /* Match testimonial padding */
   }
 }
 
 /* Mobile Breakpoint */
 @media screen and (max-width: 500px) {
   .info-section {
-    padding: 30px 0; /* Reduce vertical padding */
-    max-width: 100vw !important; /* Limit to viewport width */
+    padding: 30px 0;
   }
   
   .info-header {
-    flex-direction: column; /* Stack logo and text vertically */
+    flex-direction: column;
     margin-bottom: 15px;
-    text-align: center; /* Center align the stacked elements */
+    text-align: center;
   }
   
   .info-logo {
     margin-right: 0;
-    margin-bottom: 10px; /* Add space between logo and text */
+    margin-bottom: 10px;
   }
   
   .info-text {
-    font-size: 1.5rem; /* Smaller font size for mobile */
+    font-size: 1.5rem;
     text-align: center;
-    width: 100%; /* Full width to contain text properly */
+    width: 100%;
   }
   
   .info-content {
     margin: 15px auto;
-    padding: 0; /* Remove padding to maximize space */
-    max-width: 95%; /* Ensure content stays within container */
+    padding: 0;
   }
   
-  .info-content p {
-    font-size: 0.75rem;
-    line-height: 1.4;
+  .info-content p, 
+  .info-content div {
+    font-size: 0.85rem; /* Increased from 0.75rem for better readability */
+    line-height: 1.5;
     margin-bottom: 10px;
-    text-align: left;
-    padding: 0 2px; /* Minimal padding */
-    max-width: 100%; /* Ensure paragraphs don't overflow */
+    text-align: center; /* Match testimonial style */
+    padding: 0;
   }
   
   .info-container {
-    padding: 0 8px; /* Reduce padding for more space */
-    max-width: 100%; /* Ensure container doesn't overflow */
-  }
-  
-  /* Stronger text wrapping for mobile */
-  .highlight-text, 
-  .info-content p, 
-  .info-text {
-    word-break: break-all !important; /* Force breaking even within words */
+    padding: 0 30px; /* Match testimonial padding */
   }
 }
 
 /* Extra Small Mobile Breakpoint */
 @media screen and (max-width: 380px) {
-  html, body {
-    overflow-x: hidden !important; /* Force no horizontal scroll on body */
-    max-width: 100vw !important;
-  }
-
   .info-section {
     padding: 20px 0;
-    max-width: 100vw !important;
   }
   
   .info-text {
-    font-size: 1.2rem; /* Even smaller font size for tiny screens */
+    font-size: 1.3rem;
   }
   
   .info-title-prefix {
-    margin-right: 5px; /* Reduce spacing between prefix and suffix */
-    display: inline-block; /* Ensure proper wrapping */
+    margin-right: 5px;
+    display: inline-block;
   }
   
   .info-title-suffix {
-    display: inline-block; /* Ensure proper wrapping */
+    display: inline-block;
   }
   
   .info-logo img {
-    height: 22px; /* Even smaller logo */
+    height: 25px;
   }
   
   .info-container {
-    padding: 0 5px; /* Minimal padding on very small screens */
-    max-width: 100%;
+    padding: 0 20px;
   }
   
-  .info-content {
-    padding: 0;
-    max-width: 98%;
-  }
-  
-  .info-content p {
-    font-size: 0.7rem; /* Smaller text */
-    line-height: 1.3;
-    max-width: 100%;
-    padding: 0;
-  }
-  
-  /* Force text breaking for tiny screens */
-  p, span, div {
-    word-break: break-all !important;
-    overflow-wrap: break-word !important;
-    white-space: normal !important;
+  .info-content p,
+  .info-content div {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    text-align: center; /* Match testimonial */
   }
 }
 
