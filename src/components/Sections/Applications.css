@@ -1,113 +1,136 @@
 .applications-section {
-    padding: 0;
-    background-color: #3c3c3c;
-    color: white;
-    margin: 0 auto;
-  }
-  
+  padding: 0;
+  background-color: #3c3c3c;
+  color: white;
+  margin: 0 auto;
+}
+
+/* Create consistent spacing between sections */
+.application-item {
+  display: flex;
+  padding: 30px 100px;
+  position: relative;
+}
+
+.application-item.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Fixed width for image container */
+.application-image-container {
+  flex: 0 0 285px;
+  position: relative;
+  margin-right: 30px;
+  margin-top: 5px; /* Align image top with heading top */
+}
+
+/* Adjust margins for reverse layout */
+.application-item.reverse .application-image-container {
+  margin-right: 0;
+  margin-left: 30px;
+}
+
+/* Ensure image takes full width of container */
+.application-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.application-badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #4CAF50;
+  padding: 8px 16px;
+  border-radius: 0 0 20px 0;
+  z-index: 1;
+}
+
+.application-title {
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* Adjust content container to align with image */
+/* Base content container styles */
+.application-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Apply padding for regular layout (image on left, content on right) */
+.application-item:not(.reverse) .application-content {
+  padding-left: 20px;
+}
+
+/* Apply padding for reverse layout (image on right, content on left) */
+.application-item.reverse .application-content {
+  padding-right: 20px;
+}
+
+
+/* Ensure heading has proper spacing */
+.application-heading {
+  color: #4CAF50;
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.application-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #fff;
+  margin: 0px;
+}
+
+@media (max-width: 1024px) {
   .application-item {
-    display: flex;
-    padding: 30px 100px;
-    position: relative;
+    padding: 30px 60px;
   }
-  
+}
+
+@media (max-width: 768px) {
+  .application-item, 
   .application-item.reverse {
-    flex-direction: row-reverse;
+    flex-direction: column;
+    padding: 30px 40px;
   }
   
-  .application-image-container {
-    flex: 0 0 285px;
-    position: relative;
-    margin-right: 30px;
-  }
-  
+  .application-image-container,
   .application-item.reverse .application-image-container {
-    margin-right: 0;
-    margin-left: 30px;
-  }
-  
-  .application-image {
+    margin: 0 0 20px 0;
     width: 100%;
-    height: auto;
-    display: block;
-  }
-  
-  .application-badge {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: #4CAF50;
-    padding: 8px 16px;
-    border-radius: 0 0 20px 0;
-    z-index: 1;
-  }
-  
-  .application-title {
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    font-size: 14px;
+    flex: none;
   }
   
   .application-content {
-    flex: 1;
-    padding: 0 20px;
+    padding: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .application-item {
+    padding: 20px 20px;
   }
   
   .application-heading {
-    color: #4CAF50;
-    font-family: 'Poppins', sans-serif;
-    font-size: 24px;
-    font-weight: 700;
-    margin-top: 0;
-    margin-bottom: 15px;
-    text-transform: uppercase;
+    font-size: 20px;
   }
   
   .application-text {
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    color: #fff;
+    font-size: 14px;
   }
-  
-  @media (max-width: 1024px) {
-    .application-item {
-      padding: 30px 60px;
-    }
-  }
-  
-  @media (max-width: 768px) {
-  
-    .application-item, 
-    .application-item.reverse {
-      flex-direction: column;
-      padding: 30px 40px;
-    }
-    
-    .application-image-container,
-    .application-item.reverse .application-image-container {
-      margin: 0 0 20px 0;
-      width: 100%;
-      flex: none;
-    }
-    
-    .application-content {
-      padding: 0;
-    }
-  }
-  
-  @media (max-width: 480px) {
-  
-    .application-item {
-      padding: 20px 20px;
-    }
-    
-    .application-heading {
-      font-size: 20px;
-    }
-    
-    .application-text {
-      font-size: 14px;
-    }
-  }
+}
