@@ -160,6 +160,10 @@ function App() {
  */        icons={[euroQuickHitchLogo, securitySystemIcon, quickChangeIcon]}
       />
 
+      {false && 
+
+      // hide this section
+
       <ImageRow 
         introSections={[
           {
@@ -187,6 +191,7 @@ function App() {
           }
         }}
       />
+    }  
 
 
       <TableFeatures />

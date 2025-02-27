@@ -9,7 +9,7 @@
 .loader-points-wrapper {
   max-width: 1200px;
   margin: 0 auto 0px; /* Changed from fixed margins to auto for centering */
-  padding: 0 20px;
+  padding: 0 70px;
   box-sizing: border-box;
   width: 100%;
 }
