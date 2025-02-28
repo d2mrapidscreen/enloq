@@ -75,12 +75,11 @@ const Event = () => {
           </div>
         ))}
       </div>
-
-      <div className="event-button-container">
+{/*       <div className="event-button-container">
         <button className="event-button" onClick={handleDownload}>
           DOWNLOAD THE BROCHURE
         </button>
-      </div>
+      </div> */}
     </section>
   );
 };

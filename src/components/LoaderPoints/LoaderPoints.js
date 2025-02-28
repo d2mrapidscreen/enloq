@@ -70,10 +70,10 @@ const LoaderPoints = () => {
             ))
           )}
         </div>
-        <div className="loader-points-button-container">
+{/*         <div className="loader-points-button-container">
           <button className="find-out-more-btn">FIND OUT MORE</button>
         </div>
-      </div>
+ */}      </div>
     </section>
   );
 };
