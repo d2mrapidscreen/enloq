@@ -46,7 +46,7 @@ function Navigation() {
     
     // Function to detect which section is currently in view
     const handleScroll = () => {
-      const sections = ['events', 'downloads', 'contact'].map(id => 
+      const sections = ['events', 'downloads'].map(id =>   // removed contact
         document.getElementById(id)
       ).filter(Boolean);
       
@@ -87,16 +87,18 @@ function Navigation() {
         <img src={logoImage} alt="enloq.loaders" className="logo-image" />
       </div>
 
-      {/* Navigation links */}
-      <div className="nav-links">
-        <a href="#events" className={`nav-link ${activeSection === 'events' ? 'active' : ''}`}>EVENTS</a>
-        <a href="#downloads" className={`nav-link ${activeSection === 'downloads' ? 'active' : ''}`}>DOWNLOADS</a>
-        <a href="#contact" className={`nav-link ${activeSection === 'contact' ? 'active' : ''}`}>CONTACT US</a>
-      </div>
+      {/* Navigation links - only shown on desktop */}
+      {!isMobile && (
+        <div className="nav-links">
+          <a href="#events" className={`nav-link ${activeSection === 'events' ? 'active' : ''}`}>EVENTS</a>
+          <a href="#downloads" className={`nav-link ${activeSection === 'downloads' ? 'active' : ''}`}>DOWNLOADS</a>
+{/*           <a href="#contact" className={`nav-link ${activeSection === 'contact' ? 'active' : ''}`}>CONTACT US</a>
+ */}        </div>
+      )}
 
-      {/* Phone number - now clickable */}
+      {/* Phone number - always shown, but icon only on desktop */}
       <div className="phone-container">
-        {isMobile ? null : <img src={phoneImage} alt="phone" className="logo-image" />}
+        {!isMobile && <img src={phoneImage} alt="phone" className="logo-image" />}
         <a href="tel:1300993563" className="phone-number" aria-label="Call 1300 993 563">1300 993 563</a>
       </div>
     </nav>

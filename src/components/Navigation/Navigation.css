@@ -146,50 +146,30 @@
   opacity: 1;
 }
 
-/* Responsive design - IMPROVED */
+/* Responsive design - UPDATED for simplified mobile layout */
 @media (max-width: 768px) {
   .navigation-bar {
-    flex-direction: column;
+    flex-direction: row; /* Keep as row for logo and phone */
     height: auto;
-    padding: 8px; /* Reduced padding */
-    gap: 8px; /* Reduced gap */
+    padding: 8px 15px; /* Adjusted padding */
+    align-items: center;
+    justify-content: space-between; /* Space between logo and phone */
     width: 100%; /* Ensure full width on mobile too */
   }
   
   .logo-container {
-    margin-bottom: 4px; /* Small space after logo */
+    margin: 0; /* Remove margin */
   }
 
   .nav-links {
-    flex-direction: row; /* Keep links in a row for compact layout */
-    justify-content: center;
-    gap: 12px; /* Reduced gap between links */
-    width: 100%;
-    margin: 4px 0; /* Reduced margin */
+    display: none; /* Hide nav links on mobile */
   }
   
-  .nav-link {
-    font-size: 11px; /* Slightly smaller font */
-  }
-
   .phone-container {
-    margin-top: 4px; /* Small space before phone */
-  }
-}
-
-/* For very small screens, stack the nav links */
-@media (max-width: 480px) {
-  .navigation-bar {
-    width: 100vw; /* Force full viewport width */
-    left: 0;
-    right: 0;
-    margin: 0;
-    padding: 8px 10px; /* Adjust padding */
+    margin: 0; /* Remove margin */
   }
   
-  .nav-links {
-    flex-direction: column;
-    align-items: center;
-    gap: 6px; /* Even smaller gap for vertical layout */
+  .phone-container img {
+    display: none; /* Hide phone icon on mobile */
   }
 }
