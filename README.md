@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# enloq
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React application deployed to GitHub Pages.
 
 ## Available Scripts
 
@@ -27,8 +27,6 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
 ### `npm run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
@@ -39,32 +37,22 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+### `npm run predeploy`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Automatically runs before the `deploy` command. This script runs the `build` command to prepare your application for deployment.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### `npm run deploy`
 
-### Code Splitting
+Deploys the application to GitHub Pages using the gh-pages package. This command will publish the content of the `build` folder to the GitHub Pages site specified in the `homepage` field of your package.json.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Your application will be available at: [https://d2mrapidscreen.github.io/enloq](https://d2mrapidscreen.github.io/enloq)
 
-### Analyzing the Bundle Size
+## Dependencies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- React 19
+- React DOM 19
+- React Scripts 5.0.1
 
-### Making a Progressive Web App
+## Dev Dependencies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- gh-pages 6.3.0 (for GitHub Pages deployment)
