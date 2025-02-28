@@ -1,3 +1,7 @@
+:root {
+  --header-scale: 1.5; /* Adjust this value to scale header elements - 1.5 means 50% larger */
+}
+
 .info-section {
   width: 100%;
   padding: 40px 0;
@@ -19,18 +23,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 30px;
+  margin-bottom: calc(10px * var(--header-scale));
   flex-wrap: wrap;
 }
 
 .info-logo {
   display: inline-block;
   vertical-align: middle;
-  margin-right: 15px;
+  margin-right: calc(15px * var(--header-scale));
 }
 
 .info-logo img {
-  height: 40px;
+  height: calc(40px * var(--header-scale));
   width: auto;
   max-width: 100%;
 }
@@ -38,7 +42,7 @@
 .info-text {
   display: inline-block;
   vertical-align: middle;
-  font-size: 2.2rem;
+  font-size: calc(2.2rem * var(--header-scale));
   font-weight: bold;
   word-break: normal; /* Changed from break-word */
   overflow-wrap: break-word;
@@ -49,7 +53,7 @@
 .info-title-prefix {
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
-  margin-right: 10px;
+  margin-right: calc(10px * var(--header-scale));
 }
 
 .info-title-suffix {
@@ -91,15 +95,15 @@
 /* Tablet Breakpoint */
 @media screen and (max-width: 768px) {
   .info-header {
-    margin-bottom: 20px;
+    margin-bottom: calc(20px * var(--header-scale));
   }
   
   .info-text {
-    font-size: 1.8rem;
+    font-size: calc(1.8rem * var(--header-scale));
   }
   
   .info-logo img {
-    height: 30px;
+    height: calc(30px * var(--header-scale));
   }
   
   .info-content p {
@@ -120,17 +124,17 @@
   
   .info-header {
     flex-direction: column;
-    margin-bottom: 15px;
+    margin-bottom: calc(15px * var(--header-scale));
     text-align: center;
   }
   
   .info-logo {
     margin-right: 0;
-    margin-bottom: 10px;
+    margin-bottom: calc(10px * var(--header-scale));
   }
   
   .info-text {
-    font-size: 1.5rem;
+    font-size: calc(1.5rem * var(--header-scale));
     text-align: center;
     width: 100%;
   }
@@ -161,7 +165,7 @@
   }
   
   .info-text {
-    font-size: 1.3rem;
+    font-size: calc(1.3rem * var(--header-scale));
   }
   
   .info-title-prefix {
@@ -174,7 +178,7 @@
   }
   
   .info-logo img {
-    height: 25px;
+    height: calc(25px * var(--header-scale));
   }
   
   .info-container {
