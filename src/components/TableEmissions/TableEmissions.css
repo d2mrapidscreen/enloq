@@ -8,18 +8,17 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+  overflow-x: auto; /* Allow horizontal scrolling on small screens */
 }
 
 .emissions-table {
-  display: flex;
-  flex-direction: column;
   width: 100%;
   border-collapse: collapse;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  table-layout: fixed; /* Fixed layout for better control */
 }
 
 .emissions-header {
-  display: flex;
   width: 100%;
 }
 
@@ -27,20 +26,25 @@
   padding: 15px;
   text-align: center;
   background-color: #222;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
 .model-column {
-  flex: 1.5;
+  width: 40%;
   background-color: #222;
 }
 
 .el400-column, .el800-column {
-  flex: 1;
+  width: 20%;
   background-color: #4CAF50;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+}
+
+.diesel-column {
+  width: 20%;
+  background-color: #222;
+  color: white;
 }
 
 .logo-container {
@@ -56,22 +60,12 @@
   object-fit: contain;
 }
 
-.diesel-column {
-  flex: 1;
-  background-color: #222;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .diesel-icon {
   width: 60%;
   height: auto;
 }
 
 .emissions-row {
-  display: flex;
   width: 100%;
   border-bottom: 1px solid #ddd;
 }
@@ -89,23 +83,23 @@
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
   color: #333;
+  text-align: center;
 }
 
 .name-cell {
-  flex: 1.5;
+  width: 40%;
   font-weight: 500;
+  text-align: left;
 }
 
 .el400-cell, .el800-cell {
-  flex: 1;
+  width: 20%;
   background-color: rgba(76, 175, 80, 0.2);
-  text-align: center;
 }
 
 .diesel-cell {
-  flex: 1;
+  width: 20%;
   background-color: rgba(150, 150, 150, 0.2);
-  text-align: center;
 }
 
 /* Responsive adjustments */
@@ -113,10 +107,6 @@
   .emissions-cell {
     padding: 10px;
     font-size: 12px;
-  }
-  
-  .name-cell {
-    flex: 2;
   }
   
   .diesel-icon {
@@ -129,13 +119,13 @@
 }
 
 @media (max-width: 480px) {
+  .emissions-table {
+    min-width: 480px; /* Prevent columns from becoming too narrow */
+  }
+  
   .emissions-cell {
     padding: 8px 5px;
     font-size: 10px;
-  }
-  
-  .name-cell {
-    flex: 2.5;
   }
   
   .model-logo {
@@ -148,9 +138,5 @@
   
   .header-cell {
     padding: 10px 5px;
-  }
-  
-  .el400-column, .el800-column, .diesel-column {
-    flex: 1;
   }
 }
