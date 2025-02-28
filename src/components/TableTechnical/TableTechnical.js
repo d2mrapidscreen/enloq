@@ -154,31 +154,53 @@ const TableTechnical = () => {
     }
   ];
 
+  // Function to render pipe-separated values
+  const renderValue = (value) => {
+    if (!value) return "Drum oil brake";
+    
+    if (value.includes("|")) {
+      const parts = value.split("|");
+      return (
+        <>
+          {parts[0]}
+          <span className="separator">|</span>
+          {parts[1]}
+        </>
+      );
+    }
+    
+    return value;
+  };
+
   return (
     <section className="table-technical-section">
       <div className="container">
-        <div className="table-header">
-          <h2>TECHNICAL DATA</h2>
-          <div className="model-logos">
-            <div className="model-logo">
-              <img src={el400Logo} alt="EL400" />
-            </div>
-            <div className="model-logos-divider"></div>
-            <div className="model-logo">
-              <img src={el800Logo} alt="EL800" />
-            </div>
-          </div>
-        </div>
-        
-        <div className="technical-table">
-          {specifications.map((spec, index) => (
-            <div key={index} className="technical-row">
-              <div className="specification-name">{spec.name}</div>
-              <div className="specification-value el400">{spec.el400}</div>
-              <div className="specification-value el800">{spec.el800 || "Drum oil brake"}</div>
-            </div>
-          ))}
-        </div>
+        <table className="technical-table">
+          <thead>
+            <tr>
+              <th className="header-title">TECHNICAL DATA</th>
+              <th className="logo-header" colSpan="2">
+                <div className="logo-container">
+                  <div className="el400-logo">
+                    <img src={el400Logo} alt="EL400" />
+                  </div>
+                  <div className="el800-logo">
+                    <img src={el800Logo} alt="EL800" />
+                  </div>
+                </div>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {specifications.map((spec, index) => (
+              <tr key={index} className="technical-row">
+                <td className="specification-name">{spec.name}</td>
+                <td className="specification-value el400-cell">{renderValue(spec.el400)}</td>
+                <td className="specification-value el800-cell">{renderValue(spec.el800)}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
     </section>
   );

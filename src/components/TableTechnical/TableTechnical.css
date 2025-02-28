@@ -1,158 +1,145 @@
 .table-technical-section {
-    padding: 60px 0;
-    width: 100%;
-    background-color: #f5f5f5;
-  }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-  }
-  
-  .table-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 0;
-  }
-  
-  .table-header h2 {
-    color: white;
-    background-color: #222;
-    padding: 10px 20px;
-    margin: 0;
-    font-family: 'Poppins SemiBold', sans-serif;
-    font-size: 18px;
-    font-weight: 600;
-    text-transform: uppercase;
-    flex-grow: 1;
-  }
-  
-  .model-logos {
-    display: flex;
-    background-color: #4CAF50;
-    height: 100%;
-  }
-  
-  .model-logos-divider {
-    width: 1px;
-    background-color: white;
-    margin: 0 5px;
-  }
-  
-  .model-logo {
-    width: 120px;
-    height: 45px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .model-logo img {
-    max-width: 100%;
-    max-height: 80%;
-    object-fit: contain;
-  }
-  
+  padding: 60px 0;
+  width: 100%;
+  background-color: #f5f5f5;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  overflow-x: auto;
+}
+
+.technical-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-title {
+  background-color: #222;
+  color: white;
+  text-align: left;
+  font-family: 'Poppins SemiBold', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 15px 20px;
+  width: 50%;
+}
+
+.logo-header {
+  width: 50%;
+  padding: 0;
+}
+
+.logo-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: #4CAF50;
+}
+
+.el400-logo, .el800-logo {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.el400-logo img, .el800-logo img {
+  max-width: 100px;
+  max-height: 60px;
+  object-fit: contain;
+}
+
+.technical-row {
+  border-bottom: 1px solid #ddd;
+}
+
+.technical-row:nth-child(odd) {
+  background-color: #e0e0e0;
+}
+
+.technical-row:nth-child(even) {
+  background-color: #f0f0f0;
+}
+
+.specification-name {
+  width: 50%;
+  padding: 10px 15px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  color: #333;
+}
+
+.specification-value {
+  width: 25%;
+  padding: 10px 15px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  color: #333;
+}
+
+.el400-cell, .el800-cell {
+  background-color: rgba(76, 175, 80, 0.1);
+}
+
+/* Special styling for cells with pipe separators */
+.separator {
+  margin: 0 5px;
+  color: #777;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
   .technical-table {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
-  .technical-row {
-    display: flex;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  .technical-row:nth-child(odd) {
-    background-color: #e0e0e0;
-  }
-  
-  .technical-row:nth-child(even) {
-    background-color: #f0f0f0;
+    min-width: 480px;
   }
   
   .specification-name {
-    flex: 1;
-    padding: 10px 15px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 14px;
-    color: #333;
+    font-size: 12px;
+    padding: 10px 5px;
   }
   
   .specification-value {
-    width: 120px;
+    font-size: 12px;
+    padding: 10px 5px;
+  }
+  
+  .header-title {
+    font-size: 16px;
     padding: 10px 15px;
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
+  }
+  
+  .el400-logo img, .el800-logo img {
+    max-width: 80px;
+    max-height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .specification-name {
+    padding: 8px 5px;
+    font-size: 11px;
+  }
+  
+  .specification-value {
+    padding: 8px 3px;
+    font-size: 11px;
+  }
+  
+  .header-title {
     font-size: 14px;
-    color: #333;
+    padding: 8px 10px;
   }
   
-  .specification-value.el800 {
-    width: 140px;
+  .el400-logo img, .el800-logo img {
+    max-width: 60px;
+    max-height: 30px;
   }
-  
-  /* Special styling for cells with pipe separators */
-  .specification-value span.separator {
-    margin: 0 5px;
-    color: #777;
-  }
-  
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .table-header {
-      flex-direction: column;
-    }
-    
-    .table-header h2 {
-      width: 100%;
-      box-sizing: border-box;
-    }
-    
-    .model-logos {
-      width: 100%;
-      margin-top: 1px;
-    }
-    
-    .model-logo {
-      flex: 1;
-    }
-    
-    .specification-name {
-      font-size: 12px;
-      flex: 1.5;
-      padding: 10px 5px;
-    }
-    
-    .specification-value {
-      width: 80px;
-      font-size: 12px;
-      padding: 10px 5px;
-    }
-    
-    .specification-value.el800 {
-      width: 90px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .specification-name {
-      padding: 8px 5px;
-      font-size: 11px;
-      flex: 2;
-    }
-    
-    .specification-value {
-      width: 60px;
-      padding: 8px 3px;
-      font-size: 11px;
-    }
-    
-    .specification-value.el800 {
-      width: 70px;
-    }
-  }
+}
