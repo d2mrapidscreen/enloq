@@ -52,27 +52,32 @@ const TableFeatures = () => {
   return (
     <section className="table-features-section">
       <div className="container">
-        <div className="table-header">
-          <h2>STANDARD MACHINE FEATURES</h2>
-          <div className="model-logos">
-            <div className="model-logo">
-              <img src={el400Logo} alt="EL400" />
-            </div>
-            <div className="model-logo">
-              <img src={el800Logo} alt="EL800" />
-            </div>
-          </div>
-        </div>
-        
-        <div className="features-table">
-          {features.map((feature, index) => (
-            <div key={index} className="feature-row">
-              <div className="feature-name">{feature.name}</div>
-              <div className="feature-availability el400">{feature.el400}</div>
-              <div className="feature-availability el800">{feature.el800}</div>
-            </div>
-          ))}
-        </div>
+        <table className="features-table">
+          <thead>
+            <tr>
+              <th className="header-title">STANDARD MACHINE FEATURES</th>
+              <th className="logo-header" colSpan="2">
+                <div className="logo-container">
+                  <div className="el400-logo">
+                    <img src={el400Logo} alt="EL400" />
+                  </div>
+                  <div className="el800-logo">
+                    <img src={el800Logo} alt="EL800" />
+                  </div>
+                </div>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {features.map((feature, index) => (
+              <tr key={index} className="feature-row">
+                <td className="feature-name">{feature.name}</td>
+                <td className="feature-availability">{feature.el400}</td>
+                <td className="feature-availability">{feature.el800}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
     </section>
   );
