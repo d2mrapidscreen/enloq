@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/enloq/static/css/main.51f61eeb.css",
-    "main.js": "/enloq/static/js/main.4a6cfb1a.js",
+    "main.js": "/enloq/static/js/main.59b00426.js",
     "static/media/Loader_raised_bucket_to_ute.jpg": "/enloq/static/media/Loader_raised_bucket_to_ute.e61914bdc80cc23e16e7.jpg",
     "static/media/Loader_raised_bucket_from_rear.jpg": "/enloq/static/media/Loader_raised_bucket_from_rear.2d449ae248ab912b0496.jpg",
     "static/media/Enloq_EL800sEL400s_brochure.pdf": "/enloq/static/media/Enloq_EL800sEL400s_brochure.5ee175ad4947aa4fbc11.pdf",
@@ -72,10 +72,10 @@
     "static/media/Table_800s_logo.png": "/enloq/static/media/Table_800s_logo.57e3a6cf2c862d10e831.png",
     "index.html": "/enloq/index.html",
     "main.51f61eeb.css.map": "/enloq/static/css/main.51f61eeb.css.map",
-    "main.4a6cfb1a.js.map": "/enloq/static/js/main.4a6cfb1a.js.map"
+    "main.59b00426.js.map": "/enloq/static/js/main.59b00426.js.map"
   },
   "entrypoints": [
     "static/css/main.51f61eeb.css",
-    "static/js/main.4a6cfb1a.js"
+    "static/js/main.59b00426.js"
   ]
 }
