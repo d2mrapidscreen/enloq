@@ -82,9 +82,11 @@ function Navigation() {
   
   return (
     <nav className="navigation-bar" role="navigation" aria-label="Main Navigation">
-      {/* Logo image */}
-      <div className="logo-container">
-        <img src={logoImage} alt="enloq.loaders" className="logo-image" />
+      {/* Logo image with a completely different class name to avoid conflicts */}
+      <div className="nav-logo-wrapper">
+        <a href="/">
+          <img src={logoImage} alt="enloq.loaders" className="logo-image" />
+        </a>
       </div>
 
       {/* Navigation links - only shown on desktop */}
@@ -92,13 +94,12 @@ function Navigation() {
         <div className="nav-links">
           <a href="#events" className={`nav-link ${activeSection === 'events' ? 'active' : ''}`}>EVENTS</a>
           <a href="#downloads" className={`nav-link ${activeSection === 'downloads' ? 'active' : ''}`}>DOWNLOADS</a>
-{/*           <a href="#contact" className={`nav-link ${activeSection === 'contact' ? 'active' : ''}`}>CONTACT US</a>
- */}        </div>
+        </div>
       )}
 
       {/* Phone number - always shown, but icon only on desktop */}
       <div className="phone-container">
-        {!isMobile && <img src={phoneImage} alt="phone" className="logo-image" />}
+        {!isMobile && <img src={phoneImage} alt="phone" width="auto" height="24" />}
         <a href="tel:1300993563" className="phone-number" aria-label="Call 1300 993 563">1300 993 563</a>
       </div>
     </nav>

@@ -31,6 +31,17 @@
   max-width: 100vw; /* Ensure doesn't exceed viewport width */
 }
 
+/* Create a completely different class name for the logo container to avoid conflicts */
+.nav-logo-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: auto;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+}
+
 /* Phone Number Styles */
 .phone-container {
   display: flex;
@@ -157,7 +168,7 @@
     width: 100%; /* Ensure full width on mobile too */
   }
   
-  .logo-container {
+  .nav-logo-wrapper {
     margin: 0; /* Remove margin */
   }
 
