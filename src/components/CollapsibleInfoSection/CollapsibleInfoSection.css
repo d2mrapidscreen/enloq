@@ -94,7 +94,7 @@
 
 .collapsible-content.expanded {
   max-height: 2000px; /* Large enough to accommodate most content */
-  padding: 20px;
+  /* padding: 20px; */
   transition: max-height 0.5s ease-in;
 }
 
@@ -129,6 +129,6 @@
   }
   
   .collapsible-content.expanded {
-    padding: 15px;
-  }
+/*     padding: 15px;
+ */  }
 }
