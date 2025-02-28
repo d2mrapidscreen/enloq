@@ -41,9 +41,9 @@ import enloqTagline from './assets/images/enloq-tagline.png';
 import downloadPdfImage1 from './assets/images/Brochure_Attachments_icon.png'
 import downloadPdfImage2 from './assets/images/Brochure_EL400_800S_icon.png'
 import downloadPdfImage3 from './assets/images/Brochure_emissions_comparison_icon.png'
-import downloadPdfFile1 from './assets/pdf/website_layout.pdf'
-import downloadPdfFile2 from './assets/pdf/website_layout.pdf'
-import downloadPdfFile3 from './assets/pdf/website_layout.pdf'
+import downloadPdfFile1 from './assets/pdf/Enloq_attachments_brochure.pdf'
+import downloadPdfFile2 from './assets/pdf/Enloq_EL800sEL400s_brochure.pdf'
+import downloadPdfFile3 from './assets/pdf/Enloq_fuel_comparison_brochure.pdf'
 
 import downloadPdfImageBig from './assets/images/universe.webp'
 
@@ -81,24 +81,24 @@ function App() {
               action: {
                 type: "download",
                 url: downloadPdfFile1, // File to download (optional, defaults to image src)
-                filename: "enloq_attachements.pdf", // Suggested filename (optional)
-                tooltip: "Click to download PDF"
+                 filename: "Enloq_attachments_brochure.pdf", // Suggested filename (optional)
+                 tooltip: "Click to download PDF"
               }},
             { src: downloadPdfImage2, 
               alt: 'Enloq EL400/800S',
               action: {
                 type: "download",
                 url: downloadPdfFile2, // File to download (optional, defaults to image src)
-                filename: "enloq_EL400_800s.pdf", // Suggested filename (optional)
-                tooltip: "Click to download PDF"
+                 filename: "Enloq_EL800sEL400s_brochure.pdf", // Suggested filename (optional)
+                 tooltip: "Click to download PDF"
             }},
             { src: downloadPdfImage3, 
               alt: 'Enloq Emissions Comparison',
               action: {
                 type: "download",
                 url: downloadPdfFile3, // File to download (optional, defaults to image src)
-                filename: "enloq_emmissions_comparison.pdf", // Suggested filename (optional)
-                tooltip: "Click to download PDF"
+                 filename: "Enloq_fuel_comparison_brochure.pdf", // Suggested filename (optional)
+                 tooltip: "Click to download PDF"
             }}
 /*               { src: downloadPdfImage, 
                 alt: 'El400/800S',

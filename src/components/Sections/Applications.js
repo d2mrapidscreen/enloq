@@ -1,11 +1,11 @@
 import React from 'react';
 import './Applications.css';
 import SectionDisplay from './SectionDisplay';
-import wineryImage from '../../assets/images/Winery.png';
-import nurseryImage from '../../assets/images/Nursery.png';
-import timberImage from '../../assets/images/Timber.png';
-import forestImage from '../../assets/images/Forest.png';
-import contructionImage from '../../assets/images/Construction.png';
+import wineryImage from '../../assets/images/Markets_winery.png';
+import nurseryImage from '../../assets/images/Markets_nursery.png';
+import timberImage from '../../assets/images/Markets_timber.png';
+import forestImage from '../../assets/images/Markets_forestry.png';
+import contructionImage from '../../assets/images/Markets_construction.png';
 
 const Applications = () => {
   const applications = [
