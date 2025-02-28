@@ -54,6 +54,16 @@
   align-items: center;
 }
 
+
+.el400-column .logo-container, 
+.el800-column .logo-container {
+  background-color: #4CAF50;
+}
+
+.diesel-column .logo-container {
+  background-color: #222;
+}
+
 .model-logo {
   max-width: 80%;
   height: auto;

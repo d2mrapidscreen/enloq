@@ -43,45 +43,48 @@ const TableEmissions = () => {
   return (
     <section className="table-emissions-section">
       <div className="container">
-        <div className="emissions-table">
-          <div className="emissions-header">
-            <div className="header-cell model-column">
-              {/* Empty space for the first column */}
-            </div>
-            <div className="header-cell el400-column">
-              <div className="logo-container">
-                <img src={el400Logo} alt="EL400" className="model-logo" />
-              </div>
-            </div>
-            <div className="header-cell el800-column">
-              <div className="logo-container">
-                <img src={el800Logo} alt="EL800" className="model-logo" />
-              </div>
-            </div>
-            <div className="header-cell diesel-column">
-              <div className="logo-container">
-                <img src={dieselLoaderIcon} alt="Diesel Loader" className="diesel-icon" />
-              </div>
-            </div>
-          </div>
-          
-          {comparisons.map((comparison, index) => (
-            <div key={index} className="emissions-row">
-              <div className="emissions-cell name-cell">
-                {comparison.name}
-              </div>
-              <div className="emissions-cell el400-cell">
-                {comparison.el400}
-              </div>
-              <div className="emissions-cell el800-cell">
-                {comparison.el800}
-              </div>
-              <div className="emissions-cell diesel-cell">
-                {comparison.diesel}
-              </div>
-            </div>
-          ))}
-        </div>
+        <table className="emissions-table">
+          <thead>
+            <tr className="emissions-header">
+              <th className="header-cell model-column">
+                {/* Empty space for the first column */}
+              </th>
+              <th className="header-cell el400-column">
+                <div className="logo-container">
+                  <img src={el400Logo} alt="EL400" className="model-logo" />
+                </div>
+              </th>
+              <th className="header-cell el800-column">
+                <div className="logo-container">
+                  <img src={el800Logo} alt="EL800" className="model-logo" />
+                </div>
+              </th>
+              <th className="header-cell diesel-column">
+                <div className="logo-container">
+                  <img src={dieselLoaderIcon} alt="Diesel Loader" className="diesel-icon" />
+                </div>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {comparisons.map((comparison, index) => (
+              <tr key={index} className="emissions-row">
+                <td className="emissions-cell name-cell">
+                  {comparison.name}
+                </td>
+                <td className="emissions-cell el400-cell">
+                  {comparison.el400}
+                </td>
+                <td className="emissions-cell el800-cell">
+                  {comparison.el800}
+                </td>
+                <td className="emissions-cell diesel-cell">
+                  {comparison.diesel}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
     </section>
   );
