@@ -16,9 +16,14 @@ import ImageRow from "./components/ImageRow/ImageRow";
 import Gallery from "./components/Gallery/Gallery";
 import ModelsGallery from "./components/Gallery/ModelsGallery";
 import { ThinkElectricSection, EnloqLoadersSection } from './components/InfoSection/Sections';
+
 import TableFeatures from './components/TableFeatures/TableFeatures';
 import TableTechnical from './components/TableTechnical/TableTechnical';
 import TableEmissions from './components/TableEmissions/TableEmissions';
+// Import the CollapsibleTablesSection
+import { CollapsibleTablesSection } from './components/CollapsibleInfoSection';
+
+
 import Footer from './components/Footer/Footer';
 
 // Image imports
@@ -212,11 +217,12 @@ function App() {
       />
     }  
 
+      <section id="specifications">
+        <CollapsibleTablesSection />
+      </section>
 
-      <TableFeatures />
-      <TableTechnical />
-      <TableEmissions />
-
+      { false && 
+      // hide this section
       <ImageRow 
         introSections={[
           {
@@ -245,6 +251,7 @@ function App() {
           }
         }}
       />
+    }
 
       <SupportServices />
 

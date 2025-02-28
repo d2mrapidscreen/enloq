@@ -1,0 +1,168 @@
+/* src/components/CollapsibleInfoSection/CollapsibleInfoSection.css */
+/* Import base InfoSection styles */
+@import '../InfoSection/InfoSection.css';
+
+.collapsible-info-section {
+  width: 100%;
+  padding: 40px 0;
+  position: relative;
+  box-sizing: border-box;
+  overflow-x: hidden !important;
+}
+
+/* Section controls styling */
+.collapsible-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px 0 20px;
+  position: relative;
+}
+
+.section-controls-label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 5px;
+  position: relative;
+}
+
+.section-controls-label::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+  bottom: -5px;
+  left: 0;
+  transform: translateX(calc(100% + 5px));
+}
+
+.section-controls-label::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+  bottom: -5px;
+  right: 0;
+  transform: translateX(calc(-100% - 5px));
+}
+
+.section-controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.expand-all-btn, 
+.collapse-all-btn {
+  background-color: #222;
+  color: white;
+  border: none;
+  padding: 5px 15px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.expand-all-btn:hover, 
+.collapse-all-btn:hover {
+  background-color: var(--highlight-color, #2fb457);
+}
+
+/* Collapsible section styling */
+.collapsible-section {
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.collapsible-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  user-select: none;
+}
+
+.collapsible-header h3 {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.toggle-icon {
+  font-size: 1.2rem;
+  font-weight: bold;
+  transform: rotate(0);
+  transition: transform 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+}
+
+.toggle-icon.expanded {
+  transform: rotate(45deg);
+}
+
+.collapsible-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  background-color: white;
+}
+
+.collapsible-content.expanded {
+  max-height: 2000px; /* Large enough to accommodate most content */
+  padding: 20px;
+  transition: max-height 0.5s ease-in;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .section-controls {
+    flex-direction: row;
+  }
+  
+  .collapsible-header h3 {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .collapsible-controls {
+    margin: 20px 0 15px;
+  }
+  
+  .section-controls-label {
+    font-size: 0.8rem;
+  }
+  
+  .expand-all-btn, 
+  .collapse-all-btn {
+    font-size: 0.7rem;
+    padding: 4px 10px;
+  }
+  
+  .collapsible-header {
+    padding: 10px 15px;
+  }
+  
+  .collapsible-header h3 {
+    font-size: 0.85rem;
+  }
+  
+  .collapsible-content.expanded {
+    padding: 15px;
+  }
+}
