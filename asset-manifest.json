@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/enloq/static/css/main.991cb6d5.css",
-    "main.js": "/enloq/static/js/main.77461576.js",
+    "main.js": "/enloq/static/js/main.96e7e5c2.js",
     "static/media/Loader_raised_bucket_to_ute.jpg": "/enloq/static/media/Loader_raised_bucket_to_ute.e61914bdc80cc23e16e7.jpg",
     "static/media/Loader_raised_bucket_from_rear.jpg": "/enloq/static/media/Loader_raised_bucket_from_rear.2d449ae248ab912b0496.jpg",
     "static/media/Loader_quick_hitch.png": "/enloq/static/media/Loader_quick_hitch.e6157cce41ac4db9ff02.png",
@@ -14,6 +14,7 @@
     "static/media/attachment_12.png": "/enloq/static/media/attachment_12.cfb8d2d36686b0e356cd.png",
     "static/media/attachment_3.png": "/enloq/static/media/attachment_3.fcaf2916736fb38e40b7.png",
     "static/media/attachment_1.png": "/enloq/static/media/attachment_1.f0dbcd458cfc54b8eb7b.png",
+    "static/media/Brochure_EL400_800S_icon.png": "/enloq/static/media/Brochure_EL400_800S_icon.be43054b22f7537852c1.png",
     "static/media/attachment_4.png": "/enloq/static/media/attachment_4.5d3dd01c2cf71f77d0dc.png",
     "static/media/attachment_5.png": "/enloq/static/media/attachment_5.99095839f279346cdddc.png",
     "static/media/attachment_11.png": "/enloq/static/media/attachment_11.7f3604f81523c8bef076.png",
@@ -22,6 +23,7 @@
     "static/media/attachment_2.png": "/enloq/static/media/attachment_2.790916cfe0495c82f02c.png",
     "static/media/SRDC_Enloq_Group_photo.png": "/enloq/static/media/SRDC_Enloq_Group_photo.82550be7fd35ee1cf989.png",
     "static/media/genuine_parts.png": "/enloq/static/media/genuine_parts.6489611e4f1f62da3f24.png",
+    "static/media/Brochure_Attachments_icon.png": "/enloq/static/media/Brochure_Attachments_icon.adc3c46b2c6087d73ae5.png",
     "static/media/training_group.png": "/enloq/static/media/training_group.5b1a83d399a362906cd9.png",
     "static/media/maintenance.png": "/enloq/static/media/maintenance.6c124572dbc1c1ea53a0.png",
     "static/media/Light_closeup.png": "/enloq/static/media/Light_closeup.1f315b0c6614366e9ab2.png",
@@ -30,6 +32,7 @@
     "static/media/Knee_controller.png": "/enloq/static/media/Knee_controller.28d599140536a8067bf3.png",
     "static/media/event_norco_primex.jpg": "/enloq/static/media/event_norco_primex.d66d71d99f462ae0e428.jpg",
     "static/media/Forest.png": "/enloq/static/media/Forest.92c9b037ba8984010e05.png",
+    "static/media/Brochure_emissions_comparison_icon.png": "/enloq/static/media/Brochure_emissions_comparison_icon.176befbe1289d64eb6e7.png",
     "static/media/Winery.png": "/enloq/static/media/Winery.2fd4ac32f388879b3389.png",
     "static/media/Nursery.png": "/enloq/static/media/Nursery.b211c64952f5f54d29ac.png",
     "static/media/Construction.png": "/enloq/static/media/Construction.a55a6371b0d99de92183.png",
@@ -67,10 +70,10 @@
     "static/media/Table_800s_logo.png": "/enloq/static/media/Table_800s_logo.57e3a6cf2c862d10e831.png",
     "index.html": "/enloq/index.html",
     "main.991cb6d5.css.map": "/enloq/static/css/main.991cb6d5.css.map",
-    "main.77461576.js.map": "/enloq/static/js/main.77461576.js.map"
+    "main.96e7e5c2.js.map": "/enloq/static/js/main.96e7e5c2.js.map"
   },
   "entrypoints": [
     "static/css/main.991cb6d5.css",
-    "static/js/main.77461576.js"
+    "static/js/main.96e7e5c2.js"
   ]
 }
