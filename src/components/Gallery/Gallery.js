@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Gallery.css';
 
 // Import data directly in the component
@@ -54,10 +54,30 @@ const Gallery = ({
   
   // Track which image has tooltip visible
   const [activeTooltip, setActiveTooltip] = useState(null);
+  // State to track if we should show tooltips based on screen size
+  const [showTooltips, setShowTooltips] = useState(true);
 
-  // Show tooltip on hover
+  // Check screen size on mount and when window is resized
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setShowTooltips(window.innerWidth > 768);
+    };
+    
+    // Initial check
+    checkScreenSize();
+    
+    // Add event listener for window resize
+    window.addEventListener('resize', checkScreenSize);
+    
+    // Clean up
+    return () => window.removeEventListener('resize', checkScreenSize);
+  }, []);
+
+  // Show tooltip on hover - only if we're on a larger screen
   const showTooltip = (id) => {
-    setActiveTooltip(id);
+    if (showTooltips) {
+      setActiveTooltip(id);
+    }
   };
 
   // Hide tooltip when mouse leaves

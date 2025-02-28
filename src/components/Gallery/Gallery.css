@@ -130,6 +130,13 @@
   border-color: rgba(0, 0, 0, 0.8) transparent transparent transparent;
 }
 
+/* Hide tooltips on smaller screens */
+@media (max-width: 768px) {
+  .gallery-tooltip {
+    display: none;
+  }
+}
+
 /* Hover effect for images */
 .gallery-item:hover .gallery-image-wrapper {
   transform: translateY(-5px);
