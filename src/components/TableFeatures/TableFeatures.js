@@ -72,8 +72,8 @@ const TableFeatures = () => {
             {features.map((feature, index) => (
               <tr key={index} className="feature-row">
                 <td className="feature-name">{feature.name}</td>
-                <td className="feature-availability">{feature.el400}</td>
-                <td className="feature-availability">{feature.el800}</td>
+                <td className="feature-availability el400-cell">{feature.el400}</td>
+                <td className="feature-availability el800-cell">{feature.el800}</td>
               </tr>
             ))}
           </tbody>

@@ -82,8 +82,13 @@
   text-align: center;
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
-  font-weight: bold;
+  /* font-weight: bold; */
   color: #333;
+}
+
+/* Added background color to match TableTechnical */
+.el400-cell, .el800-cell {
+  background-color: rgba(76, 175, 80, 0.1);
 }
 
 /* Responsive adjustments */
