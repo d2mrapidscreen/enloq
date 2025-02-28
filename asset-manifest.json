@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/enloq/static/css/main.6601f1bc.css",
-    "main.js": "/enloq/static/js/main.3dc5a74d.js",
+    "main.css": "/enloq/static/css/main.3061e901.css",
+    "main.js": "/enloq/static/js/main.d15182fc.js",
     "static/media/Loader_raised_bucket_to_ute.jpg": "/enloq/static/media/Loader_raised_bucket_to_ute.e61914bdc80cc23e16e7.jpg",
     "static/media/Loader_raised_bucket_from_rear.jpg": "/enloq/static/media/Loader_raised_bucket_from_rear.2d449ae248ab912b0496.jpg",
     "static/media/Enloq_EL800sEL400s_brochure.pdf": "/enloq/static/media/Enloq_EL800sEL400s_brochure.5ee175ad4947aa4fbc11.pdf",
@@ -71,11 +71,11 @@
     "static/media/event_seymour_expo.png": "/enloq/static/media/event_seymour_expo.581be5d60a0a744a11d9.png",
     "static/media/Table_800s_logo.png": "/enloq/static/media/Table_800s_logo.57e3a6cf2c862d10e831.png",
     "index.html": "/enloq/index.html",
-    "main.6601f1bc.css.map": "/enloq/static/css/main.6601f1bc.css.map",
-    "main.3dc5a74d.js.map": "/enloq/static/js/main.3dc5a74d.js.map"
+    "main.3061e901.css.map": "/enloq/static/css/main.3061e901.css.map",
+    "main.d15182fc.js.map": "/enloq/static/js/main.d15182fc.js.map"
   },
   "entrypoints": [
-    "static/css/main.6601f1bc.css",
-    "static/js/main.3dc5a74d.js"
+    "static/css/main.3061e901.css",
+    "static/js/main.d15182fc.js"
   ]
 }
