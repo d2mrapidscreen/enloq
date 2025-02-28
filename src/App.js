@@ -38,9 +38,14 @@ import dashboardImage from './assets/images/EV_dashbrd.png'
 
 import enloqTagline from './assets/images/enloq-tagline.png';
 
-import downloadPdfImage from './assets/images/download_pdf.png'
-import downloadPdfImageBig from './assets/images/universe.webp'
+import downloadPdfImage1 from './assets/images/Brochure_Attachments_icon.png'
+import downloadPdfImage2 from './assets/images/Brochure_EL400_800S_icon.png'
+import downloadPdfImage3 from './assets/images/Brochure_emissions_comparison_icon.png'
 import downloadPdfFile1 from './assets/pdf/website_layout.pdf'
+import downloadPdfFile2 from './assets/pdf/website_layout.pdf'
+import downloadPdfFile3 from './assets/pdf/website_layout.pdf'
+
+import downloadPdfImageBig from './assets/images/universe.webp'
 
 
 function App() {
@@ -66,30 +71,44 @@ function App() {
         <ImageRow 
           introSections={[
             {
-              title: "Technical Details",
-              content: "White papers, specifications and other details."
+              title: "Downloads",
+              content: "White papers, brochures, specifications etc."
             }
           ]}
           images={[
-            { src: downloadPdfImage, 
-              alt: 'Download 1',
-              alt: "Image 2",
+            { src: downloadPdfImage1, 
+              alt: 'Enloq Attachments',
               action: {
                 type: "download",
                 url: downloadPdfFile1, // File to download (optional, defaults to image src)
-                filename: "document-name.pdf", // Suggested filename (optional)
+                filename: "enloq_attachements.pdf", // Suggested filename (optional)
                 tooltip: "Click to download PDF"
               }},
-            { src: downloadPdfImage, 
-              alt: 'Specifications',
+            { src: downloadPdfImage2, 
+              alt: 'Enloq EL400/800S',
               action: {
-                type: "popup",  // Shows enlarged image in popup
-                largeImageSrc: downloadPdfImageBig, // Optional: use different image for popup
-                tooltip: "Click to enlarge"
-              },
-              caption: "This is an optional caption for the popup view",
-            },
-            { src: downloadPdfImage, alt: 'Dashboard 3' }
+                type: "download",
+                url: downloadPdfFile2, // File to download (optional, defaults to image src)
+                filename: "enloq_EL400_800s.pdf", // Suggested filename (optional)
+                tooltip: "Click to download PDF"
+            }},
+            { src: downloadPdfImage3, 
+              alt: 'Enloq Emissions Comparison',
+              action: {
+                type: "download",
+                url: downloadPdfFile3, // File to download (optional, defaults to image src)
+                filename: "enloq_emmissions_comparison.pdf", // Suggested filename (optional)
+                tooltip: "Click to download PDF"
+            }}
+/*               { src: downloadPdfImage, 
+                alt: 'El400/800S',
+                action: {
+                  type: "popup",  // Shows enlarged image in popup
+                  largeImageSrc: downloadPdfImageBig, // Optional: use different image for popup
+                  tooltip: "Click to enlarge"
+                },
+                caption: "This is an optional caption for the popup view",
+              }, */
           ]} 
           imagesPerRow={3}
         />
