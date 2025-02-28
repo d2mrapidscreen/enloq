@@ -49,17 +49,19 @@ const TableEmissions = () => {
               {/* Empty space for the first column */}
             </div>
             <div className="header-cell el400-column">
-              <img src={el400Logo} alt="EL400" className="model-logo" />
+              <div className="logo-container">
+                <img src={el400Logo} alt="EL400" className="model-logo" />
+              </div>
             </div>
             <div className="header-cell el800-column">
-              <img src={el800Logo} alt="EL800" className="model-logo" />
+              <div className="logo-container">
+                <img src={el800Logo} alt="EL800" className="model-logo" />
+              </div>
             </div>
             <div className="header-cell diesel-column">
-              <div className="diesel-label">
-                <p>Conventional</p>
-                <p>diesel loader</p>
+              <div className="logo-container">
+                <img src={dieselLoaderIcon} alt="Diesel Loader" className="diesel-icon" />
               </div>
-              <img src={dieselLoaderIcon} alt="Diesel Loader" className="diesel-icon" />
             </div>
           </div>
           

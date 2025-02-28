@@ -1,159 +1,156 @@
 .table-emissions-section {
-    padding: 60px 0;
-    width: 100%;
-    background-color: #f5f5f5;
-  }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-  }
-  
-  .emissions-table {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    border-collapse: collapse;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .emissions-header {
-    display: flex;
-    width: 100%;
-  }
-  
-  .header-cell {
-    padding: 15px;
-    text-align: center;
-    background-color: #222;
-  }
-  
-  .model-column {
-    flex: 1.5;
-    background-color: #222;
-  }
-  
-  .el400-column, .el800-column {
-    flex: 1;
-    background-color: #4CAF50;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .diesel-column {
-    flex: 1;
-    background-color: #222;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .model-logo {
-    max-width: 100px;
-    max-height: 40px;
-    object-fit: contain;
-  }
-  
-  .diesel-label {
-    margin-bottom: 10px;
-    font-family: 'Poppins Medium', sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    text-align: center;
-  }
-  
-  .diesel-label p {
-    margin: 0;
-    line-height: 1.2;
-  }
-  
-  .diesel-icon {
-    width: 50px;
-    height: auto;
-    margin-top: 5px;
-  }
-  
-  .emissions-row {
-    display: flex;
-    width: 100%;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  .emissions-row:nth-child(odd) {
-    background-color: #e0e0e0;
-  }
-  
-  .emissions-row:nth-child(even) {
-    background-color: #f0f0f0;
-  }
-  
+  padding: 60px 0;
+  width: 100%;
+  background-color: #f5f5f5;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.emissions-table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.emissions-header {
+  display: flex;
+  width: 100%;
+}
+
+.header-cell {
+  padding: 15px;
+  text-align: center;
+  background-color: #222;
+}
+
+.model-column {
+  flex: 1.5;
+  background-color: #222;
+}
+
+.el400-column, .el800-column {
+  flex: 1;
+  background-color: #4CAF50;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.model-logo {
+  max-width: 80%;
+  height: auto;
+  object-fit: contain;
+}
+
+.diesel-column {
+  flex: 1;
+  background-color: #222;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.diesel-icon {
+  width: 60%;
+  height: auto;
+}
+
+.emissions-row {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+}
+
+.emissions-row:nth-child(odd) {
+  background-color: #e0e0e0;
+}
+
+.emissions-row:nth-child(even) {
+  background-color: #f0f0f0;
+}
+
+.emissions-cell {
+  padding: 15px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  color: #333;
+}
+
+.name-cell {
+  flex: 1.5;
+  font-weight: 500;
+}
+
+.el400-cell, .el800-cell {
+  flex: 1;
+  background-color: rgba(76, 175, 80, 0.2);
+  text-align: center;
+}
+
+.diesel-cell {
+  flex: 1;
+  background-color: rgba(150, 150, 150, 0.2);
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
   .emissions-cell {
-    padding: 15px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 14px;
-    color: #333;
+    padding: 10px;
+    font-size: 12px;
   }
   
   .name-cell {
-    flex: 1.5;
-    font-weight: 500;
+    flex: 2;
   }
   
-  .el400-cell, .el800-cell {
+  .diesel-icon {
+    width: 60%;
+  }
+  
+  .model-logo {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .emissions-cell {
+    padding: 8px 5px;
+    font-size: 10px;
+  }
+  
+  .name-cell {
+    flex: 2.5;
+  }
+  
+  .model-logo {
+    max-width: 80%;
+  }
+  
+  .diesel-icon {
+    width: 60%;
+  }
+  
+  .header-cell {
+    padding: 10px 5px;
+  }
+  
+  .el400-column, .el800-column, .diesel-column {
     flex: 1;
-    background-color: rgba(76, 175, 80, 0.2);
-    text-align: center;
   }
-  
-  .diesel-cell {
-    flex: 1;
-    background-color: rgba(150, 150, 150, 0.2);
-    text-align: center;
-  }
-  
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .emissions-cell {
-      padding: 10px;
-      font-size: 12px;
-    }
-    
-    .name-cell {
-      flex: 2;
-    }
-    
-    .diesel-label {
-      font-size: 12px;
-    }
-    
-    .diesel-icon {
-      width: 40px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .emissions-cell {
-      padding: 8px 5px;
-      font-size: 10px;
-    }
-    
-    .name-cell {
-      flex: 2.5;
-    }
-    
-    .model-logo {
-      max-width: 70px;
-    }
-    
-    .diesel-label {
-      font-size: 10px;
-    }
-    
-    .diesel-icon {
-      width: 30px;
-    }
-  }
+}
