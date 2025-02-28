@@ -119,9 +119,9 @@ function App() {
         quote="We see a big financial gain with near zero hourly running costs and with no emissions, we are not breathing diesel particulates from owning electric machines anymore. Its better for our staff"
         author="Tony"
         company="Hunter Winery"
-        buttonText="FIND OUT MORE"
+/*         buttonText="FIND OUT MORE" 
         onButtonClick={handleFindOutMore}
-      />
+ */      />
    
       <section id="events">
         <Event />
@@ -133,9 +133,9 @@ function App() {
         quote="Within minutes of a test run we were convinced on the The Wombat. The machine is powerful and quiet and you have a lot of power available immediately. With two different drive modes, its quick to unload a trailer and bring to where it's needed. Fits through a gate and is better than using a shovel and wheelbarrow, we can save days of labor"
         author="Blake"
         company="Wolf Plumbing"
-        buttonText="FIND OUT MORE"
+/*          buttonText="FIND OUT MORE"
         onButtonClick={handleFindOutMore}
-      />
+ */      />
 
       <Feature 
         title="SAFE AND"

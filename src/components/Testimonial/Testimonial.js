@@ -4,7 +4,7 @@ import './Testimonial.css';
 const Testimonial = ({ quote, author, company, buttonText, onButtonClick }) => {
   return (
     <div className="testimonial-container">
-      <div className="testimonial-content">
+      <div className={`testimonial-content ${!buttonText ? 'no-button' : ''}`}>
         <div className="testimonial-quote">
           "{quote}"
         </div>

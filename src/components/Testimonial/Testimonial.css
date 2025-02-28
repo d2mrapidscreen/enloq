@@ -1,59 +1,68 @@
 .testimonial-container {
-    background-color: #d1d3d4;
-    padding: 40px 0;
-    width: 100%;
-  }
-  
+  background-color: #d1d3d4;
+  padding: 40px 0;
+  width: 100%;
+}
+
+.testimonial-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 100px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testimonial-content.no-button {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.testimonial-quote {
+  font-size: 22px;
+  line-height: 1.4;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.testimonial-author {
+  font-size: 18px;
+  color: #4CAF50;
+  margin-bottom: 30px;
+}
+
+/* Adjust margin for the author when there's no button */
+.no-button .testimonial-author {
+  margin-bottom: 0;
+}
+
+.testimonial-button {
+  background-color: #4a4a4a;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  max-width: 300px;
+  width: 100%;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.testimonial-button:hover {
+  background-color: #333333;
+}
+
+@media (max-width: 768px) {
   .testimonial-content {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 100px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: 0 30px;
   }
   
   .testimonial-quote {
-    font-size: 22px;
-    line-height: 1.4;
-    margin-bottom: 20px;
-    font-style: italic;
-  }
-  
-  .testimonial-author {
     font-size: 18px;
-    color: #4CAF50;
-    margin-bottom: 30px;
   }
-  
-  .testimonial-button {
-    background-color: #4a4a4a;
-    color: white;
-    border: none;
-    padding: 15px 40px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    text-transform: uppercase;
-    cursor: pointer;
-    max-width: 300px;
-    width: 100%;
-    text-align: center;
-    transition: background-color 0.3s ease;
-
-  }
-  
-  .testimonial-button:hover {
-    background-color: #333333;
-  }
-  
-  @media (max-width: 768px) {
-    .testimonial-content {
-      padding: 0 30px;
-    }
-    
-    .testimonial-quote {
-      font-size: 18px;
-    }
-  }
+}
