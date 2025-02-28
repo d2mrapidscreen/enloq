@@ -3,18 +3,18 @@ import './Gallery.css';
 
 // Import data directly in the component
 // This ensures the data is always available
-import attachment1 from '../../assets/images/gallery/attachment_1.png';
-import attachment2 from '../../assets/images/gallery/attachment_2.png';
-import attachment3 from '../../assets/images/gallery/attachment_3.png';
-import attachment4 from '../../assets/images/gallery/attachment_4.png';
-import attachment5 from '../../assets/images/gallery/attachment_5.png';
-import attachment6 from '../../assets/images/gallery/attachment_6.png';
-import attachment7 from '../../assets/images/gallery/attachment_7.png';
-import attachment8 from '../../assets/images/gallery/attachment_8.png';
-import attachment9 from '../../assets/images/gallery/attachment_9.png';
-import attachment10 from '../../assets/images/gallery/attachment_10.png';
-import attachment11 from '../../assets/images/gallery/attachment_11.png';
-import attachment12 from '../../assets/images/gallery/attachment_12.png';
+import bucket from '../../assets/images/gallery/4-in-1-Bucket.png';
+import auger from '../../assets/images/gallery/Auger.png';
+import dozerBlade from '../../assets/images/gallery/Dozer_Blade.png';
+import grappleBucket from '../../assets/images/gallery/Grapple_Bucket.png';
+import grassCutter from '../../assets/images/gallery/Grass_Cutter.png';
+import grassFork from '../../assets/images/gallery/Grass_Fork.png';
+import miniDigger from '../../assets/images/gallery/Mini_Digger.png';
+import palletFork from '../../assets/images/gallery/Pallet_Fork.png';
+import baleGrabber from '../../assets/images/gallery/Round_Bale_Grabber.png';
+import screeningBucket from '../../assets/images/gallery/Screening_Bucket.png';
+import snowPlow from '../../assets/images/gallery/Snow_Plow_Articulated_Dozer_Blade.png';
+import sweeper from '../../assets/images/gallery/Sweeper.png';
 
 const Gallery = ({ 
   imagesPerRow = 4,
@@ -25,19 +25,20 @@ const Gallery = ({
   const titleHighlight = "ATTACHMENTS";
   const content = "Our attachments are developed entirely in-house so that they deliver the best results when working with our machines. Enloq Loaders® offers different attachments so your machine can be used all year round and a variety of jobs. By choosing the right attachment it is possible to adjust your EL800s to working conditions for agriculture, construction, material handling, private use and many other areas of application. Get every job done with just one machine!";
   
+  // Updated images array with new file names and matching descriptions
   const images = [
-    { id: 1, src: attachment1, alt: "Bucket attachment" },
-    { id: 2, src: attachment2, alt: "Grabber attachment" },
-    { id: 3, src: attachment3, alt: "Fork attachment" },
-    { id: 4, src: attachment4, alt: "Pallet fork attachment" },
-    { id: 5, src: attachment5, alt: "Multipurpose attachment" },
-    { id: 6, src: attachment6, alt: "Bale spike attachment" },
-    { id: 7, src: attachment7, alt: "Grapple attachment" },
-    { id: 8, src: attachment8, alt: "Pallet lifter attachment" },
-    { id: 9, src: attachment9, alt: "Sieve bucket attachment" },
-    { id: 10, src: attachment10, alt: "Auger attachment" },
-    { id: 11, src: attachment11, alt: "Sweeper attachment" },
-    { id: 12, src: attachment12, alt: "Broom attachment" }
+    { id: 1, src: bucket, alt: "4-in-1 Bucket" },
+    { id: 2, src: auger, alt: "Auger" },
+    { id: 3, src: dozerBlade, alt: "Dozer Blade" },
+    { id: 4, src: grappleBucket, alt: "Grapple Bucket" },
+    { id: 5, src: grassCutter, alt: "Grass Cutter" },
+    { id: 6, src: grassFork, alt: "Grass Fork" },
+    { id: 7, src: miniDigger, alt: "Mini Digger" },
+    { id: 8, src: palletFork, alt: "Pallet Fork" },
+    { id: 9, src: baleGrabber, alt: "Round Bale Grabber" },
+    { id: 10, src: screeningBucket, alt: "Screening Bucket" },
+    { id: 11, src: snowPlow, alt: "Snow Plow Articulated Dozer Blade" },
+    { id: 12, src: sweeper, alt: "Sweeper" }
   ];
 
   // Create rows of images based on imagesPerRow
