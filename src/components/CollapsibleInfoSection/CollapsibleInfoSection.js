@@ -119,7 +119,6 @@ function CollapsibleInfoSection({
         
         {collapsibleSections.length > 0 && (
           <div className="collapsible-controls">
-            <div className="section-controls-label">section controls</div>
             <div className="section-controls">
               <button 
                 className="expand-all-btn" 
