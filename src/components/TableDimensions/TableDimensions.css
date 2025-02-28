@@ -1,0 +1,42 @@
+/* src/components/TableDimensions/TableDimensions.css */
+
+.dimensions-container {
+    padding: 15px 0;
+  }
+  
+  .dimensions-container .image-container {
+    margin: 20px 0;
+    text-align: center;
+  }
+  
+  .dimensions-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    padding: 10px;
+  }
+  
+  .dimensions-container .image-caption {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    color: #666;
+    font-style: 'italic';
+  }
+  
+  .dimensions-container ul {
+    margin-left: 20px;
+    margin-top: 15px;
+  }
+  
+  .dimensions-container li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .dimensions-container img {
+      max-width: 80%; /* Makes the image a bit smaller on larger screens for better readability */
+    }
+  }

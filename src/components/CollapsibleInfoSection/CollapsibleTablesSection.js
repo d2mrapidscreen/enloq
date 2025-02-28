@@ -4,6 +4,7 @@ import CollapsibleInfoSection from './CollapsibleInfoSection';
 import TableFeatures from '../TableFeatures/TableFeatures';
 import TableTechnical from '../TableTechnical/TableTechnical';
 import TableEmissions from '../TableEmissions/TableEmissions';
+import TableDimensions from '../TableDimensions/TableDimensions';
 import enloqLogo from '../../assets/images/enloq_loaders_corp_logo.png';
 
 function CollapsibleTablesSection() {
@@ -26,6 +27,10 @@ function CollapsibleTablesSection() {
     {
       title: "Emissions & Cost Comparison",
       content: <TableEmissions />
+    },
+    {
+      title: "Dimensions & Technical Drawing",
+      content: <TableDimensions />
     }
   ];
 
